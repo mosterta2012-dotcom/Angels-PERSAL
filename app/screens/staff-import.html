@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PeopleImport</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.side a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3A4459;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}
+.side a:hover{background:#EEF2F8}
+.side .code{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A93A6}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:8px 10px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:11px 10px;border-bottom:1px solid #EEF1F5}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.f{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#5B6478}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+
+html,body{margin:0;background:#F3F5F9;font-family:Manrope,sans-serif;color:#16213A}
+body>main{padding:14px 16px !important;max-width:none}
+@media (max-width:700px){body [style*="minmax(4"]{grid-template-columns:1fr !important}}
+</style></head><body>
+<main data-dc-tpl="53" style="flex: 999 1 560px; min-width: 0px; box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px;">
+    <div data-dc-tpl="54" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+      <div data-dc-tpl="55">
+        <h1 data-dc-tpl="56" style="margin: 0px; font-size: 28px; font-weight: 800;">Staff import</h1>
+        <p data-dc-tpl="57" style="margin: 4px 0px 0px; color: rgb(91, 100, 120); font-size: 14px;">Loads the final staff list into PERSAL once and issues PERSAL numbers in one go · after that, every change goes through a request</p>
+      </div>
+      <div data-dc-tpl="58" style="display: flex; gap: 10px; flex-wrap: wrap;"><a data-dc-tpl="59" href="../index.html#/d/staff-import" target="_top" style="text-decoration: none; background: rgb(255, 255, 255); border: 1px solid rgb(213, 219, 229); color: rgb(22, 33, 58); padding: 11px 16px; border-radius: 10px; font-weight: 700; font-size: 14px;">Download template</a><a data-dc-tpl="60" href="../index.html#/d/staff-import" target="_top" style="text-decoration: none; background: rgb(31, 78, 140); color: rgb(255, 255, 255); padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 14px;">Upload final staff list</a></div>
+    </div>
+    <div data-dc-tpl="61" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px;">
+      
+        <div data-dc-tpl="63" class="card" style="padding: 16px 18px;"><div data-dc-tpl="64" style="font-size: 13px; font-weight: 700; color: rgb(91, 100, 120);"><span class="sc-interp">Rows in file</span></div><div data-dc-tpl="65" style="font-size: 28px; font-weight: 800; margin-top: 6px; color: rgb(22, 33, 58);"><span class="sc-interp">[00]</span></div><div data-dc-tpl="66" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Final merged staff list</span></div></div>
+      
+        <div data-dc-tpl="63" class="card" style="padding: 16px 18px;"><div data-dc-tpl="64" style="font-size: 13px; font-weight: 700; color: rgb(91, 100, 120);"><span class="sc-interp">Ready to load</span></div><div data-dc-tpl="65" style="font-size: 28px; font-weight: 800; margin-top: 6px; color: rgb(30, 122, 79);"><span class="sc-interp">[00]</span></div><div data-dc-tpl="66" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">All checks passed</span></div></div>
+      
+        <div data-dc-tpl="63" class="card" style="padding: 16px 18px;"><div data-dc-tpl="64" style="font-size: 13px; font-weight: 700; color: rgb(91, 100, 120);"><span class="sc-interp">Need fixing</span></div><div data-dc-tpl="65" style="font-size: 28px; font-weight: 800; margin-top: 6px; color: rgb(180, 35, 24);"><span class="sc-interp">[0]</span></div><div data-dc-tpl="66" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">See checks below</span></div></div>
+      
+        <div data-dc-tpl="63" class="card" style="padding: 16px 18px;"><div data-dc-tpl="64" style="font-size: 13px; font-weight: 700; color: rgb(91, 100, 120);"><span class="sc-interp">No PERSAL number</span></div><div data-dc-tpl="65" style="font-size: 28px; font-weight: 800; margin-top: 6px; color: rgb(91, 100, 120);"><span class="sc-interp">[0]</span></div><div data-dc-tpl="66" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Suppliers</span></div></div>
+      
+    </div>
+    <section data-dc-tpl="67" class="card" style="min-width: 0px;">
+      <div data-dc-tpl="68" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px;"><h2 data-dc-tpl="69" class="h2" style="margin: 0px;">Checks before loading</h2><span data-dc-tpl="70" style="font-size: 12px; color: rgb(91, 100, 120);"></span></div>
+      <div data-dc-tpl="71" style="overflow-x: auto; padding: 0px 8px 8px;">
+        <table data-dc-tpl="72" class="tbl">
+          <thead data-dc-tpl="73"><tr data-dc-tpl="74"><th data-dc-tpl="75">Check</th><th data-dc-tpl="76">Rows</th><th data-dc-tpl="77">Result</th></tr></thead>
+          <tbody data-dc-tpl="78">
+            
+              <tr data-dc-tpl="80"><td data-dc-tpl="81" style="font-weight: 700; white-space: normal; min-width: 280px;"><span class="sc-interp">Every row has a staff category and how they are paid</span></td><td data-dc-tpl="82"><span class="sc-interp">[00]</span></td><td data-dc-tpl="83"><span data-dc-tpl="84" class="pill" style="background: rgb(227, 244, 236); color: rgb(30, 122, 79);"><span class="sc-interp">Passed</span></span></td></tr>
+            
+              <tr data-dc-tpl="80"><td data-dc-tpl="81" style="font-weight: 700; white-space: normal; min-width: 280px;"><span class="sc-interp">Every employee has a direct manager who is an employee</span></td><td data-dc-tpl="82"><span class="sc-interp">[0] missing</span></td><td data-dc-tpl="83"><span data-dc-tpl="84" class="pill" style="background: rgb(253, 236, 234); color: rgb(180, 35, 24);"><span class="sc-interp">Fix</span></span></td></tr>
+            
+              <tr data-dc-tpl="80"><td data-dc-tpl="81" style="font-weight: 700; white-space: normal; min-width: 280px;"><span class="sc-interp">Emails are unique and on a valid domain</span></td><td data-dc-tpl="82"><span class="sc-interp">[00]</span></td><td data-dc-tpl="83"><span data-dc-tpl="84" class="pill" style="background: rgb(227, 244, 236); color: rgb(30, 122, 79);"><span class="sc-interp">Passed</span></span></td></tr>
+            
+              <tr data-dc-tpl="80"><td data-dc-tpl="81" style="font-weight: 700; white-space: normal; min-width: 280px;"><span class="sc-interp">Cell numbers have 10 digits and start with 06, 07 or 08</span></td><td data-dc-tpl="82"><span class="sc-interp">[00]</span></td><td data-dc-tpl="83"><span data-dc-tpl="84" class="pill" style="background: rgb(227, 244, 236); color: rgb(30, 122, 79);"><span class="sc-interp">Passed</span></span></td></tr>
+            
+              <tr data-dc-tpl="80"><td data-dc-tpl="81" style="font-weight: 700; white-space: normal; min-width: 280px;"><span class="sc-interp">Employment start date present (first day worked)</span></td><td data-dc-tpl="82"><span class="sc-interp">[0] missing</span></td><td data-dc-tpl="83"><span data-dc-tpl="84" class="pill" style="background: rgb(253, 236, 234); color: rgb(180, 35, 24);"><span class="sc-interp">Fix</span></span></td></tr>
+            
+              <tr data-dc-tpl="80"><td data-dc-tpl="81" style="font-weight: 700; white-space: normal; min-width: 280px;"><span class="sc-interp">Title matches a post on the establishment</span></td><td data-dc-tpl="82"><span class="sc-interp">[0] unmatched</span></td><td data-dc-tpl="83"><span data-dc-tpl="84" class="pill" style="background: rgb(255, 243, 217); color: rgb(138, 88, 0);"><span class="sc-interp">Check</span></span></td></tr>
+            
+              <tr data-dc-tpl="80"><td data-dc-tpl="81" style="font-weight: 700; white-space: normal; min-width: 280px;"><span class="sc-interp">Interns have a client (placed with) and an end date</span></td><td data-dc-tpl="82"><span class="sc-interp">[00]</span></td><td data-dc-tpl="83"><span data-dc-tpl="84" class="pill" style="background: rgb(227, 244, 236); color: rgb(30, 122, 79);"><span class="sc-interp">Passed</span></span></td></tr>
+            
+              <tr data-dc-tpl="80"><td data-dc-tpl="81" style="font-weight: 700; white-space: normal; min-width: 280px;"><span class="sc-interp">No duplicate people (same ID or same name and email)</span></td><td data-dc-tpl="82"><span class="sc-interp">0</span></td><td data-dc-tpl="83"><span data-dc-tpl="84" class="pill" style="background: rgb(227, 244, 236); color: rgb(30, 122, 79);"><span class="sc-interp">Passed</span></span></td></tr>
+            
+          </tbody>
+        </table>
+      </div>
+      <p data-dc-tpl="85" style="margin: 0px; padding: 0px 20px 16px; font-size: 12px; color: rgb(91, 100, 120);">Rows with an error stay out of the load until HR fixes them in the file and uploads it again.</p>
+    </section>
+    <section data-dc-tpl="86" class="card" style="min-width: 0px;">
+      <div data-dc-tpl="87" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px;"><h2 data-dc-tpl="88" class="h2" style="margin: 0px;">Preview</h2><span data-dc-tpl="89" style="font-size: 12px; color: rgb(91, 100, 120);"></span></div>
+      <div data-dc-tpl="90" style="overflow-x: auto; padding: 0px 8px 8px;">
+        <table data-dc-tpl="91" class="tbl">
+          <thead data-dc-tpl="92"><tr data-dc-tpl="93"><th data-dc-tpl="94">#</th><th data-dc-tpl="95">Name</th><th data-dc-tpl="96">Category</th><th data-dc-tpl="97">Department</th><th data-dc-tpl="98">Direct manager</th><th data-dc-tpl="99">Placed with</th><th data-dc-tpl="100">Email</th><th data-dc-tpl="101">PERSAL no</th><th data-dc-tpl="102">Result</th></tr></thead>
+          <tbody data-dc-tpl="103">
+            
+              <tr data-dc-tpl="105"><td data-dc-tpl="106" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">1</span></td><td data-dc-tpl="107" style="font-weight: 700;"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="108"><span class="sc-interp">Permanent</span></td><td data-dc-tpl="109"><span class="sc-interp">Operations</span></td><td data-dc-tpl="110"><span class="sc-interp">Head of Ops &amp; Systems</span></td><td data-dc-tpl="111"><span class="sc-interp">Angels</span></td><td data-dc-tpl="112" style="color: rgb(91, 100, 120);"><span class="sc-interp">[name]@angelsinc.co.za</span></td><td data-dc-tpl="113" class="m" style="font-size: 12px;"><span class="sc-interp">[on approval]</span></td><td data-dc-tpl="114"><span data-dc-tpl="115" class="pill" style="background: rgb(227, 244, 236); color: rgb(30, 122, 79);"><span class="sc-interp">Ready</span></span></td></tr>
+            
+              <tr data-dc-tpl="105"><td data-dc-tpl="106" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">2</span></td><td data-dc-tpl="107" style="font-weight: 700;"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="108"><span class="sc-interp">Contract (SLA)</span></td><td data-dc-tpl="109"><span class="sc-interp">Operations</span></td><td data-dc-tpl="110"><span class="sc-interp">n/a (contractor)</span></td><td data-dc-tpl="111"><span class="sc-interp">Angels</span></td><td data-dc-tpl="112" style="color: rgb(91, 100, 120);"><span class="sc-interp">[name]@angelsinc.co.za</span></td><td data-dc-tpl="113" class="m" style="font-size: 12px;"><span class="sc-interp">[on approval]</span></td><td data-dc-tpl="114"><span data-dc-tpl="115" class="pill" style="background: rgb(227, 244, 236); color: rgb(30, 122, 79);"><span class="sc-interp">Ready</span></span></td></tr>
+            
+              <tr data-dc-tpl="105"><td data-dc-tpl="106" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">3</span></td><td data-dc-tpl="107" style="font-weight: 700;"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="108"><span class="sc-interp">Permanent</span></td><td data-dc-tpl="109"><span class="sc-interp">[blank]</span></td><td data-dc-tpl="110"><span class="sc-interp">[blank]</span></td><td data-dc-tpl="111"><span class="sc-interp">Angels</span></td><td data-dc-tpl="112" style="color: rgb(91, 100, 120);"><span class="sc-interp">[name]@angelsinc.co.za</span></td><td data-dc-tpl="113" class="m" style="font-size: 12px;"><span class="sc-interp">—</span></td><td data-dc-tpl="114"><span data-dc-tpl="115" class="pill" style="background: rgb(253, 236, 234); color: rgb(180, 35, 24);"><span class="sc-interp">Fix</span></span></td></tr>
+            
+              <tr data-dc-tpl="105"><td data-dc-tpl="106" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">4</span></td><td data-dc-tpl="107" style="font-weight: 700;"><span class="sc-interp">[Intern name]</span></td><td data-dc-tpl="108"><span class="sc-interp">Intern</span></td><td data-dc-tpl="109"><span class="sc-interp">Human Resources</span></td><td data-dc-tpl="110"><span class="sc-interp">HOD HR</span></td><td data-dc-tpl="111"><span class="sc-interp">[Client]</span></td><td data-dc-tpl="112" style="color: rgb(91, 100, 120);"><span class="sc-interp">[name]@[client].co.za</span></td><td data-dc-tpl="113" class="m" style="font-size: 12px;"><span class="sc-interp">[on approval]</span></td><td data-dc-tpl="114"><span data-dc-tpl="115" class="pill" style="background: rgb(227, 244, 236); color: rgb(30, 122, 79);"><span class="sc-interp">Ready</span></span></td></tr>
+            
+              <tr data-dc-tpl="105"><td data-dc-tpl="106" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">5</span></td><td data-dc-tpl="107" style="font-weight: 700;"><span class="sc-interp">[Supplier name]</span></td><td data-dc-tpl="108"><span class="sc-interp">Supplier</span></td><td data-dc-tpl="109"><span class="sc-interp">—</span></td><td data-dc-tpl="110"><span class="sc-interp">—</span></td><td data-dc-tpl="111"><span class="sc-interp">—</span></td><td data-dc-tpl="112" style="color: rgb(91, 100, 120);"><span class="sc-interp">[name]@[supplier].co.za</span></td><td data-dc-tpl="113" class="m" style="font-size: 12px;"><span class="sc-interp">None</span></td><td data-dc-tpl="114"><span data-dc-tpl="115" class="pill" style="background: rgb(238, 241, 245); color: rgb(91, 100, 120);"><span class="sc-interp">No number</span></span></td></tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section data-dc-tpl="116" class="card" style="padding: 16px 18px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+      <span data-dc-tpl="117" style="font-size: 13px; color: rgb(91, 100, 120); flex: 1 1 400px;">Loading needs HOD HR approval. Each person gets a record, a post link and a PERSAL number (8 random digits with a check digit, checked against every number issued). Suppliers get no number.</span>
+      <button data-dc-tpl="118" type="button" style="font-family: Manrope, sans-serif; font-size: 14px; font-weight: 700; padding: 12px 18px; border-radius: 10px; border: 1px solid rgb(31, 78, 140); background: rgb(31, 78, 140); color: rgb(255, 255, 255); min-height: 44px;">Send for HOD HR approval</button>
+    </section>
+  </main>
+</body></html>

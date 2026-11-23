@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RiskTracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:10px 12px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:12px;border-bottom:1px solid #EEF1F5;white-space:nowrap}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+.rowbtn{font-family:Manrope,sans-serif;font-size:13px;font-weight:700;padding:8px 12px;border-radius:10px;border:1px solid #D5DBE5;background:#fff;color:#16213A;cursor:pointer;min-height:40px}
+
+html,body{margin:0;background:#F3F5F9;font-family:Manrope,sans-serif;color:#16213A}
+body>main{padding:14px 16px !important;max-width:none}
+@media (max-width:700px){body [style*="minmax(4"]{grid-template-columns:1fr !important}}
+</style></head><body>
+<div id="dc-root"><div class="sc-host" data-sc-name="RiskTracker"><div data-dc-tpl="4" style="font-family: Manrope, sans-serif; color: rgb(22, 33, 58); background: rgb(243, 245, 249); min-height: 100vh;">
+  <header data-dc-tpl="5" style="background: rgb(255, 255, 255); border-bottom: 1px solid rgb(227, 231, 238);">
+    <div data-dc-tpl="6" style="max-width: 1240px; margin: 0px auto; padding: 14px 24px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+      <div data-dc-tpl="7" style="width: 38px; height: 38px; border-radius: 10px; background: rgb(31, 78, 140); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-weight: 800;">A</div>
+      <div data-dc-tpl="8" style="flex: 1 1 220px;"><div data-dc-tpl="9" style="font-weight: 800; font-size: 16px;">Angels Risk Tracker</div><div data-dc-tpl="10" style="font-size: 12px; color: rgb(91, 100, 120);">HR risks fed from PERSAL · no names or personal details</div></div>
+      <div data-dc-tpl="11" style="font-size: 13px; color: rgb(91, 100, 120); text-align: right;">Signed in as <strong data-dc-tpl="12" style="color: rgb(22, 33, 58);">[QMS Administrator]</strong><br data-dc-tpl="13">Microsoft 365</div>
+    </div>
+  </header>
+  <main data-dc-tpl="14" style="max-width: 1240px; margin: 0px auto; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px;">
+    <div data-dc-tpl="15" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+      <div data-dc-tpl="16">
+        <h1 data-dc-tpl="17" style="margin: 0px; font-size: 26px; font-weight: 800;">HR risks</h1>
+        <p data-dc-tpl="18" style="margin: 4px 0px 0px; color: rgb(91, 100, 120); font-size: 14px;">Updated whenever a risk is logged, changes level or changes status in PERSAL · linked to the QMS risk register</p>
+      </div>
+      <a data-dc-tpl="19" href="../index.html#/d/risk-design" target="_top" style="text-decoration: none; background: rgb(31, 78, 140); color: rgb(255, 255, 255); padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 14px;">Export quarterly report</a>
+    </div>
+    <div data-dc-tpl="20" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px;">
+      
+        <div data-dc-tpl="22" class="card" style="padding: 16px 18px;"><div data-dc-tpl="23" style="font-size: 13px; font-weight: 700; color: rgb(91, 100, 120);"><span class="sc-interp">Open HR risks</span></div><div data-dc-tpl="24" style="font-size: 28px; font-weight: 800; margin-top: 6px; color: rgb(22, 33, 58);"><span class="sc-interp">[0]</span></div><div data-dc-tpl="25" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Not yet closed</span></div></div>
+      
+        <div data-dc-tpl="22" class="card" style="padding: 16px 18px;"><div data-dc-tpl="23" style="font-size: 13px; font-weight: 700; color: rgb(91, 100, 120);"><span class="sc-interp">Not reported in time</span></div><div data-dc-tpl="24" style="font-size: 28px; font-weight: 800; margin-top: 6px; color: rgb(180, 35, 24);"><span class="sc-interp">[0]</span></div><div data-dc-tpl="25" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Past the deadline for their level</span></div></div>
+      
+        <div data-dc-tpl="22" class="card" style="padding: 16px 18px;"><div data-dc-tpl="23" style="font-size: 13px; font-weight: 700; color: rgb(91, 100, 120);"><span class="sc-interp">Actions overdue</span></div><div data-dc-tpl="24" style="font-size: 28px; font-weight: 800; margin-top: 6px; color: rgb(138, 88, 0);"><span class="sc-interp">[0]</span></div><div data-dc-tpl="25" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Past the due date</span></div></div>
+      
+        <div data-dc-tpl="22" class="card" style="padding: 16px 18px;"><div data-dc-tpl="23" style="font-size: 13px; font-weight: 700; color: rgb(91, 100, 120);"><span class="sc-interp">Closed this quarter</span></div><div data-dc-tpl="24" style="font-size: 28px; font-weight: 800; margin-top: 6px; color: rgb(30, 122, 79);"><span class="sc-interp">[0]</span></div><div data-dc-tpl="25" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">With evidence and approval</span></div></div>
+      
+    </div>
+    <section data-dc-tpl="26" class="card" style="padding: 18px 20px;">
+      <h2 data-dc-tpl="27" class="h2">Alerts</h2>
+      <div data-dc-tpl="28" style="display: flex; flex-direction: column; gap: 8px;">
+        
+          <div data-dc-tpl="30" style="display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 10px; background: rgb(253, 236, 234); flex-wrap: wrap;">
+            <span data-dc-tpl="31" style="width: 8px; height: 8px; border-radius: 99px; background: rgb(180, 35, 24); flex: 0 0 auto;"></span>
+            <span data-dc-tpl="32" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">HR-R02</span></span>
+            <span data-dc-tpl="33" style="flex: 1 1 300px; font-size: 13px;"><span class="sc-interp">High risk not reported to the CEO within 48 hours</span></span>
+            <span data-dc-tpl="34" style="font-size: 12px; font-weight: 700; color: rgb(180, 35, 24);"><span class="sc-interp">Reminder sent</span></span>
+          </div>
+        
+          <div data-dc-tpl="30" style="display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 10px; background: rgb(255, 243, 217); flex-wrap: wrap;">
+            <span data-dc-tpl="31" style="width: 8px; height: 8px; border-radius: 99px; background: rgb(138, 88, 0); flex: 0 0 auto;"></span>
+            <span data-dc-tpl="32" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">HR-R04</span></span>
+            <span data-dc-tpl="33" style="flex: 1 1 300px; font-size: 13px;"><span class="sc-interp">Action past its due date</span></span>
+            <span data-dc-tpl="34" style="font-size: 12px; font-weight: 700; color: rgb(138, 88, 0);"><span class="sc-interp">Follow up with owner</span></span>
+          </div>
+        
+          <div data-dc-tpl="30" style="display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 10px; background: rgb(232, 239, 248); flex-wrap: wrap;">
+            <span data-dc-tpl="31" style="width: 8px; height: 8px; border-radius: 99px; background: rgb(31, 78, 140); flex: 0 0 auto;"></span>
+            <span data-dc-tpl="32" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">HR-R11</span></span>
+            <span data-dc-tpl="33" style="flex: 1 1 300px; font-size: 13px;"><span class="sc-interp">New risk logged · Medium · Leave</span></span>
+            <span data-dc-tpl="34" style="font-size: 12px; font-weight: 700; color: rgb(31, 78, 140);"><span class="sc-interp">Add to QMS register</span></span>
+          </div>
+        
+          <div data-dc-tpl="30" style="display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 10px; background: rgb(227, 244, 236); flex-wrap: wrap;">
+            <span data-dc-tpl="31" style="width: 8px; height: 8px; border-radius: 99px; background: rgb(30, 122, 79); flex: 0 0 auto;"></span>
+            <span data-dc-tpl="32" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">HR-R09</span></span>
+            <span data-dc-tpl="33" style="flex: 1 1 300px; font-size: 13px;"><span class="sc-interp">Closed with evidence · HOD HR approved</span></span>
+            <span data-dc-tpl="34" style="font-size: 12px; font-weight: 700; color: rgb(30, 122, 79);"><span class="sc-interp">Closed this quarter</span></span>
+          </div>
+        
+      </div>
+    </section>
+    <section data-dc-tpl="35" class="card" style="min-width: 0px;">
+      <div data-dc-tpl="36" style="padding: 16px 20px 4px;"><h2 data-dc-tpl="37" class="h2" style="margin: 0px;">All HR risks · select one to see its trail</h2></div>
+      <div data-dc-tpl="38" style="overflow-x: auto; padding: 0px 8px 8px;">
+        <table data-dc-tpl="39" class="tbl">
+          <thead data-dc-tpl="40"><tr data-dc-tpl="41"><th data-dc-tpl="42">HR ID</th><th data-dc-tpl="43">QMS ID</th><th data-dc-tpl="44">Area</th><th data-dc-tpl="45">Level</th><th data-dc-tpl="46">Owner</th><th data-dc-tpl="47">Reported to · date</th><th data-dc-tpl="48">Action due</th><th data-dc-tpl="49">Status</th><th data-dc-tpl="50"></th></tr></thead>
+          <tbody data-dc-tpl="51">
+            
+              <tr data-dc-tpl="53" style="background: rgb(247, 249, 253);"><td data-dc-tpl="54" class="m" style="font-size: 12px;"><span class="sc-interp">HR-R01</span></td><td data-dc-tpl="55" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">QMS-R[000]</span></td><td data-dc-tpl="56"><span class="sc-interp">Leave · BCEA</span></td><td data-dc-tpl="57"><span data-dc-tpl="58" class="pill" style="background: rgb(255, 243, 217); color: rgb(180, 83, 42);"><span class="sc-interp">High</span></span></td><td data-dc-tpl="59"><span class="sc-interp">HOD HR</span></td><td data-dc-tpl="60" style="font-size: 12px; color: rgb(58, 68, 89);"><span class="sc-interp">CEO · [date] ✓ in time</span></td><td data-dc-tpl="61" style="font-size: 12px; color: rgb(58, 68, 89);"><span class="sc-interp">[DD Mon] · on track</span></td><td data-dc-tpl="62"><span data-dc-tpl="63" class="pill" style="background: rgb(238, 241, 245); color: rgb(58, 68, 89);"><span class="sc-interp">Action in progress</span></span></td><td data-dc-tpl="64"><button data-dc-tpl="65" class="rowbtn" type="button" aria-label="Show trail for HR-R01">Trail</button></td></tr>
+            
+              <tr data-dc-tpl="53" style="background: rgb(255, 255, 255);"><td data-dc-tpl="54" class="m" style="font-size: 12px;"><span class="sc-interp">HR-R02</span></td><td data-dc-tpl="55" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">QMS-R[000]</span></td><td data-dc-tpl="56"><span class="sc-interp">Leave · BCEA</span></td><td data-dc-tpl="57"><span data-dc-tpl="58" class="pill" style="background: rgb(255, 243, 217); color: rgb(180, 83, 42);"><span class="sc-interp">High</span></span></td><td data-dc-tpl="59"><span class="sc-interp">HOD HR</span></td><td data-dc-tpl="60" style="font-size: 12px; color: rgb(180, 35, 24);"><span class="sc-interp">Not reported · 3 days</span></td><td data-dc-tpl="61" style="font-size: 12px; color: rgb(58, 68, 89);"><span class="sc-interp">[DD Mon]</span></td><td data-dc-tpl="62"><span data-dc-tpl="63" class="pill" style="background: rgb(238, 241, 245); color: rgb(58, 68, 89);"><span class="sc-interp">Open</span></span></td><td data-dc-tpl="64"><button data-dc-tpl="65" class="rowbtn" type="button" aria-label="Show trail for HR-R02">Trail</button></td></tr>
+            
+              <tr data-dc-tpl="53" style="background: rgb(255, 255, 255);"><td data-dc-tpl="54" class="m" style="font-size: 12px;"><span class="sc-interp">HR-R04</span></td><td data-dc-tpl="55" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">QMS-R[000]</span></td><td data-dc-tpl="56"><span class="sc-interp">POPIA</span></td><td data-dc-tpl="57"><span data-dc-tpl="58" class="pill" style="background: rgb(255, 248, 232); color: rgb(138, 88, 0);"><span class="sc-interp">Medium</span></span></td><td data-dc-tpl="59"><span class="sc-interp">HOD HR</span></td><td data-dc-tpl="60" style="font-size: 12px; color: rgb(58, 68, 89);"><span class="sc-interp">HOD · [date] ✓</span></td><td data-dc-tpl="61" style="font-size: 12px; color: rgb(180, 35, 24);"><span class="sc-interp">[DD Mon] · overdue</span></td><td data-dc-tpl="62"><span data-dc-tpl="63" class="pill" style="background: rgb(238, 241, 245); color: rgb(58, 68, 89);"><span class="sc-interp">Action in progress</span></span></td><td data-dc-tpl="64"><button data-dc-tpl="65" class="rowbtn" type="button" aria-label="Show trail for HR-R04">Trail</button></td></tr>
+            
+              <tr data-dc-tpl="53" style="background: rgb(255, 255, 255);"><td data-dc-tpl="54" class="m" style="font-size: 12px;"><span class="sc-interp">HR-R06</span></td><td data-dc-tpl="55" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">QMS-R[000]</span></td><td data-dc-tpl="56"><span class="sc-interp">Tax · labour</span></td><td data-dc-tpl="57"><span data-dc-tpl="58" class="pill" style="background: rgb(255, 243, 217); color: rgb(180, 83, 42);"><span class="sc-interp">High</span></span></td><td data-dc-tpl="59"><span class="sc-interp">Head of Finance</span></td><td data-dc-tpl="60" style="font-size: 12px; color: rgb(58, 68, 89);"><span class="sc-interp">CEO · [date] ✓ in time</span></td><td data-dc-tpl="61" style="font-size: 12px; color: rgb(58, 68, 89);"><span class="sc-interp">[DD Mon]</span></td><td data-dc-tpl="62"><span data-dc-tpl="63" class="pill" style="background: rgb(238, 241, 245); color: rgb(58, 68, 89);"><span class="sc-interp">Reported</span></span></td><td data-dc-tpl="64"><button data-dc-tpl="65" class="rowbtn" type="button" aria-label="Show trail for HR-R06">Trail</button></td></tr>
+            
+              <tr data-dc-tpl="53" style="background: rgb(255, 255, 255);"><td data-dc-tpl="54" class="m" style="font-size: 12px;"><span class="sc-interp">HR-R09</span></td><td data-dc-tpl="55" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">QMS-R[000]</span></td><td data-dc-tpl="56"><span class="sc-interp">Policy</span></td><td data-dc-tpl="57"><span data-dc-tpl="58" class="pill" style="background: rgb(255, 248, 232); color: rgb(138, 88, 0);"><span class="sc-interp">Medium</span></span></td><td data-dc-tpl="59"><span class="sc-interp">HOD HR</span></td><td data-dc-tpl="60" style="font-size: 12px; color: rgb(58, 68, 89);"><span class="sc-interp">HOD · [date] ✓</span></td><td data-dc-tpl="61" style="font-size: 12px; color: rgb(30, 122, 79);"><span class="sc-interp">Done</span></td><td data-dc-tpl="62"><span data-dc-tpl="63" class="pill" style="background: rgb(238, 241, 245); color: rgb(58, 68, 89);"><span class="sc-interp">Closed</span></span></td><td data-dc-tpl="64"><button data-dc-tpl="65" class="rowbtn" type="button" aria-label="Show trail for HR-R09">Trail</button></td></tr>
+            
+              <tr data-dc-tpl="53" style="background: rgb(255, 255, 255);"><td data-dc-tpl="54" class="m" style="font-size: 12px;"><span class="sc-interp">HR-R10</span></td><td data-dc-tpl="55" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">QMS-R[000]</span></td><td data-dc-tpl="56"><span class="sc-interp">Contracts</span></td><td data-dc-tpl="57"><span data-dc-tpl="58" class="pill" style="background: rgb(227, 244, 236); color: rgb(30, 122, 79);"><span class="sc-interp">Low</span></span></td><td data-dc-tpl="59"><span class="sc-interp">HR Administrator</span></td><td data-dc-tpl="60" style="font-size: 12px; color: rgb(58, 68, 89);"><span class="sc-interp">Quarterly report</span></td><td data-dc-tpl="61" style="font-size: 12px; color: rgb(58, 68, 89);"><span class="sc-interp">[DD Mon]</span></td><td data-dc-tpl="62"><span data-dc-tpl="63" class="pill" style="background: rgb(238, 241, 245); color: rgb(58, 68, 89);"><span class="sc-interp">Open</span></span></td><td data-dc-tpl="64"><button data-dc-tpl="65" class="rowbtn" type="button" aria-label="Show trail for HR-R10">Trail</button></td></tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div data-dc-tpl="66" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 16px; align-items: start;">
+      <section data-dc-tpl="67" class="card" style="padding: 18px 20px; min-width: 0px;">
+        <h2 data-dc-tpl="68" class="h2">Trail · <span class="sc-interp">HR-R01</span> · <span class="sc-interp">Leave · BCEA</span></h2>
+        <div data-dc-tpl="69" style="display: flex; flex-direction: column;">
+          
+            <div data-dc-tpl="71" style="display: flex; gap: 12px; padding: 10px 0px; border-bottom: 1px solid rgb(238, 241, 245);">
+              <span data-dc-tpl="72" style="width: 10px; height: 10px; margin-top: 5px; border-radius: 99px; background: rgb(31, 78, 140); flex: 0 0 auto;"></span>
+              <div data-dc-tpl="73" style="flex: 1 1 0%;"><div data-dc-tpl="74" style="font-size: 14px; font-weight: 700;"><span class="sc-interp">Logged in PERSAL · rated High (4 × 4)</span></div><div data-dc-tpl="75" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">[DD Mon]</span> · <span class="sc-interp">HR Administrator</span></div></div>
+            </div>
+          
+            <div data-dc-tpl="71" style="display: flex; gap: 12px; padding: 10px 0px; border-bottom: 1px solid rgb(238, 241, 245);">
+              <span data-dc-tpl="72" style="width: 10px; height: 10px; margin-top: 5px; border-radius: 99px; background: rgb(31, 78, 140); flex: 0 0 auto;"></span>
+              <div data-dc-tpl="73" style="flex: 1 1 0%;"><div data-dc-tpl="74" style="font-size: 14px; font-weight: 700;"><span class="sc-interp">Alert received · QMS-R[000] created</span></div><div data-dc-tpl="75" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">[DD Mon]</span> · <span class="sc-interp">QMS Administrator</span></div></div>
+            </div>
+          
+            <div data-dc-tpl="71" style="display: flex; gap: 12px; padding: 10px 0px; border-bottom: 1px solid rgb(238, 241, 245);">
+              <span data-dc-tpl="72" style="width: 10px; height: 10px; margin-top: 5px; border-radius: 99px; background: rgb(30, 122, 79); flex: 0 0 auto;"></span>
+              <div data-dc-tpl="73" style="flex: 1 1 0%;"><div data-dc-tpl="74" style="font-size: 14px; font-weight: 700;"><span class="sc-interp">Reported to the CEO (within 48 hours)</span></div><div data-dc-tpl="75" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">[DD Mon]</span> · <span class="sc-interp">HOD HR</span></div></div>
+            </div>
+          
+            <div data-dc-tpl="71" style="display: flex; gap: 12px; padding: 10px 0px; border-bottom: 1px solid rgb(238, 241, 245);">
+              <span data-dc-tpl="72" style="width: 10px; height: 10px; margin-top: 5px; border-radius: 99px; background: rgb(138, 88, 0); flex: 0 0 auto;"></span>
+              <div data-dc-tpl="73" style="flex: 1 1 0%;"><div data-dc-tpl="74" style="font-size: 14px; font-weight: 700;"><span class="sc-interp">Action: leave history import and signed opening balances</span></div><div data-dc-tpl="75" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Due [DD Mon]</span> · <span class="sc-interp">HOD HR</span></div></div>
+            </div>
+          
+            <div data-dc-tpl="71" style="display: flex; gap: 12px; padding: 10px 0px; border-bottom: 1px solid rgb(238, 241, 245);">
+              <span data-dc-tpl="72" style="width: 10px; height: 10px; margin-top: 5px; border-radius: 99px; background: rgb(201, 208, 220); flex: 0 0 auto;"></span>
+              <div data-dc-tpl="73" style="flex: 1 1 0%;"><div data-dc-tpl="74" style="font-size: 14px; font-weight: 700;"><span class="sc-interp">Closure: waiting for evidence and approval</span></div><div data-dc-tpl="75" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">—</span> · <span class="sc-interp">—</span></div></div>
+            </div>
+          
+        </div>
+      </section>
+      <section data-dc-tpl="76" class="card" style="padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; font-size: 14px;">
+        <h2 data-dc-tpl="77" class="h2" style="margin: 0px 0px 6px;">How the tracker works</h2>
+        <span data-dc-tpl="78">1. A new HR risk, a level change or a status change reaches you here and by email or Teams the same day.</span>
+        <span data-dc-tpl="79">2. You give it a QMS ID in the QMS risk register; both registers stay linked.</span>
+        <span data-dc-tpl="80">3. You are warned when a risk is not reported in time (Critical: immediately; High: [48 hours]; Medium: [5] working days), or when a review or action is overdue.</span>
+        <span data-dc-tpl="81">4. A risk shows Closed only after the owner’s closure note, an evidence reference and HOD HR approval (CEO too for High and Critical).</span>
+        <span data-dc-tpl="82">5. Closed risks stay on the quarterly report for one more quarter as “closed this quarter”.</span>
+        <span data-dc-tpl="83" style="font-size: 12px; color: rgb(91, 100, 120); margin-top: 4px;">Quarterly report goes to [HOD Operations and Systems · to confirm].</span>
+      </section>
+    </div>
+  </main></div></div></div>
+</body></html>

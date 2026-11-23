@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LeaveImport</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.side a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3A4459;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}
+.side a:hover{background:#EEF2F8}
+.side .code{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A93A6}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:8px 10px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:11px 10px;border-bottom:1px solid #EEF1F5}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+
+html,body{margin:0;background:#F3F5F9;font-family:Manrope,sans-serif;color:#16213A}
+body>main{padding:14px 16px !important;max-width:none}
+@media (max-width:700px){body [style*="minmax(4"]{grid-template-columns:1fr !important}}
+</style></head><body>
+<main data-dc-tpl="53" style="flex: 999 1 560px; min-width: 0px; box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px;">
+    <div data-dc-tpl="54" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+      <div data-dc-tpl="55">
+        <h1 data-dc-tpl="56" style="margin: 0px; font-size: 28px; font-weight: 800;">Leave history import</h1>
+        <p data-dc-tpl="57" style="margin: 4px 0px 0px; color: rgb(91, 100, 120); font-size: 14px;">Each person starts on PERSAL with an opening balance checked by HR and signed by the employee. Old records come across read-only, with the scans attached.</p>
+      </div>
+      <div data-dc-tpl="58" style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <a data-dc-tpl="59" href="../index.html#/d/leave-import" target="_top" style="text-decoration: none; background: rgb(255, 255, 255); border: 1px solid rgb(213, 219, 229); color: rgb(22, 33, 58); padding: 11px 16px; border-radius: 10px; font-weight: 700; font-size: 14px;">Download import template</a>
+        <a data-dc-tpl="60" href="../index.html#/d/leave-import" target="_top" style="text-decoration: none; background: rgb(31, 78, 140); color: rgb(255, 255, 255); padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 14px;">Upload source file</a>
+      </div>
+    </div>
+    <section data-dc-tpl="61" class="card" style="padding: 18px 20px;">
+      <div data-dc-tpl="62" style="display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 12px;"><h2 data-dc-tpl="63" class="h2" style="margin: 0px;">Cut-over steps</h2><span data-dc-tpl="64" style="font-size: 13px; color: rgb(91, 100, 120);">Leave stops in SimplePay on <strong data-dc-tpl="65" style="color: rgb(22, 33, 58);">[1 April 2027]</strong></span></div>
+      <ol data-dc-tpl="66" style="list-style: none; margin: 0px; padding: 0px; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px;">
+        
+          <li data-dc-tpl="68" style="border-radius: 12px; padding: 12px; background: rgb(242, 250, 246); border: 1px solid rgb(191, 227, 207); display: flex; flex-direction: column; gap: 4px;">
+            <span data-dc-tpl="69" style="display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="70" style="width: 24px; height: 24px; border-radius: 99px; background: rgb(30, 122, 79); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;"><span class="sc-interp">1</span></span><span data-dc-tpl="71" style="font-size: 11px; font-weight: 800; color: rgb(30, 122, 79); text-transform: uppercase;"><span class="sc-interp">Done</span></span></span>
+            <span data-dc-tpl="72" style="font-size: 14px; font-weight: 800;"><span class="sc-interp">List sources</span></span>
+            <span data-dc-tpl="73" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">SimplePay, Excel trackers, paper forms, closure dates</span></span>
+          </li>
+        
+          <li data-dc-tpl="68" style="border-radius: 12px; padding: 12px; background: rgb(255, 248, 232); border: 1px solid rgb(241, 221, 168); display: flex; flex-direction: column; gap: 4px;">
+            <span data-dc-tpl="69" style="display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="70" style="width: 24px; height: 24px; border-radius: 99px; background: rgb(138, 88, 0); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;"><span class="sc-interp">2</span></span><span data-dc-tpl="71" style="font-size: 11px; font-weight: 800; color: rgb(138, 88, 0); text-transform: uppercase;"><span class="sc-interp">Now</span></span></span>
+            <span data-dc-tpl="72" style="font-size: 14px; font-weight: 800;"><span class="sc-interp">Scan paper</span></span>
+            <span data-dc-tpl="73" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">One scan per form, named by PERSAL no and date</span></span>
+          </li>
+        
+          <li data-dc-tpl="68" style="border-radius: 12px; padding: 12px; background: rgb(255, 255, 255); border: 1px solid rgb(227, 231, 238); display: flex; flex-direction: column; gap: 4px;">
+            <span data-dc-tpl="69" style="display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="70" style="width: 24px; height: 24px; border-radius: 99px; background: rgb(138, 147, 166); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;"><span class="sc-interp">3</span></span><span data-dc-tpl="71" style="font-size: 11px; font-weight: 800; color: rgb(138, 147, 166); text-transform: uppercase;"><span class="sc-interp">Next</span></span></span>
+            <span data-dc-tpl="72" style="font-size: 14px; font-weight: 800;"><span class="sc-interp">Fill template</span></span>
+            <span data-dc-tpl="73" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">One row per leave event, every source</span></span>
+          </li>
+        
+          <li data-dc-tpl="68" style="border-radius: 12px; padding: 12px; background: rgb(255, 255, 255); border: 1px solid rgb(227, 231, 238); display: flex; flex-direction: column; gap: 4px;">
+            <span data-dc-tpl="69" style="display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="70" style="width: 24px; height: 24px; border-radius: 99px; background: rgb(138, 147, 166); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;"><span class="sc-interp">4</span></span><span data-dc-tpl="71" style="font-size: 11px; font-weight: 800; color: rgb(138, 147, 166); text-transform: uppercase;"><span class="sc-interp">Next</span></span></span>
+            <span data-dc-tpl="72" style="font-size: 14px; font-weight: 800;"><span class="sc-interp">Check each person</span></span>
+            <span data-dc-tpl="73" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Earned − taken vs SimplePay</span></span>
+          </li>
+        
+          <li data-dc-tpl="68" style="border-radius: 12px; padding: 12px; background: rgb(255, 255, 255); border: 1px solid rgb(227, 231, 238); display: flex; flex-direction: column; gap: 4px;">
+            <span data-dc-tpl="69" style="display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="70" style="width: 24px; height: 24px; border-radius: 99px; background: rgb(138, 147, 166); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;"><span class="sc-interp">5</span></span><span data-dc-tpl="71" style="font-size: 11px; font-weight: 800; color: rgb(138, 147, 166); text-transform: uppercase;"><span class="sc-interp">Next</span></span></span>
+            <span data-dc-tpl="72" style="font-size: 14px; font-weight: 800;"><span class="sc-interp">Settle differences</span></span>
+            <span data-dc-tpl="73" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Credit back, accept or refer</span></span>
+          </li>
+        
+          <li data-dc-tpl="68" style="border-radius: 12px; padding: 12px; background: rgb(255, 255, 255); border: 1px solid rgb(227, 231, 238); display: flex; flex-direction: column; gap: 4px;">
+            <span data-dc-tpl="69" style="display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="70" style="width: 24px; height: 24px; border-radius: 99px; background: rgb(138, 147, 166); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;"><span class="sc-interp">6</span></span><span data-dc-tpl="71" style="font-size: 11px; font-weight: 800; color: rgb(138, 147, 166); text-transform: uppercase;"><span class="sc-interp">Next</span></span></span>
+            <span data-dc-tpl="72" style="font-size: 14px; font-weight: 800;"><span class="sc-interp">Sign off</span></span>
+            <span data-dc-tpl="73" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Employee and HR sign the opening balance</span></span>
+          </li>
+        
+          <li data-dc-tpl="68" style="border-radius: 12px; padding: 12px; background: rgb(255, 255, 255); border: 1px solid rgb(227, 231, 238); display: flex; flex-direction: column; gap: 4px;">
+            <span data-dc-tpl="69" style="display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="70" style="width: 24px; height: 24px; border-radius: 99px; background: rgb(138, 147, 166); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;"><span class="sc-interp">7</span></span><span data-dc-tpl="71" style="font-size: 11px; font-weight: 800; color: rgb(138, 147, 166); text-transform: uppercase;"><span class="sc-interp">Next</span></span></span>
+            <span data-dc-tpl="72" style="font-size: 14px; font-weight: 800;"><span class="sc-interp">Cut over</span></span>
+            <span data-dc-tpl="73" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Leave stops in SimplePay; balances go live</span></span>
+          </li>
+        
+      </ol>
+    </section>
+    <section data-dc-tpl="74" class="card" style="min-width: 0px;">
+      <div data-dc-tpl="75" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px;"><h2 data-dc-tpl="76" class="h2" style="margin: 0px;">Per-person check · annual leave</h2><span data-dc-tpl="77" style="font-size: 12px; color: rgb(91, 100, 120);">Earned − taken (all sources) compared with the last SimplePay balance</span></div>
+      <div data-dc-tpl="78" style="overflow-x: auto; padding: 0px 8px 8px;">
+        <table data-dc-tpl="79" class="tbl">
+          <thead data-dc-tpl="80"><tr data-dc-tpl="81"><th data-dc-tpl="82">PERSAL no</th><th data-dc-tpl="83">Name</th><th data-dc-tpl="84">Earned</th><th data-dc-tpl="85">Taken</th><th data-dc-tpl="86">Expected</th><th data-dc-tpl="87">SimplePay</th><th data-dc-tpl="88">Difference</th><th data-dc-tpl="89">Wrongly deducted</th><th data-dc-tpl="90">Status</th></tr></thead>
+          <tbody data-dc-tpl="91">
+            
+              <tr data-dc-tpl="93"><td data-dc-tpl="94" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">[00000000]</span></td><td data-dc-tpl="95" style="font-weight: 700;"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="96"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="97"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="98"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="99"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="100" style="font-weight: 800; color: rgb(30, 122, 79);"><span class="sc-interp">0.00</span></td><td data-dc-tpl="101"><span class="sc-interp">0</span></td><td data-dc-tpl="102"><span data-dc-tpl="103" class="pill" style="background: rgb(227, 244, 236); color: rgb(30, 122, 79);"><span class="sc-interp">Signed</span></span></td></tr>
+            
+              <tr data-dc-tpl="93"><td data-dc-tpl="94" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">[00000000]</span></td><td data-dc-tpl="95" style="font-weight: 700;"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="96"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="97"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="98"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="99"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="100" style="font-weight: 800; color: rgb(180, 35, 24);"><span class="sc-interp">[−00.00]</span></td><td data-dc-tpl="101"><span class="sc-interp">[0]</span></td><td data-dc-tpl="102"><span data-dc-tpl="103" class="pill" style="background: rgb(255, 243, 217); color: rgb(138, 88, 0);"><span class="sc-interp">Differences</span></span></td></tr>
+            
+              <tr data-dc-tpl="93"><td data-dc-tpl="94" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">[00000000]</span></td><td data-dc-tpl="95" style="font-weight: 700;"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="96"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="97"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="98"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="99"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="100" style="font-weight: 800; color: rgb(180, 35, 24);"><span class="sc-interp">[−00.00]</span></td><td data-dc-tpl="101"><span class="sc-interp">[0]</span></td><td data-dc-tpl="102"><span data-dc-tpl="103" class="pill" style="background: rgb(253, 236, 234); color: rgb(180, 35, 24);"><span class="sc-interp">Disputed</span></span></td></tr>
+            
+              <tr data-dc-tpl="93"><td data-dc-tpl="94" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">[00000000]</span></td><td data-dc-tpl="95" style="font-weight: 700;"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="96"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="97"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="98"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="99"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="100" style="font-weight: 800; color: rgb(30, 122, 79);"><span class="sc-interp">0.00</span></td><td data-dc-tpl="101"><span class="sc-interp">0</span></td><td data-dc-tpl="102"><span data-dc-tpl="103" class="pill" style="background: rgb(227, 244, 236); color: rgb(30, 122, 79);"><span class="sc-interp">Agreed</span></span></td></tr>
+            
+              <tr data-dc-tpl="93"><td data-dc-tpl="94" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">[00000000]</span></td><td data-dc-tpl="95" style="font-weight: 700;"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="96"><span class="sc-interp">—</span></td><td data-dc-tpl="97"><span class="sc-interp">—</span></td><td data-dc-tpl="98"><span class="sc-interp">—</span></td><td data-dc-tpl="99"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="100" style="font-weight: 800; color: rgb(180, 35, 24);"><span class="sc-interp">—</span></td><td data-dc-tpl="101"><span class="sc-interp">—</span></td><td data-dc-tpl="102"><span data-dc-tpl="103" class="pill" style="background: rgb(232, 239, 248); color: rgb(31, 78, 140);"><span class="sc-interp">Checking</span></span></td></tr>
+            
+              <tr data-dc-tpl="93"><td data-dc-tpl="94" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">[00000000]</span></td><td data-dc-tpl="95" style="font-weight: 700;"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="96"><span class="sc-interp">—</span></td><td data-dc-tpl="97"><span class="sc-interp">—</span></td><td data-dc-tpl="98"><span class="sc-interp">—</span></td><td data-dc-tpl="99"><span class="sc-interp">[00.00]</span></td><td data-dc-tpl="100" style="font-weight: 800; color: rgb(180, 35, 24);"><span class="sc-interp">—</span></td><td data-dc-tpl="101"><span class="sc-interp">—</span></td><td data-dc-tpl="102"><span data-dc-tpl="103" class="pill" style="background: rgb(238, 241, 245); color: rgb(91, 100, 120);"><span class="sc-interp">Not started</span></span></td></tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div data-dc-tpl="104" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 16px; align-items: start;">
+      <section data-dc-tpl="105" class="card" style="padding: 18px 20px; min-width: 0px;">
+        <h2 data-dc-tpl="106" class="h2">Sources · [Employee name]</h2>
+        <div data-dc-tpl="107" style="overflow-x: auto;">
+          <table data-dc-tpl="108" class="tbl">
+            <thead data-dc-tpl="109"><tr data-dc-tpl="110"><th data-dc-tpl="111">Source</th><th data-dc-tpl="112">Years</th><th data-dc-tpl="113">Records</th><th data-dc-tpl="114">Evidence</th></tr></thead>
+            <tbody data-dc-tpl="115">
+              
+                <tr data-dc-tpl="117"><td data-dc-tpl="118" style="font-weight: 700;"><span class="sc-interp">SimplePay (admin report)</span></td><td data-dc-tpl="119"><span class="sc-interp">[2018]–[2027]</span></td><td data-dc-tpl="120"><span class="sc-interp">[00]</span></td><td data-dc-tpl="121" style="color: rgb(91, 100, 120); white-space: normal;"><span class="sc-interp">Leave transactions, adjustments and expired leave</span></td></tr>
+              
+                <tr data-dc-tpl="117"><td data-dc-tpl="118" style="font-weight: 700;"><span class="sc-interp">HR Excel tracker</span></td><td data-dc-tpl="119"><span class="sc-interp">[YYYY]</span></td><td data-dc-tpl="120"><span class="sc-interp">[00]</span></td><td data-dc-tpl="121" style="color: rgb(91, 100, 120); white-space: normal;"><span class="sc-interp">Tracker file, the person’s row only</span></td></tr>
+              
+                <tr data-dc-tpl="117"><td data-dc-tpl="118" style="font-weight: 700;"><span class="sc-interp">Paper leave forms</span></td><td data-dc-tpl="119"><span class="sc-interp">[YYYY]–[YYYY]</span></td><td data-dc-tpl="120"><span class="sc-interp">[00]</span></td><td data-dc-tpl="121" style="color: rgb(91, 100, 120); white-space: normal;"><span class="sc-interp">Scans: PERSALno_LEAVE_YYYY-MM-DD</span></td></tr>
+              
+                <tr data-dc-tpl="117"><td data-dc-tpl="118" style="font-weight: 700;"><span class="sc-interp">December closure list</span></td><td data-dc-tpl="119"><span class="sc-interp">Every year</span></td><td data-dc-tpl="120"><span class="sc-interp">[00]</span></td><td data-dc-tpl="121" style="color: rgb(91, 100, 120); white-space: normal;"><span class="sc-interp">Closure dates approved by the CEO</span></td></tr>
+              
+            </tbody>
+          </table>
+        </div>
+        <p data-dc-tpl="122" style="margin: 10px 0px 0px; font-size: 12px; color: rgb(91, 100, 120);">Import template: one row per leave event · PERSAL no · type · from · to · days · source · document reference · status (approved, cancelled, disputed).</p>
+      </section>
+      <section data-dc-tpl="123" class="card" style="padding: 18px 20px; min-width: 0px;">
+        <h2 data-dc-tpl="124" class="h2">Differences to settle</h2>
+        <div data-dc-tpl="125" style="display: flex; flex-direction: column; gap: 8px;">
+          
+            <div data-dc-tpl="127" style="padding: 10px 12px; border-radius: 10px; background: rgb(227, 244, 236); display: flex; flex-direction: column; gap: 4px;">
+              <div data-dc-tpl="128" style="display: flex; justify-content: space-between; gap: 10px;"><strong data-dc-tpl="129" style="font-size: 13px;"><span class="sc-interp">Public holidays recorded as leave</span></strong><span data-dc-tpl="130" style="font-size: 13px; font-weight: 800; color: rgb(30, 122, 79);"><span class="sc-interp">[0] days</span></span></div>
+              <span data-dc-tpl="131" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Found automatically by the public holiday calendar</span></span>
+              <span data-dc-tpl="132" style="font-size: 12px; font-weight: 700; color: rgb(30, 122, 79);"><span class="sc-interp">Credit back</span></span>
+            </div>
+          
+            <div data-dc-tpl="127" style="padding: 10px 12px; border-radius: 10px; background: rgb(227, 244, 236); display: flex; flex-direction: column; gap: 4px;">
+              <div data-dc-tpl="128" style="display: flex; justify-content: space-between; gap: 10px;"><strong data-dc-tpl="129" style="font-size: 13px;"><span class="sc-interp">Overtime time off recorded as annual leave</span></strong><span data-dc-tpl="130" style="font-size: 13px; font-weight: 800; color: rgb(30, 122, 79);"><span class="sc-interp">[0] days</span></span></div>
+              <span data-dc-tpl="131" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Signed overtime form shows the hours bank</span></span>
+              <span data-dc-tpl="132" style="font-size: 12px; font-weight: 700; color: rgb(30, 122, 79);"><span class="sc-interp">Credit back</span></span>
+            </div>
+          
+            <div data-dc-tpl="127" style="padding: 10px 12px; border-radius: 10px; background: rgb(255, 243, 217); display: flex; flex-direction: column; gap: 4px;">
+              <div data-dc-tpl="128" style="display: flex; justify-content: space-between; gap: 10px;"><strong data-dc-tpl="129" style="font-size: 13px;"><span class="sc-interp">Closure days with no leave record</span></strong><span data-dc-tpl="130" style="font-size: 13px; font-weight: 800; color: rgb(138, 88, 0);"><span class="sc-interp">[0] days</span></span></div>
+              <span data-dc-tpl="131" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Closure dates known, nothing captured</span></span>
+              <span data-dc-tpl="132" style="font-size: 12px; font-weight: 700; color: rgb(138, 88, 0);"><span class="sc-interp">[HR to confirm]</span></span>
+            </div>
+          
+            <div data-dc-tpl="127" style="padding: 10px 12px; border-radius: 10px; background: rgb(253, 236, 234); display: flex; flex-direction: column; gap: 4px;">
+              <div data-dc-tpl="128" style="display: flex; justify-content: space-between; gap: 10px;"><strong data-dc-tpl="129" style="font-size: 13px;"><span class="sc-interp">Leave not explained by any record</span></strong><span data-dc-tpl="130" style="font-size: 13px; font-weight: 800; color: rgb(180, 35, 24);"><span class="sc-interp">[00.00] days</span></span></div>
+              <span data-dc-tpl="131" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Likely expired leave or an HR adjustment</span></span>
+              <span data-dc-tpl="132" style="font-size: 12px; font-weight: 700; color: rgb(180, 35, 24);"><span class="sc-interp">[Decision needed]</span></span>
+            </div>
+          
+        </div>
+        <div data-dc-tpl="133" style="margin-top: 14px; display: grid; grid-template-columns: repeat(2, minmax(0px, 1fr)); gap: 10px;">
+          <div data-dc-tpl="134" style="border: 1px dashed rgb(213, 219, 229); border-radius: 10px; padding: 10px 12px; font-size: 12px; color: rgb(91, 100, 120);"><strong data-dc-tpl="135" style="color: rgb(22, 33, 58); display: block;">Employee sign-off</strong>[Not signed]</div>
+          <div data-dc-tpl="136" style="border: 1px dashed rgb(213, 219, 229); border-radius: 10px; padding: 10px 12px; font-size: 12px; color: rgb(91, 100, 120);"><strong data-dc-tpl="137" style="color: rgb(22, 33, 58); display: block;">HR sign-off</strong>[Not signed]</div>
+        </div>
+        <p data-dc-tpl="138" style="margin: 10px 0px 0px; font-size: 12px; color: rgb(91, 100, 120);">Disputed days are loaded as "disputed" so the rest of the balance can go live. Adjustments go through request 3.6 (HR → HOD HR → HOF).</p>
+      </section>
+    </div>
+  </main>
+</body></html>

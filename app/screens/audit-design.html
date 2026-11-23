@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AuditLog</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.side a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3A4459;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}
+.side a:hover{background:#EEF2F8}
+.side .code{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A93A6}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:8px 10px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:11px 10px;border-bottom:1px solid #EEF1F5}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.f{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#5B6478}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+
+html,body{margin:0;background:#F3F5F9;font-family:Manrope,sans-serif;color:#16213A}
+body>main{padding:14px 16px !important;max-width:none}
+@media (max-width:700px){body [style*="minmax(4"]{grid-template-columns:1fr !important}}
+</style></head><body>
+<main data-dc-tpl="53" style="flex: 999 1 560px; min-width: 0px; box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px;">
+    <div data-dc-tpl="54" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+      <div data-dc-tpl="55">
+        <h1 data-dc-tpl="56" style="margin: 0px; font-size: 28px; font-weight: 800;">Audit log</h1>
+        <p data-dc-tpl="57" style="margin: 4px 0px 0px; color: rgb(91, 100, 120); font-size: 14px;">Every view of a pay, ID or Employment Equity field and every change is recorded · entries can never be edited or deleted</p>
+      </div>
+      <div data-dc-tpl="58" style="display: flex; gap: 10px; flex-wrap: wrap;"><a data-dc-tpl="59" href="../index.html#/d/audit-design" target="_top" style="text-decoration: none; background: rgb(255, 255, 255); border: 1px solid rgb(213, 219, 229); color: rgb(22, 33, 58); padding: 11px 16px; border-radius: 10px; font-weight: 700; font-size: 14px;">Export for Information Officer</a></div>
+    </div>
+    <section data-dc-tpl="60" class="card" style="padding: 16px 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px;">
+      <label data-dc-tpl="61" class="f">Person<input data-dc-tpl="62" placeholder="Name or PERSAL no" style="font-family: Manrope, sans-serif; font-size: 14px; padding: 10px 12px; border: 1px solid rgb(213, 219, 229); border-radius: 10px;"></label>
+      <label data-dc-tpl="63" class="f">Done by<select data-dc-tpl="64" style="font-family: Manrope, sans-serif; font-size: 14px; padding: 10px 12px; border: 1px solid rgb(213, 219, 229); border-radius: 10px; background: rgb(255, 255, 255);"><option data-dc-tpl="65">Anyone</option><option data-dc-tpl="66">HOD HR</option><option data-dc-tpl="67">HR Administrator</option><option data-dc-tpl="68">Head of Finance</option><option data-dc-tpl="69">CEO</option><option data-dc-tpl="70">Leave portal users</option><option data-dc-tpl="71">System</option></select></label>
+      <label data-dc-tpl="72" class="f">Action<select data-dc-tpl="73" style="font-family: Manrope, sans-serif; font-size: 14px; padding: 10px 12px; border: 1px solid rgb(213, 219, 229); border-radius: 10px; background: rgb(255, 255, 255);"><option data-dc-tpl="74">All</option><option data-dc-tpl="75">Viewed sensitive field</option><option data-dc-tpl="76">Changed</option><option data-dc-tpl="77">Approved / declined</option><option data-dc-tpl="78">Exported</option><option data-dc-tpl="79">Signed in</option></select></label>
+      <label data-dc-tpl="80" class="f">From<input data-dc-tpl="81" type="date" value="2027-04-01" style="font-family: Manrope, sans-serif; font-size: 14px; padding: 10px 12px; border: 1px solid rgb(213, 219, 229); border-radius: 10px;"></label>
+    </section>
+    <section data-dc-tpl="82" class="card" style="min-width: 0px;">
+      <div data-dc-tpl="83" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px;"><h2 data-dc-tpl="84" class="h2" style="margin: 0px;">Entries</h2><span data-dc-tpl="85" style="font-size: 12px; color: rgb(91, 100, 120);"></span></div>
+      <div data-dc-tpl="86" style="overflow-x: auto; padding: 0px 8px 8px;">
+        <table data-dc-tpl="87" class="tbl">
+          <thead data-dc-tpl="88"><tr data-dc-tpl="89"><th data-dc-tpl="90">When</th><th data-dc-tpl="91">Who</th><th data-dc-tpl="92">Role</th><th data-dc-tpl="93">Action</th><th data-dc-tpl="94">Record</th><th data-dc-tpl="95">Detail</th><th data-dc-tpl="96">Reference</th></tr></thead>
+          <tbody data-dc-tpl="97">
+            
+              <tr data-dc-tpl="99"><td data-dc-tpl="100" style="color: rgb(91, 100, 120);"><span class="sc-interp">[DD Mon] 09:14</span></td><td data-dc-tpl="101" style="font-weight: 700;"><span class="sc-interp">[Name]</span></td><td data-dc-tpl="102"><span class="sc-interp">Head of Finance</span></td><td data-dc-tpl="103"><span data-dc-tpl="104" class="pill" style="background: rgb(255, 243, 217); color: rgb(138, 88, 0);"><span class="sc-interp">Viewed sensitive field</span></span></td><td data-dc-tpl="105"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="106" style="white-space: normal; min-width: 240px;"><span class="sc-interp">Bank account number shown</span></td><td data-dc-tpl="107" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">—</span></td></tr>
+            
+              <tr data-dc-tpl="99"><td data-dc-tpl="100" style="color: rgb(91, 100, 120);"><span class="sc-interp">[DD Mon] 09:02</span></td><td data-dc-tpl="101" style="font-weight: 700;"><span class="sc-interp">[Name]</span></td><td data-dc-tpl="102"><span class="sc-interp">HR Administrator</span></td><td data-dc-tpl="103"><span data-dc-tpl="104" class="pill" style="background: rgb(232, 239, 248); color: rgb(31, 78, 140);"><span class="sc-interp">Changed</span></span></td><td data-dc-tpl="105"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="106" style="white-space: normal; min-width: 240px;"><span class="sc-interp">Cell number •••• → ••••</span></td><td data-dc-tpl="107" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">PR-27-0[000]</span></td></tr>
+            
+              <tr data-dc-tpl="99"><td data-dc-tpl="100" style="color: rgb(91, 100, 120);"><span class="sc-interp">[DD Mon] 08:47</span></td><td data-dc-tpl="101" style="font-weight: 700;"><span class="sc-interp">[Name]</span></td><td data-dc-tpl="102"><span class="sc-interp">Direct manager</span></td><td data-dc-tpl="103"><span data-dc-tpl="104" class="pill" style="background: rgb(227, 244, 236); color: rgb(30, 122, 79);"><span class="sc-interp">Approved</span></span></td><td data-dc-tpl="105"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="106" style="white-space: normal; min-width: 240px;"><span class="sc-interp">Annual leave [DD]–[DD Mon], 3 days</span></td><td data-dc-tpl="107" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">LV-27-0[000]</span></td></tr>
+            
+              <tr data-dc-tpl="99"><td data-dc-tpl="100" style="color: rgb(91, 100, 120);"><span class="sc-interp">[DD Mon] 16:30</span></td><td data-dc-tpl="101" style="font-weight: 700;"><span class="sc-interp">System</span></td><td data-dc-tpl="102"><span class="sc-interp">PERSAL</span></td><td data-dc-tpl="103"><span data-dc-tpl="104" class="pill" style="background: rgb(232, 239, 248); color: rgb(31, 78, 140);"><span class="sc-interp">Changed</span></span></td><td data-dc-tpl="105"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="106" style="white-space: normal; min-width: 240px;"><span class="sc-interp">PERSAL number issued on approval of 2.2</span></td><td data-dc-tpl="107" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">PR-27-0[000]</span></td></tr>
+            
+              <tr data-dc-tpl="99"><td data-dc-tpl="100" style="color: rgb(91, 100, 120);"><span class="sc-interp">[DD Mon] 15:05</span></td><td data-dc-tpl="101" style="font-weight: 700;"><span class="sc-interp">[Name]</span></td><td data-dc-tpl="102"><span class="sc-interp">HOD HR</span></td><td data-dc-tpl="103"><span data-dc-tpl="104" class="pill" style="background: rgb(255, 243, 217); color: rgb(138, 88, 0);"><span class="sc-interp">Viewed sensitive field</span></span></td><td data-dc-tpl="105"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="106" style="white-space: normal; min-width: 240px;"><span class="sc-interp">Employment Equity fields opened</span></td><td data-dc-tpl="107" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">—</span></td></tr>
+            
+              <tr data-dc-tpl="99"><td data-dc-tpl="100" style="color: rgb(91, 100, 120);"><span class="sc-interp">[DD Mon] 11:20</span></td><td data-dc-tpl="101" style="font-weight: 700;"><span class="sc-interp">[Name]</span></td><td data-dc-tpl="102"><span class="sc-interp">CEO</span></td><td data-dc-tpl="103"><span data-dc-tpl="104" class="pill" style="background: rgb(227, 244, 236); color: rgb(30, 122, 79);"><span class="sc-interp">Approved</span></span></td><td data-dc-tpl="105"><span class="sc-interp">All employees</span></td><td data-dc-tpl="106" style="white-space: normal; min-width: 240px;"><span class="sc-interp">December closure [DD Dec]–[DD Jan]</span></td><td data-dc-tpl="107" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">PR-27-0[000]</span></td></tr>
+            
+              <tr data-dc-tpl="99"><td data-dc-tpl="100" style="color: rgb(91, 100, 120);"><span class="sc-interp">[DD Mon] 10:12</span></td><td data-dc-tpl="101" style="font-weight: 700;"><span class="sc-interp">[Name]</span></td><td data-dc-tpl="102"><span class="sc-interp">HOD HR</span></td><td data-dc-tpl="103"><span data-dc-tpl="104" class="pill" style="background: rgb(238, 241, 245); color: rgb(91, 100, 120);"><span class="sc-interp">Exported</span></span></td><td data-dc-tpl="105"><span class="sc-interp">—</span></td><td data-dc-tpl="106" style="white-space: normal; min-width: 240px;"><span class="sc-interp">Leave liability report (Excel)</span></td><td data-dc-tpl="107" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">—</span></td></tr>
+            
+              <tr data-dc-tpl="99"><td data-dc-tpl="100" style="color: rgb(91, 100, 120);"><span class="sc-interp">[DD Mon] 07:58</span></td><td data-dc-tpl="101" style="font-weight: 700;"><span class="sc-interp">[Name]</span></td><td data-dc-tpl="102"><span class="sc-interp">HR Administrator</span></td><td data-dc-tpl="103"><span data-dc-tpl="104" class="pill" style="background: rgb(238, 241, 245); color: rgb(91, 100, 120);"><span class="sc-interp">Signed in</span></span></td><td data-dc-tpl="105"><span class="sc-interp">—</span></td><td data-dc-tpl="106" style="white-space: normal; min-width: 240px;"><span class="sc-interp">Microsoft 365 sign-in</span></td><td data-dc-tpl="107" class="m" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">—</span></td></tr>
+            
+          </tbody>
+        </table>
+      </div>
+      <p data-dc-tpl="108" style="margin: 0px; padding: 0px 20px 16px; font-size: 12px; color: rgb(91, 100, 120);">Old and new values of pay, bank and ID fields are masked here and visible only to HOD HR. Entries are kept for [5] years (retention schedule).</p>
+    </section>
+  </main>
+</body></html>

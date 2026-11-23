@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EmployeeRelations</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.side a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3A4459;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}
+.side a:hover{background:#EEF2F8}
+.side .code{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A93A6}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:8px 10px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:11px 10px;border-bottom:1px solid #EEF1F5}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+.seg{font-family:Manrope,sans-serif;border:0;border-radius:10px;padding:10px 20px;font-size:14px;font-weight:800;cursor:pointer;min-height:44px}
+.f{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#5B6478}
+.f input,.f select,.f textarea{font-family:Manrope,sans-serif;font-size:14px;padding:10px 12px;border:1px solid #D5DBE5;border-radius:10px;background:#fff;color:#16213A}
+.f textarea{min-height:64px;resize:vertical}
+.btn{font-family:Manrope,sans-serif;font-size:14px;font-weight:700;padding:11px 16px;border-radius:10px;cursor:pointer;min-height:44px}
+
+html,body{margin:0;background:#F3F5F9;font-family:Manrope,sans-serif;color:#16213A}
+body>main{padding:14px 16px !important;max-width:none}
+@media (max-width:700px){body [style*="minmax(4"]{grid-template-columns:1fr !important}}
+</style></head><body>
+<main data-dc-tpl="53" style="flex: 999 1 560px; min-width: 0px; box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px;">
+    <div data-dc-tpl="54" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+      <div data-dc-tpl="55">
+        <h1 data-dc-tpl="56" style="margin: 0px; font-size: 28px; font-weight: 800;">Discipline &amp; grievance</h1>
+        <p data-dc-tpl="57" style="margin: 4px 0px 0px; color: rgb(91, 100, 120); font-size: 14px;">HR-03 Disciplinary &amp; Grievance Policy · corrective, not punitive · fair procedure every time</p>
+      </div>
+      <div data-dc-tpl="58" style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <a data-dc-tpl="59" href="../index.html#/d/discipline" target="_top" style="text-decoration: none; background: rgb(255, 255, 255); border: 1px solid rgb(213, 219, 229); color: rgb(22, 33, 58); padding: 11px 16px; border-radius: 10px; font-weight: 700; font-size: 14px;">Log grievance (HR-03-FRM-02)</a>
+        <a data-dc-tpl="60" href="../index.html#/d/discipline" target="_top" style="text-decoration: none; background: rgb(31, 78, 140); color: rgb(255, 255, 255); padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 14px;">+ Open disciplinary case</a>
+      </div>
+    </div>
+    <div data-dc-tpl="61" style="display: flex; gap: 12px; align-items: center; padding: 12px 16px; border-radius: 12px; background: rgb(22, 33, 58); color: rgb(255, 255, 255); font-size: 13px; flex-wrap: wrap;">
+      <svg data-dc-tpl="62" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect data-dc-tpl="63" x="4" y="11" width="16" height="10" rx="2"></rect><path data-dc-tpl="64" d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+      <strong data-dc-tpl="65">Confidential.</strong><span data-dc-tpl="66" style="color: rgb(201, 210, 227);">Only HR and HOD HR see this area. Every view and change is logged. Cases never appear on dashboards, reports or the person's self-service.</span>
+    </div>
+    <div data-dc-tpl="67" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;">
+      
+        <div data-dc-tpl="69" class="card" style="padding: 16px 18px;"><div data-dc-tpl="70" style="font-size: 13px; font-weight: 700; color: rgb(91, 100, 120);"><span class="sc-interp">Open grievances</span></div><div data-dc-tpl="71" style="font-size: 28px; font-weight: 800; margin-top: 6px;"><span class="sc-interp">[0]</span></div><div data-dc-tpl="72" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Oldest [00] days</span></div></div>
+      
+        <div data-dc-tpl="69" class="card" style="padding: 16px 18px;"><div data-dc-tpl="70" style="font-size: 13px; font-weight: 700; color: rgb(91, 100, 120);"><span class="sc-interp">Open disciplinary cases</span></div><div data-dc-tpl="71" style="font-size: 28px; font-weight: 800; margin-top: 6px;"><span class="sc-interp">[0]</span></div><div data-dc-tpl="72" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">[0] hearings scheduled</span></div></div>
+      
+        <div data-dc-tpl="69" class="card" style="padding: 16px 18px;"><div data-dc-tpl="70" style="font-size: 13px; font-weight: 700; color: rgb(91, 100, 120);"><span class="sc-interp">Investigations</span></div><div data-dc-tpl="71" style="font-size: 28px; font-weight: 800; margin-top: 6px;"><span class="sc-interp">[0]</span></div><div data-dc-tpl="72" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">HR-03-SOP-01</span></div></div>
+      
+        <div data-dc-tpl="69" class="card" style="padding: 16px 18px;"><div data-dc-tpl="70" style="font-size: 13px; font-weight: 700; color: rgb(91, 100, 120);"><span class="sc-interp">Appeals pending</span></div><div data-dc-tpl="71" style="font-size: 28px; font-weight: 800; margin-top: 6px;"><span class="sc-interp">[0]</span></div><div data-dc-tpl="72" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Written appeals</span></div></div>
+      
+    </div>
+    <section data-dc-tpl="73" class="card" style="min-width: 0px;">
+      <div data-dc-tpl="74" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px;"><h2 data-dc-tpl="75" class="h2" style="margin: 0px;">Case register</h2><span data-dc-tpl="76" style="font-size: 12px; color: rgb(91, 100, 120);">Applies to employees, interns, volunteers and management</span></div>
+      <div data-dc-tpl="77" style="overflow-x: auto; padding: 0px 8px 8px;">
+        <table data-dc-tpl="78" class="tbl">
+          <thead data-dc-tpl="79"><tr data-dc-tpl="80"><th data-dc-tpl="81">Case no</th><th data-dc-tpl="82">Type</th><th data-dc-tpl="83">Person</th><th data-dc-tpl="84">Opened</th><th data-dc-tpl="85">Matter</th><th data-dc-tpl="86">Current step</th><th data-dc-tpl="87">Status</th></tr></thead>
+          <tbody data-dc-tpl="88">
+            
+              <tr data-dc-tpl="90"><td data-dc-tpl="91" class="m" style="font-size: 12px;"><span class="sc-interp">DC-26-005</span></td><td data-dc-tpl="92" style="font-weight: 700;"><span class="sc-interp">Disciplinary</span></td><td data-dc-tpl="93"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="94" style="color: rgb(91, 100, 120); white-space: nowrap;"><span class="sc-interp">02 Oct 2026</span></td><td data-dc-tpl="95"><span class="sc-interp">Serious misconduct · [summary]</span></td><td data-dc-tpl="96"><span class="sc-interp">Hearing</span></td><td data-dc-tpl="97"><span data-dc-tpl="98" class="pill" style="background: rgb(255, 243, 217); color: rgb(138, 88, 0);"><span class="sc-interp">Open</span></span></td></tr>
+            
+              <tr data-dc-tpl="90"><td data-dc-tpl="91" class="m" style="font-size: 12px;"><span class="sc-interp">GR-26-003</span></td><td data-dc-tpl="92" style="font-weight: 700;"><span class="sc-interp">Grievance</span></td><td data-dc-tpl="93"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="94" style="color: rgb(91, 100, 120); white-space: nowrap;"><span class="sc-interp">09 Oct 2026</span></td><td data-dc-tpl="95"><span class="sc-interp">Treatment by colleague</span></td><td data-dc-tpl="96"><span class="sc-interp">Grievance meeting</span></td><td data-dc-tpl="97"><span data-dc-tpl="98" class="pill" style="background: rgb(255, 243, 217); color: rgb(138, 88, 0);"><span class="sc-interp">Open</span></span></td></tr>
+            
+              <tr data-dc-tpl="90"><td data-dc-tpl="91" class="m" style="font-size: 12px;"><span class="sc-interp">INV-26-002</span></td><td data-dc-tpl="92" style="font-weight: 700;"><span class="sc-interp">Investigation</span></td><td data-dc-tpl="93"><span class="sc-interp">[Employee name]</span></td><td data-dc-tpl="94" style="color: rgb(91, 100, 120); white-space: nowrap;"><span class="sc-interp">12 Oct 2026</span></td><td data-dc-tpl="95"><span class="sc-interp">Misuse of resources</span></td><td data-dc-tpl="96"><span class="sc-interp">Interviewing parties</span></td><td data-dc-tpl="97"><span data-dc-tpl="98" class="pill" style="background: rgb(232, 239, 248); color: rgb(31, 78, 140);"><span class="sc-interp">Open</span></span></td></tr>
+            
+              <tr data-dc-tpl="90"><td data-dc-tpl="91" class="m" style="font-size: 12px;"><span class="sc-interp">DC-26-004</span></td><td data-dc-tpl="92" style="font-weight: 700;"><span class="sc-interp">Disciplinary</span></td><td data-dc-tpl="93"><span class="sc-interp">[Intern name]</span></td><td data-dc-tpl="94" style="color: rgb(91, 100, 120); white-space: nowrap;"><span class="sc-interp">18 Aug 2026</span></td><td data-dc-tpl="95"><span class="sc-interp">Repeated lateness</span></td><td data-dc-tpl="96"><span class="sc-interp">Written warning issued</span></td><td data-dc-tpl="97"><span data-dc-tpl="98" class="pill" style="background: rgb(238, 241, 245); color: rgb(91, 100, 120);"><span class="sc-interp">Closed</span></span></td></tr>
+            
+              <tr data-dc-tpl="90"><td data-dc-tpl="91" class="m" style="font-size: 12px;"><span class="sc-interp">GR-26-002</span></td><td data-dc-tpl="92" style="font-weight: 700;"><span class="sc-interp">Grievance · appeal</span></td><td data-dc-tpl="93"><span class="sc-interp">[Volunteer name]</span></td><td data-dc-tpl="94" style="color: rgb(91, 100, 120); white-space: nowrap;"><span class="sc-interp">30 Jul 2026</span></td><td data-dc-tpl="95"><span class="sc-interp">Application of policy</span></td><td data-dc-tpl="96"><span class="sc-interp">Appeal outcome</span></td><td data-dc-tpl="97"><span data-dc-tpl="98" class="pill" style="background: rgb(238, 241, 245); color: rgb(91, 100, 120);"><span class="sc-interp">Closed</span></span></td></tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div data-dc-tpl="99" role="tablist" aria-label="Case type" style="display: inline-flex; gap: 4px; padding: 4px; background: rgb(230, 234, 241); border-radius: 12px; align-self: flex-start;">
+      
+        <button data-dc-tpl="101" class="seg" role="tab" style="background: rgb(255, 255, 255); color: rgb(22, 33, 58);"><span class="sc-interp">Disciplinary</span></button>
+      
+        <button data-dc-tpl="101" class="seg" role="tab" style="background: transparent; color: rgb(91, 100, 120);"><span class="sc-interp">Grievance</span></button>
+      
+    </div>
+    <section data-dc-tpl="102" class="card" style="padding: 18px 20px;">
+      <h2 data-dc-tpl="103" class="h2"><span class="sc-interp">Disciplinary case DC-26-005 · HR-03-PROC-01</span></h2>
+      <ol data-dc-tpl="104" style="list-style: none; margin: 0px; padding: 0px; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px;">
+        
+          <li data-dc-tpl="106" style="border-radius: 12px; padding: 12px; background: rgb(242, 250, 246); border: 1px solid rgb(191, 227, 207); display: flex; flex-direction: column; gap: 4px;">
+            <span data-dc-tpl="107" style="display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="108" style="width: 24px; height: 24px; border-radius: 99px; background: rgb(30, 122, 79); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;"><span class="sc-interp">1</span></span><span data-dc-tpl="109" style="font-size: 11px; font-weight: 800; color: rgb(30, 122, 79); text-transform: uppercase;"><span class="sc-interp">Done</span></span></span>
+            <span data-dc-tpl="110" style="font-size: 14px; font-weight: 800;"><span class="sc-interp">Matter reported</span></span>
+            <span data-dc-tpl="111" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Breach of HR-02 or misconduct</span></span>
+          </li>
+        
+          <li data-dc-tpl="106" style="border-radius: 12px; padding: 12px; background: rgb(242, 250, 246); border: 1px solid rgb(191, 227, 207); display: flex; flex-direction: column; gap: 4px;">
+            <span data-dc-tpl="107" style="display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="108" style="width: 24px; height: 24px; border-radius: 99px; background: rgb(30, 122, 79); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;"><span class="sc-interp">2</span></span><span data-dc-tpl="109" style="font-size: 11px; font-weight: 800; color: rgb(30, 122, 79); text-transform: uppercase;"><span class="sc-interp">Done</span></span></span>
+            <span data-dc-tpl="110" style="font-size: 14px; font-weight: 800;"><span class="sc-interp">Investigation</span></span>
+            <span data-dc-tpl="111" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">HR-03-SOP-01: scope, evidence, interviews, findings, report</span></span>
+          </li>
+        
+          <li data-dc-tpl="106" style="border-radius: 12px; padding: 12px; background: rgb(242, 250, 246); border: 1px solid rgb(191, 227, 207); display: flex; flex-direction: column; gap: 4px;">
+            <span data-dc-tpl="107" style="display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="108" style="width: 24px; height: 24px; border-radius: 99px; background: rgb(30, 122, 79); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;"><span class="sc-interp">3</span></span><span data-dc-tpl="109" style="font-size: 11px; font-weight: 800; color: rgb(30, 122, 79); text-transform: uppercase;"><span class="sc-interp">Done</span></span></span>
+            <span data-dc-tpl="110" style="font-size: 14px; font-weight: 800;"><span class="sc-interp">Suspension?</span></span>
+            <span data-dc-tpl="111" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Only for serious misconduct, pending investigation</span></span>
+          </li>
+        
+          <li data-dc-tpl="106" style="border-radius: 12px; padding: 12px; background: rgb(242, 250, 246); border: 1px solid rgb(191, 227, 207); display: flex; flex-direction: column; gap: 4px;">
+            <span data-dc-tpl="107" style="display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="108" style="width: 24px; height: 24px; border-radius: 99px; background: rgb(30, 122, 79); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;"><span class="sc-interp">4</span></span><span data-dc-tpl="109" style="font-size: 11px; font-weight: 800; color: rgb(30, 122, 79); text-transform: uppercase;"><span class="sc-interp">Done</span></span></span>
+            <span data-dc-tpl="110" style="font-size: 14px; font-weight: 800;"><span class="sc-interp">Notice of allegations</span></span>
+            <span data-dc-tpl="111" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Employee informed in writing</span></span>
+          </li>
+        
+          <li data-dc-tpl="106" style="border-radius: 12px; padding: 12px; background: rgb(255, 248, 232); border: 1px solid rgb(241, 221, 168); display: flex; flex-direction: column; gap: 4px;">
+            <span data-dc-tpl="107" style="display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="108" style="width: 24px; height: 24px; border-radius: 99px; background: rgb(138, 88, 0); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;"><span class="sc-interp">5</span></span><span data-dc-tpl="109" style="font-size: 11px; font-weight: 800; color: rgb(138, 88, 0); text-transform: uppercase;"><span class="sc-interp">Now</span></span></span>
+            <span data-dc-tpl="110" style="font-size: 14px; font-weight: 800;"><span class="sc-interp">Hearing</span></span>
+            <span data-dc-tpl="111" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Response &amp; mitigating factors · HR-03-FRM-01</span></span>
+          </li>
+        
+          <li data-dc-tpl="106" style="border-radius: 12px; padding: 12px; background: rgb(255, 255, 255); border: 1px solid rgb(227, 231, 238); display: flex; flex-direction: column; gap: 4px;">
+            <span data-dc-tpl="107" style="display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="108" style="width: 24px; height: 24px; border-radius: 99px; background: rgb(138, 147, 166); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;"><span class="sc-interp">6</span></span><span data-dc-tpl="109" style="font-size: 11px; font-weight: 800; color: rgb(138, 147, 166); text-transform: uppercase;"><span class="sc-interp">Next</span></span></span>
+            <span data-dc-tpl="110" style="font-size: 14px; font-weight: 800;"><span class="sc-interp">Written outcome</span></span>
+            <span data-dc-tpl="111" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Sanction filed confidentially by HR</span></span>
+          </li>
+        
+          <li data-dc-tpl="106" style="border-radius: 12px; padding: 12px; background: rgb(255, 255, 255); border: 1px solid rgb(227, 231, 238); display: flex; flex-direction: column; gap: 4px;">
+            <span data-dc-tpl="107" style="display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="108" style="width: 24px; height: 24px; border-radius: 99px; background: rgb(138, 147, 166); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;"><span class="sc-interp">7</span></span><span data-dc-tpl="109" style="font-size: 11px; font-weight: 800; color: rgb(138, 147, 166); text-transform: uppercase;"><span class="sc-interp">Next</span></span></span>
+            <span data-dc-tpl="110" style="font-size: 14px; font-weight: 800;"><span class="sc-interp">Appeal</span></span>
+            <span data-dc-tpl="111" style="font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">Procedural unfairness or new evidence</span></span>
+          </li>
+        
+      </ol>
+      <p data-dc-tpl="112" style="margin: 12px 0px 0px; font-size: 12px; color: rgb(91, 100, 120);"><span class="sc-interp">For minor matters steps 2–5 can be replaced by informal counselling or a verbal warning. Dismissal creates a 5.1 termination request (letter HR-05-LET-03).</span></p>
+    </section>
+    
+      <div data-dc-tpl="114" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 16px; align-items: start;">
+        <section data-dc-tpl="115" class="card" style="padding: 18px 20px; display: flex; flex-direction: column; gap: 12px;">
+          <div data-dc-tpl="116" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;"><h2 data-dc-tpl="117" class="h2" style="margin: 0px;">Hearing record</h2><span data-dc-tpl="118" class="m" style="font-size: 11px; color: rgb(91, 100, 120);">HR-03-FRM-01 · v1.0 · DC-26-005</span></div>
+          <div data-dc-tpl="119" style="display: grid; grid-template-columns: repeat(2, minmax(0px, 1fr)); gap: 12px;">
+            <label data-dc-tpl="120" class="f">Employee<input data-dc-tpl="121" value="[Employee name]"></label>
+            <label data-dc-tpl="122" class="f">Position<input data-dc-tpl="123" value="[Position]"></label>
+            <label data-dc-tpl="124" class="f">Date of hearing<input data-dc-tpl="125" type="date"></label>
+            <label data-dc-tpl="126" class="f">Chairperson<input data-dc-tpl="127" value="[Chairperson]"></label>
+          </div>
+          <label data-dc-tpl="128" class="f">Allegation(s)<textarea data-dc-tpl="129">[Allegation as put to the employee in the notice]</textarea></label>
+          <label data-dc-tpl="130" class="f">Employee response<textarea data-dc-tpl="131" placeholder="Employee's response and any evidence presented"></textarea></label>
+          <label data-dc-tpl="132" class="f">Mitigating / aggravating factors (from HR-03-GDL-01)<textarea data-dc-tpl="133" placeholder="Role, previous record, length of service, impact, intent"></textarea></label>
+          <fieldset data-dc-tpl="134" style="border: 1px solid rgb(227, 231, 238); border-radius: 10px; padding: 10px 12px; display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px;">
+            <legend data-dc-tpl="135" style="font-size: 12px; font-weight: 700; color: rgb(91, 100, 120); padding: 0px 4px;">Finding</legend>
+            <label data-dc-tpl="136" style="display: flex; gap: 6px; align-items: center;"><input data-dc-tpl="137" type="radio" name="finding"> Not guilty</label>
+            <label data-dc-tpl="138" style="display: flex; gap: 6px; align-items: center;"><input data-dc-tpl="139" type="radio" name="finding"> Guilty</label>
+          </fieldset>
+          <label data-dc-tpl="140" class="f">Sanction (if applicable)<select data-dc-tpl="141"><option data-dc-tpl="142">Choose…</option><option data-dc-tpl="143">Informal counselling</option><option data-dc-tpl="144">Verbal warning</option><option data-dc-tpl="145">Written warning</option><option data-dc-tpl="146">Final written warning</option><option data-dc-tpl="147">Termination of employment / engagement</option></select></label>
+          <label data-dc-tpl="148" style="display: flex; gap: 8px; align-items: center; font-size: 14px; font-weight: 600;"><input data-dc-tpl="149" type="checkbox" style="width: 18px; height: 18px;"> Right of appeal explained to the employee</label>
+          <div data-dc-tpl="150" style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <button data-dc-tpl="151" class="btn" style="background: rgb(31, 78, 140); border: 1px solid rgb(31, 78, 140); color: rgb(255, 255, 255);">Save &amp; issue outcome in writing</button>
+            <button data-dc-tpl="152" class="btn" style="background: rgb(255, 255, 255); border: 1px solid rgb(213, 219, 229); color: rgb(22, 33, 58);">Print for signature</button>
+          </div>
+        </section>
+        <div data-dc-tpl="153" style="display: flex; flex-direction: column; gap: 16px;">
+          <section data-dc-tpl="154" class="card" style="padding: 18px 20px; min-width: 0px;">
+            <h2 data-dc-tpl="155" class="h2">Sanctions guideline</h2>
+            <div data-dc-tpl="156" style="overflow-x: auto;">
+              <table data-dc-tpl="157" class="tbl">
+                <thead data-dc-tpl="158"><tr data-dc-tpl="159"><th data-dc-tpl="160">Type of offence</th><th data-dc-tpl="161">Possible sanction</th></tr></thead>
+                <tbody data-dc-tpl="162">
+                  <tr data-dc-tpl="163"><td data-dc-tpl="164">Minor misconduct (e.g. lateness)</td><td data-dc-tpl="165">Counselling / verbal warning</td></tr>
+                  <tr data-dc-tpl="166"><td data-dc-tpl="167">Repeated minor misconduct</td><td data-dc-tpl="168">Written warning</td></tr>
+                  <tr data-dc-tpl="169"><td data-dc-tpl="170">Serious misconduct</td><td data-dc-tpl="171">Final written warning</td></tr>
+                  <tr data-dc-tpl="172"><td data-dc-tpl="173">Gross misconduct</td><td data-dc-tpl="174">Dismissal</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p data-dc-tpl="175" style="margin: 12px 0px 0px; font-size: 12px; color: rgb(91, 100, 120);">HR-03-GDL-01 · guideline only. Steps need not follow in sequence; sanctions may go up or down; earlier outcomes are not binding precedent.</p>
+          </section>
+          <section data-dc-tpl="176" class="card" style="padding: 18px 20px;">
+            <h2 data-dc-tpl="177" class="h2">Person's history (confidential)</h2>
+            <div data-dc-tpl="178" style="display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
+              <div data-dc-tpl="179" style="display: flex; justify-content: space-between; gap: 8px; padding: 10px 12px; border-radius: 10px; background: rgb(243, 245, 249);"><span data-dc-tpl="180">Verbal warning · lateness</span><span data-dc-tpl="181" style="color: rgb(91, 100, 120);">[Date]</span></div>
+              <div data-dc-tpl="182" style="display: flex; justify-content: space-between; gap: 8px; padding: 10px 12px; border-radius: 10px; background: rgb(243, 245, 249);"><span data-dc-tpl="183">Grievance lodged by this person · resolved</span><span data-dc-tpl="184" style="color: rgb(91, 100, 120);">[Date]</span></div>
+            </div>
+            <p data-dc-tpl="185" style="margin: 10px 0px 0px; font-size: 12px; color: rgb(138, 88, 0);">How long a warning stays valid is not stated in HR-03. Add it to the policy before go-live.</p>
+          </section>
+        </div>
+      </div>
+    
+    
+  </main>
+</body></html>

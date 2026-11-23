@@ -166,16 +166,59 @@
   // =====================================================================
   // Navigation
   // =====================================================================
+  // Menu follows the prototype sidebar (People & Payroll Hub). Items marked "live" work with data;
+  // the rest open the approved prototype screen (design preview) until they are built.
   const NAV = [
-    ['Overview', [['#/home', 'Home', '0.0', () => true]]],
-    ['My leave', [['#/my-leave', 'My leave', 'P1', () => !!me.personId], ['#/team-leave', 'Team approvals', 'P2', () => has('direct_manager', 'ceo', 'board') || isHR()]]],
-    ['HR', [['#/people', 'People', '2.1', isHR], ['#/leave-admin', 'Leave (HR)', '3.0', isHR], ['#/grading', 'Grading & scales', '1.2', isHR], ['#/risks', 'Risk register', '8.0', isHR], ['#/audit', 'Audit log', '9.1', () => has('hod_hr', 'head_of_finance', 'ceo')]]],
-    ['Quality', [['#/risk-tracker', 'Risk tracker', 'R1', () => has('qms_admin') || isHR()]]],
+    ['People & Payroll Hub', [
+      ['#/home', 'Dashboard', '0.0', () => true],
+      ['#/d/establishment', 'Post establishment', '1.1', isHR],
+      ['#/grading', 'Grading & salary scales', '1.2', isHR],
+      ['#/d/recruitment', 'Recruitment', '1.5', isHR],
+      ['#/d/programmes', 'Internships & bursaries', '1.6', isHR],
+      ['#/people', 'People', '2.1', isHR],
+      ['#/d/staff-import', 'Staff import', '2.2', isHR],
+      ['#/d/lifecycle', 'Onboarding & exits', '2.4', isHR],
+      ['#/d/documents', 'Documents', '2.6', isHR],
+      ['#/leave-admin', 'Leave', '3.0', isHR],
+      ['#/d/leave-import', 'Leave history import', '3.2', isHR],
+      ['#/d/performance', 'Performance', '3.5', isHR],
+      ['#/d/payroll', 'Payroll instructions', '4.0', isHR],
+      ['#/d/approvals', 'Approvals', '6.0', isHR],
+      ['#/d/discipline', 'Discipline & grievance', '5.5', isHR],
+      ['#/d/policies', 'Policies & compliance', '8.0', isHR],
+      ['#/d/reports', 'Reports', '7.0', isHR],
+      ['#/d/access', 'Roles & access', '9.0', isHR],
+      ['#/audit', 'Audit log', '9.1', () => has('hod_hr', 'head_of_finance', 'ceo')]]],
+    ['Leave portal', [['#/my-leave', 'My leave', 'P1', () => !!me.personId], ['#/team-leave', 'Team approvals', 'P2', () => has('direct_manager', 'ceo', 'board') || isHR()], ['#/d/leave-portal', 'Portal home (design)', 'P0', () => true]]],
+    ['Quality', [['#/risks', 'Risk register', 'R0', isHR], ['#/risk-tracker', 'Risk tracker', 'R1', () => has('qms_admin') || isHR()]]],
     ['Help', [['#/help', 'How to use', '?', () => true]]]
   ];
+  // Prototype screens (static copies of the design canvas, in app/screens/)
+  const DESIGN = {
+    dashboard: ['Dashboard', 'dashboard', isHR], establishment: ['Post establishment', 'establishment', isHR], 'grading-design': ['Grading & salary scales', 'grading-design', isHR],
+    recruitment: ['Recruitment', 'recruitment', isHR], programmes: ['Internships & bursaries', 'programmes', isHR], 'person-record': ['Person record', 'person-record', isHR],
+    'staff-import': ['Staff import', 'staff-import', isHR], lifecycle: ['Onboarding & exits', 'lifecycle', isHR], documents: ['Documents', 'documents', isHR],
+    'leave-design': ['Leave', 'leave-design', isHR], 'leave-import': ['Leave history import', 'leave-import', isHR], performance: ['Performance', 'performance', isHR],
+    payroll: ['Payroll instructions', 'approvals', isHR], approvals: ['Approvals', 'approvals', isHR], discipline: ['Discipline & grievance', 'discipline', isHR],
+    policies: ['Policies & compliance', 'policies', isHR], reports: ['Reports', 'reports', isHR], access: ['Roles & access', 'access', isHR],
+    'audit-design': ['Audit log', 'audit-design', () => has('hod_hr', 'head_of_finance', 'ceo')], 'leave-portal': ['Leave portal', 'leave-portal', () => true],
+    'risk-design': ['Risk tracker', 'risk-design', () => has('qms_admin') || isHR()]
+  };
+  const NAV_OF = { 'grading-design': '#/grading', 'leave-design': '#/leave-admin', 'person-record': '#/people', 'audit-design': '#/audit', 'risk-design': '#/risk-tracker', dashboard: '#/home' };
+  function designFrame(slug) {
+    return `<iframe class="dframe" src="screens/${slug}.html" title="Prototype screen" loading="lazy" onload="window.__fit && window.__fit(this)"></iframe>`;
+  }
+  window.__fit = (f) => { try { const h = () => { try { if (f.isConnected && f.contentDocument) f.style.height = f.contentDocument.documentElement.scrollHeight + 'px'; } catch (e) { /* ignore */ } }; h(); setTimeout(h, 600); f.contentWindow.addEventListener('resize', h); } catch (e) { f.style.height = '1400px'; } };
+  function designLink(slug, label) { return `<div class="row"><a class="btn sec sm" href="#/d/${slug}" style="text-decoration:none;display:inline-flex;align-items:center">${label || 'Open the full prototype screen'}</a></div>`; }
+  async function pDesign(slug) {
+    const d = DESIGN[slug]; if (!d) return page('Not found', '', '<div class="card">That screen does not exist. <a href="#/home">Back to Dashboard</a></div>');
+    return '<div class="banner" style="background:var(--infobg);color:var(--info)"><strong>Prototype screen.</strong> This is the approved design with placeholder values like [Name] and [00]. It becomes a working page once it is connected to the database.</div>' + designFrame(d[1]);
+  }
+
   function renderNav() {
-    const cur = location.hash.split('/').slice(0, 2).join('/') || '#/home';
-    let h = '<div class="brand"><div class="logo">A</div><div><div style="font-weight:800">Angels PERSAL</div><div class="note">HR portal</div></div></div>';
+    const parts = (location.hash || '#/home').split('/'); let cur = parts.slice(0, parts[1] === 'd' ? 3 : 2).join('/');
+    if (parts[1] === 'd' && NAV_OF[parts[2]]) cur = NAV_OF[parts[2]];
+    let h = '<div class="brand"><div class="logo">A</div><div><div style="font-weight:800">Angels PERSAL</div><div class="note">People &amp; Payroll Hub</div></div></div>';
     NAV.forEach(([g, items]) => {
       const vis = items.filter((i) => i[3]()); if (!vis.length) return;
       h += `<div class="group">${esc(g)}</div>` + vis.map(([href, label, code]) => `<a href="${href}" class="${cur === href ? 'on' : ''}">${esc(label)}<span class="code">${esc(code)}</span></a>`).join('');
@@ -206,7 +249,7 @@
       tiles.push(['Open HR risks', rk.filter((r) => r.status !== 'closed').length, rk.filter((r) => ['High', 'Critical'].includes(r.level) && r.status === 'open').length + ' High/Critical not reported', '#/risks']);
     }
     if (has('qms_admin') && !isHR()) { const t = await db.tracker(); tiles.push(['HR risks to follow', t.filter((r) => r.status !== 'closed').length, 'No names or personal details', '#/risk-tracker']); }
-    return page(DEMO ? 'Welcome · ' + (ROLE_NAMES[me.roles[0]] || '') : 'Welcome' + (me.name ? ', ' + me.name.split(' ')[0] : ''), esc(C.ORGANISATION || 'Angels Resource Centres') + ' · HR portal',
+    return page(DEMO ? 'Welcome · ' + (ROLE_NAMES[me.roles[0]] || '') : 'Welcome' + (me.name ? ', ' + me.name.split(' ')[0] : ''), esc(C.ORGANISATION || 'Angels Resource Centres') + ' · People &amp; Payroll Hub',
       (DEMO ? '<div class="banner" style="background:var(--warnbg);color:var(--warn)"><strong>Demo mode.</strong> Sample data only, kept in this browser tab. Use “View as” at the top to see each role. Nothing is saved online.</div>' : '') +
       `<div class="grid">${tiles.map(([l, v, s, href]) => `<a class="card tile" href="${href}" style="text-decoration:none;color:inherit"><div class="l">${esc(l)}</div><div class="v">${esc(v)}</div><div class="s">${esc(s)}</div></a>`).join('')}</div>`);
   }
@@ -388,7 +431,7 @@
   // =====================================================================
   function loginPage() {
     $('#nav').innerHTML = ''; $('#who').innerHTML = '';
-    $('#main').innerHTML = `<div class="card login"><div class="brand"><div class="logo">A</div><div><div style="font-weight:800">Angels PERSAL</div><div class="note">HR portal</div></div></div>
+    $('#main').innerHTML = `<div class="card login"><div class="brand"><div class="logo">A</div><div><div style="font-weight:800">Angels PERSAL</div><div class="note">People &amp; Payroll Hub</div></div></div>
       ${C.SIGN_IN_WITH_MICROSOFT ? '<button class="btn" id="ms" style="width:100%">Sign in with Microsoft</button><p class="note" style="text-align:center">or</p>' : ''}
       <form id="mail"><label>Work email<input type="email" name="email" required placeholder="name@angelsinc.co.za"></label><button class="btn sec" type="submit">Email me a sign-in link</button></form></div>`;
     const ms = $('#ms'); if (ms) ms.onclick = () => sb.auth.signInWithOAuth({ provider: 'azure', options: { scopes: 'email', redirectTo: location.href.split('#')[0] } });
@@ -398,15 +441,22 @@
   // =====================================================================
   // Router
   // =====================================================================
-  const ROUTES = { home: pHome, 'my-leave': pMyLeave, 'team-leave': pTeamLeave, people: pPeople, person: pPerson, 'leave-admin': pLeaveAdmin, grading: pGrading, risks: pRisks, 'risk-tracker': pTracker, audit: pAudit, help: pHelp };
+  const ROUTES = { home: pHome, 'my-leave': pMyLeave, 'team-leave': pTeamLeave, people: pPeople, person: pPerson, 'leave-admin': pLeaveAdmin, grading: pGrading, risks: pRisks, 'risk-tracker': pTracker, audit: pAudit, help: pHelp, d: pDesign };
   async function route() {
     const [, name, arg] = (location.hash || '#/home').split('/');
     const fn = ROUTES[name] || pHome;
-    const ALLOW = { people: isHR, person: isHR, 'leave-admin': isHR, grading: isHR, risks: isHR, audit: () => has('hod_hr', 'head_of_finance', 'ceo'), 'risk-tracker': () => has('qms_admin') || isHR(), 'team-leave': () => has('direct_manager', 'ceo', 'board') || isHR() };
+    const ALLOW = { d: () => (DESIGN[arg] ? DESIGN[arg][2]() : true), people: isHR, person: isHR, 'leave-admin': isHR, grading: isHR, risks: isHR, audit: () => has('hod_hr', 'head_of_finance', 'ceo'), 'risk-tracker': () => has('qms_admin') || isHR(), 'team-leave': () => has('direct_manager', 'ceo', 'board') || isHR() };
     if (ALLOW[name] && !ALLOW[name]()) { renderNav(); $('#main').innerHTML = page('No access', '', '<div class="card">This page is not part of your role. <a href="#/home">Back to home</a></div>'); return; }
     renderNav(); $('#nav').classList.remove('open');
     $('#main').innerHTML = '<p class="note">Loading…</p>';
-    try { $('#main').innerHTML = await fn(arg); $('#main').focus(); }
+    try {
+      let html = await fn(arg);
+      const EXTRA = { home: isHR() ? ['dashboard', true, 'Full dashboard (prototype)'] : null, people: ['person-record', false, 'Full person record (prototype)'], person: ['person-record', false, 'Full person record (prototype)'], 'leave-admin': ['leave-design', false, 'Full leave screen (prototype)'], grading: ['grading-design', false, 'Full grading screen (prototype)'], audit: ['audit-design', false, 'Full audit log (prototype)'], 'risk-tracker': ['risk-design', false, 'Full risk tracker (prototype)'], 'my-leave': ['leave-portal', false, 'Leave portal home (prototype)'] };
+      const x = EXTRA[name];
+      if (x && fn !== pDesign) html += `<details class="card proto" ${x[1] ? 'open' : ''}><summary>${x[2]} <span class="note">· placeholder values</span></summary>${designFrame(x[0])}</details>`;
+      $('#main').innerHTML = html; $('#main').focus();
+      $('#main').querySelectorAll('details.proto').forEach((d) => d.addEventListener('toggle', () => { const f = d.querySelector('iframe'); if (d.open && f) window.__fit(f); }));
+    }
     catch (err) { $('#main').innerHTML = page('Something went wrong', '', `<div class="card">${esc(err.message || err)}<p class="note">If this keeps happening, tell HR. You may not have access to this page.</p></div>`); }
   }
 
