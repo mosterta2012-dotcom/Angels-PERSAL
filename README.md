@@ -14,6 +14,8 @@ Status: **design and drafts, November 2026** — not yet built. Values in `[squa
 | Screen designs (20 screens, `.dc.html` canvas source) | `design/screens/` — list in `design/SCREENS.md`; live canvas: https://claude.ai/artifact/NS8gn3KKj4DwDdNMpSY4Jo |
 | HR policies and procedures (folders 01–11, current + PERSAL drafts) | `policies/` |
 | Coverage register (documents → PERSAL screens, POPIA/PAIA/ISO notes, gaps G-01 to G-09) | `registers/00_Registers & Evidence/HR Document Coverage Register - PERSAL, POPIA, PAIA, ISO (Nov 2026).xlsx` |
+| **Web app** (online HR portal, demo mode + live Supabase) | `app/` — setup in `docs/WEB-APP-SETUP.md` |
+| **Supabase database** (schema, security, functions, seed; deploys from GitHub) | `supabase/` — setup steps in `docs/SUPABASE-SETUP.md` |
 | Discussion papers (leave readiness, grading & salary scales, HR portal wishlist) | `docs/papers/` |
 
 ## Key design decisions
