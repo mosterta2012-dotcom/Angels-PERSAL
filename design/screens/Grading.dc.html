@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Grading and salary scales</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.side a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3A4459;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}
+.side a:hover{background:#EEF2F8}
+.side .code{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A93A6}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:8px 10px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:11px 10px;border-bottom:1px solid #EEF1F5}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+.f{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#5B6478}
+</style>
+</helmet>
+<div style="font-family: Manrope, sans-serif; color: #16213A; background: #F3F5F9; min-height: 100vh; display: flex; flex-wrap: wrap; align-items: flex-start">
+  <nav class="side" aria-label="People Hub menu" style="flex: 1 1 240px; max-width: 260px; box-sizing: border-box; background: #fff; border-right: 1px solid #E3E7EE; padding: 20px 14px; display: flex; flex-direction: column; gap: 4px; align-self: stretch">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px">
+      <div style="width: 38px; height: 38px; border-radius: 10px; background: {{brand}}; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800">A</div>
+      <div><div style="font-weight: 800; font-size: 16px">Angels PERSAL</div><div style="font-size: 12px; color: #5B6478">People &amp; Payroll Hub</div></div>
+    </div>
+    <a href="Main.dc.html">Dashboard<span class="code">0.0</span></a>
+    <a href="Establishment.dc.html">Post establishment<span class="code">1.1</span></a>
+    <a href="Grading.dc.html" style="background: {{brand}}; color: #fff">Grading &amp; salary scales<span class="code" style="color: #C9D6EA">1.2</span></a>
+    <a href="Recruitment.dc.html">Recruitment<span class="code">1.5</span></a>
+    <a href="Programmes.dc.html">Internships &amp; bursaries<span class="code">1.6</span></a>
+    <a href="PersonRecord.dc.html">People<span class="code">2.1</span></a>
+    <a href="PeopleImport.dc.html">Staff import<span class="code">2.2</span></a>
+    <a href="Lifecycle.dc.html">Onboarding &amp; exits<span class="code">2.4</span></a>
+    <a href="Documents.dc.html">Documents<span class="code">2.6</span></a>
+    <a href="Leave.dc.html">Leave<span class="code">3.0</span></a>
+    <a href="LeaveImport.dc.html">Leave history import<span class="code">3.2</span></a>
+    <a href="Performance.dc.html">Performance<span class="code">3.5</span></a>
+    <a href="Transactions.dc.html">Payroll instructions<span class="code">4.0</span></a>
+    <a href="Transactions.dc.html">Approvals<span class="code">6.0</span></a>
+    <a href="EmployeeRelations.dc.html">Discipline &amp; grievance<span class="code">5.5</span></a>
+    <a href="Policies.dc.html">Policies &amp; compliance<span class="code">8.0</span></a>
+    <a href="Reports.dc.html">Reports<span class="code">7.0</span></a>
+    <a href="Access.dc.html">Roles &amp; access<span class="code">9.0</span></a>
+    <a href="AuditLog.dc.html">Audit log<span class="code">9.1</span></a>
+    <div style="margin-top: 24px; padding: 12px; border-radius: 12px; background: #F3F5F9; font-size: 12px; color: #5B6478">Signed in as<br><strong style="color: #16213A">[HR Administrator]</strong><br>HR Administrator</div>
+  </nav>
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px">
+      <div>
+        <h1 style="margin: 0; font-size: 28px; font-weight: 800">Grading &amp; salary scales</h1>
+        <p style="margin: 4px 0 0; color: #5B6478; font-size: 14px">Proposal for discussion · not approved · rand values to be set from market data with the Head of Finance</p>
+      </div>
+      <a href="Grading.dc.html" style="text-decoration: none; background: #fff; border: 1px solid #D5DBE5; color: #16213A; padding: 11px 16px; border-radius: 10px; font-weight: 700; font-size: 14px">Download scales</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px">
+      <sc-for list="{{tiles}}" as="t" hint-placeholder-count="4">
+        <div class="card" style="padding: 16px 18px"><div style="font-size: 13px; font-weight: 700; color: #5B6478">{{t.l}}</div><div style="font-size: 28px; font-weight: 800; margin-top: 6px">{{t.v}}</div><div style="font-size: 12px; color: #5B6478">{{t.s}}</div></div>
+      </sc-for>
+    </div>
+    <section class="card" style="padding: 18px 20px">
+      <h2 class="h2">Five steps in every title</h2>
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px">
+        <sc-for list="{{steps}}" as="s" hint-placeholder-count="5">
+          <li style="border-radius: 12px; padding: 12px; background: {{s.bg}}; border: 1px solid {{s.bd}}; display: flex; flex-direction: column; gap: 4px">
+            <span style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="width: 26px; height: 26px; border-radius: 99px; background: {{brand}}; color: #fff; font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center">{{s.n}}</span><span class="m" style="font-size: 12px; color: #5B6478">{{s.pct}}</span></span>
+            <span style="font-size: 14px; font-weight: 800">{{s.t}}</span>
+            <span style="font-size: 12px; color: #5B6478">{{s.d}}</span>
+          </li>
+        </sc-for>
+      </ol>
+      <p style="margin: 12px 0 0; font-size: 12px; color: #5B6478">Percentages are of step 1 (the minimum for the title). Step 3 is the market rate for someone fully competent in the job.</p>
+    </section>
+    <section class="card" style="min-width: 0">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px"><h2 class="h2" style="margin: 0">Starting step guide · new appointments</h2><span style="font-size: 12px; color: #5B6478">Proposal for HOD HR and Head of Finance to adjust</span></div>
+      <div style="overflow-x: auto; padding: 0 8px 4px">
+        <table class="tbl">
+          <thead><tr><th>Starting step</th><th>When</th><th>Who approves</th></tr></thead>
+          <tbody>
+            <sc-for list="{{start}}" as="g" hint-placeholder-count="4">
+              <tr><td><span class="pill" style="background: {{g.bg}}; color: {{g.fg}}">{{g.s}}</span></td><td style="white-space: normal; min-width: 260px">{{g.w}}</td><td style="white-space: normal; min-width: 200px; color: #5B6478">{{g.a}}</td></tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 10px; padding: 8px 20px 18px; font-size: 13px">
+        <div style="padding: 10px 12px; border-radius: 10px; background: #F3F5F9"><strong>Fair to current staff.</strong> A new person does not start above someone in the same title with similar or more experience; if they would, that person’s step is reviewed too.</div>
+        <div style="padding: 10px 12px; border-radius: 10px; background: #F3F5F9"><strong>Reason on record.</strong> The starting step, relevant years and qualifications are entered on the appointment request (2.2).</div>
+        <div style="padding: 10px 12px; border-radius: 10px; background: #F3F5F9"><strong>Relevant experience</strong> = work in the same kind of job or field, defined per title in the job description, not total years of work.</div>
+      </div>
+    </section>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 16px; align-items: start">
+      <section class="card" style="padding: 18px 20px; display: flex; flex-direction: column; gap: 14px; min-width: 0">
+        <h2 class="h2" style="margin: 0">Where does a salary fall?</h2>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+          <label class="f">Current monthly salary (R)<input type="number" inputmode="numeric" value="{{sal}}" onInput="{{setSal}}" style="font-family: Manrope, sans-serif; font-size: 15px; padding: 11px 12px; border: 1px solid #D5DBE5; border-radius: 10px; color: #16213A"></label>
+          <label class="f">Title’s market rate · step 3 (R)<input type="number" inputmode="numeric" value="{{mid}}" onInput="{{setMid}}" style="font-family: Manrope, sans-serif; font-size: 15px; padding: 11px 12px; border: 1px solid #D5DBE5; border-radius: 10px; color: #16213A"></label>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px">
+          <sc-for list="{{calc}}" as="c" hint-placeholder-count="5">
+            <div style="border-radius: 10px; padding: 10px 6px; text-align: center; background: {{c.bg}}; border: 1px solid {{c.bd}}"><div style="font-size: 11px; font-weight: 700; color: #5B6478">Step {{c.n}}</div><div class="m" style="font-size: 13px; font-weight: 700; margin-top: 4px">{{c.v}}</div></div>
+          </sc-for>
+        </div>
+        <div style="padding: 12px 14px; border-radius: 10px; background: {{res.bg}}; color: {{res.fg}}; font-size: 14px"><strong>{{res.t}}</strong><div style="font-size: 13px; margin-top: 4px">{{res.d}}</div></div>
+        <p style="margin: 0; font-size: 12px; color: #5B6478">Uses the gap between steps set in Tweaks. Amounts rounded to the nearest R50.</p>
+      </section>
+      <section class="card" style="padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; font-size: 14px">
+        <h2 class="h2" style="margin: 0 0 6px">Job description changes during the year</h2>
+        <sc-for list="{{jd}}" as="x" hint-placeholder-count="5"><span>{{x}}</span></sc-for>
+        <div style="margin-top: 6px; font-size: 12px; padding: 10px 12px; border-radius: 10px; background: #E8EFF8; color: #163A69">Request 4.3 · Regrade after a job description change: HOD → HR (grading) → HOD HR → Head of Finance → CEO.</div>
+      </section>
+    </div>
+    <section class="card" style="min-width: 0">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px"><h2 class="h2" style="margin: 0">Salary scale per title · monthly gross</h2><span style="font-size: 12px; color: #5B6478">Titles from the new organogram · levels proposed, to be confirmed by grading</span></div>
+      <div style="overflow-x: auto; padding: 0 8px 8px">
+        <table class="tbl">
+          <thead><tr><th>Title</th><th>Department</th><th>Level</th><th>Paterson</th><th>Step 1</th><th>Step 2</th><th>Step 3</th><th>Step 4</th><th>Step 5</th></tr></thead>
+          <tbody>
+            <sc-for list="{{titles}}" as="r" hint-placeholder-count="19">
+              <tr><td style="font-weight: 700">{{r.t}}</td><td style="color: #5B6478">{{r.d}}</td><td><span class="pill" style="background: {{r.bg}}; color: {{r.fg}}">{{r.l}}</span></td><td class="m" style="font-size: 12px">{{r.p}}</td><td class="m" style="font-size: 12px">{{r.s1}}</td><td class="m" style="font-size: 12px">{{r.s2}}</td><td class="m" style="font-size: 12px; font-weight: 700">{{r.s3}}</td><td class="m" style="font-size: 12px">{{r.s4}}</td><td class="m" style="font-size: 12px">{{r.s5}}</td></tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 16px; align-items: start">
+      <section class="card" style="padding: 18px 20px; min-width: 0">
+        <h2 class="h2">Levels</h2>
+        <div style="display: flex; flex-direction: column">
+          <sc-for list="{{levels}}" as="v" hint-placeholder-count="6">
+            <div style="display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #EEF1F5; font-size: 13px">
+              <span class="pill" style="background: #E8EFF8; color: #1F4E8C; flex: none; align-self: flex-start">{{v.l}}</span>
+              <div style="flex: 1"><div style="font-weight: 800">{{v.n}} <span class="m" style="font-weight: 500; color: #5B6478; font-size: 11px">· Paterson {{v.p}}</span></div><div style="color: #5B6478">{{v.d}}</div></div>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+      <section class="card" style="padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; font-size: 14px">
+        <h2 class="h2" style="margin: 0 0 6px">Rules</h2>
+        <sc-for list="{{rules}}" as="x" hint-placeholder-count="10"><span>{{x}}</span></sc-for>
+        <div style="margin-top: 6px; font-size: 12px; padding: 10px 12px; border-radius: 10px; background: #FFFBF1; border: 1px solid #F1DDA8">Outside the scale: mentors and other SLA contractors (rate bands, HR-09), interns (stipend scale, HR-04-INT-PROC-01), bursary holders (award, HR-08), volunteers (expenses only), and outsourced suppliers.</div>
+      </section>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#1F4E8C","options":["#1F4E8C","#0F6E6E","#6B3FA0","#B4532A"]},"stepPct":{"editor":"range","default":5,"min":3,"max":10,"step":0.5,"unit":"%"},"$preview":{"width":1440,"height":2300}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { sal: 25000, mid: 25000 }; }
+  renderVals() {
+    const sp = Number(this.props.stepPct ?? 5);
+    const pct = i => (100 * Math.pow(1 + sp / 100, i)).toFixed(1) + '%';
+    const top = (Math.pow(1 + sp / 100, 4) - 1) * 100;
+    const lv = { L6: { bg: '#F1EAFB', fg: '#6B3FA0' }, L5: { bg: '#E8EFF8', fg: '#1F4E8C' }, L4: { bg: '#E3F4EC', fg: '#1E7A4F' }, L3: { bg: '#FFF3D9', fg: '#8A5800' }, L2: { bg: '#EEF1F5', fg: '#3A4459' } };
+    const R = 'R [00 000]';
+    const T = (t, d, l, p) => ({ t, d, l, p, s1: R, s2: R, s3: R, s4: R, s5: R, ...lv[l] });
+    const plain = { bg: '#F7F9FD', bd: '#E3E7EE' }, mid = { bg: '#FFF8E8', bd: '#F1DDA8' };
+    const sal = Number(this.state.sal) || 0, m3 = Number(this.state.mid) || 0, f = 1 + sp / 100;
+    const amt = [0, 1, 2, 3, 4].map(i => Math.round(m3 / (f * f) * Math.pow(f, i) / 50) * 50);
+    const fmt = n => 'R ' + n.toLocaleString('en-ZA').replace(/,/g, ' ');
+    let res, hit = -1;
+    if (!sal || !m3) res = { t: 'Enter a salary and a market rate', d: '', bg: '#F3F5F9', fg: '#3A4459' };
+    else if (sal > amt[4]) res = { t: 'Above step 5', d: 'Salary is kept; smaller increases until the scale catches up (' + fmt(sal - amt[4]) + ' above the maximum).', bg: '#FDECEA', fg: '#B42318' };
+    else if (sal < amt[0]) res = { t: 'Below step 1', d: 'Brought up to step 1 in phases through the annual increase cycle (' + fmt(amt[0] - sal) + ' short).', bg: '#FFF3D9', fg: '#8A5800' };
+    else {
+      hit = amt.findIndex(a => a === sal);
+      if (hit >= 0) res = { t: 'On step ' + (hit + 1), d: (4 - hit) + ' step(s) of growth left in this title.', bg: '#E3F4EC', fg: '#1E7A4F' };
+      else { const lo = amt.filter(a => a < sal).length; hit = lo - 1; res = { t: 'Between step ' + lo + ' and step ' + (lo + 1), d: 'Round up to step ' + (lo + 1) + ' (costs ' + fmt(amt.at(lo) - sal) + ' a month), or keep the salary until the next annual increase.', bg: '#E8EFF8', fg: '#1F4E8C' }; }
+    }
+    return {
+      brand: this.props.brand ?? '#1F4E8C',
+      sal: this.state.sal, mid: this.state.mid,
+      setSal: e => this.setState({ sal: e.target.value }), setMid: e => this.setState({ mid: e.target.value }),
+      res,
+      calc: amt.map((v, i) => ({ n: i + 1, v: fmt(v), ...(i === hit ? { bg: '#E3F4EC', bd: '#1E7A4F' } : i === 2 ? mid : plain) })),
+      start: [
+        { s: 'Step 1 · default', w: 'Meets the minimum requirements in the job description', a: 'Normal appointment route', bg: '#E3F4EC', fg: '#1E7A4F' },
+        { s: 'Step 2', w: '[2–4] years of relevant experience above the minimum, or a higher qualification relevant to the job', a: 'Normal appointment route · reason recorded', bg: '#E8EFF8', fg: '#1F4E8C' },
+        { s: 'Step 3 · market rate', w: '[5+] years of relevant experience; fully competent from day one', a: 'HOD HR and Head of Finance', bg: '#FFF3D9', fg: '#8A5800' },
+        { s: 'Steps 4–5', w: 'Not used at appointment, except for a scarce skill or to match a strong current salary', a: 'CEO, with a written reason', bg: '#FDECEA', fg: '#B42318' }
+      ],
+      jd: [
+        '1. Annual increase first: the person moves on their current level and step.',
+        '2. Extra duties at the same level: no regrade. Pay changes only through the next annual review.',
+        '3. Job regraded to a higher level: a promotion. Placed on the lowest step of the new level that is at or above current pay, never lower.',
+        '4. An increase already given for a JD change, outside a scale, is not taken back. At implementation the salary is placed with the calculator: between steps, above step 5 or below step 1.',
+        '5. The annual increase and a regrade are not added together for the same change; the regrade date is recorded separately on the person’s history.'
+      ],
+      tiles: [
+        { l: 'Levels', v: '6', s: 'L1–L6, Paterson A to E' },
+        { l: 'Steps per title', v: '5', s: 'Step 3 = market rate' },
+        { l: 'Gap between steps', v: sp + '%', s: 'Adjustable in Tweaks' },
+        { l: 'Step 1 to step 5', v: '+' + top.toFixed(1) + '%', s: 'Spread within one title' }
+      ],
+      steps: [
+        { n: '1', t: 'Entry', d: 'New in the job; learning it', pct: pct(0), ...plain },
+        { n: '2', t: 'Developing', d: 'Does most of the job without help', pct: pct(1), ...plain },
+        { n: '3', t: 'Competent', d: 'Fully competent · market rate', pct: pct(2), ...mid },
+        { n: '4', t: 'Experienced', d: 'Consistently above expectations', pct: pct(3), ...plain },
+        { n: '5', t: 'Expert', d: 'Maximum for the title', pct: pct(4), ...plain }
+      ],
+      titles: [
+        { t: 'Chief Executive Officer', d: 'Office of the CEO', l: 'L6', p: 'E', s1: 'Set by the Board', s2: '—', s3: '—', s4: '—', s5: '—', ...lv.L6 },
+        T('Head of Operations and Systems', 'Operations', 'L5', 'D'),
+        T('HOD Human Resources', 'Human Resources', 'L5', 'D'),
+        T('Marketing HOD', 'Marketing / PR', 'L5', 'D'),
+        T('Finance HOD', 'Finance', 'L5', 'D'),
+        T('National Operations Co-ordinator (NOC)', 'Operations', 'L4', 'C upper'),
+        T('Programme Manager: Bursaries & Internships (planned)', 'Human Resources', 'L4', 'C upper'),
+        T('Programme Operations Coordinator (planned)', 'Operations', 'L4', 'C upper'),
+        T('HOD Reports [check]', 'Finance', 'L4', 'C upper'),
+        T('Operations and Programme Systems Coordinator', 'Operations', 'L3', 'C lower'),
+        T('Social Performance Practitioner', 'Operations', 'L3', 'C lower'),
+        T('Economic Development Administrator', 'Operations', 'L3', 'C lower'),
+        T('Programme Lead E4C (planned)', 'Operations', 'L3', 'C lower'),
+        T('PA to the CEO · Support to the Executive Team', 'Office of the CEO', 'L3', 'C lower'),
+        T('Graphic & Digital Design', 'Marketing / PR', 'L3', 'C lower'),
+        T('Bookkeeper [check: employee or outsourced]', 'Finance', 'L3', 'C lower'),
+        T('HR Assistant', 'Human Resources', 'L2', 'B upper'),
+        T('ED Administrator (planned)', 'Operations', 'L2', 'B upper'),
+        T('Logistics Factotum', 'Logistics', 'L2', 'B upper')
+      ],
+      levels: [
+        { l: 'L6', n: 'Executive', p: 'E', d: 'Sets strategy and organisation-wide policy · CEO' },
+        { l: 'L5', n: 'Head of Department', p: 'D', d: 'Plans and manages a department' },
+        { l: 'L4', n: 'Senior / specialist', p: 'C upper', d: 'Specialist judgement; may coordinate others' },
+        { l: 'L3', n: 'Skilled', p: 'C lower', d: 'Interprets procedures; plans own work · officers, administrators, coordinators' },
+        { l: 'L2', n: 'Support', p: 'B upper', d: 'Routine tasks, chooses how to do them' },
+        { l: 'L1', n: 'Entry', p: 'A – B lower', d: 'Interns and learners · stipend scale, not steps' }
+      ],
+      rules: [
+        '1. Jobs are graded, not people: the level comes from the job description.',
+        '2. New appointments start on step 1 unless the starting step guide allows higher.',
+        '3. Annual review (HR-07): rating 3 → 1 step; ratings 4–5 → 2 steps; ratings 1–2 → no step and a performance plan.',
+        '4. Step 5 is the maximum. After that only the annual cost-of-living increase applies.',
+        '5. Anyone already paid above step 5 keeps their salary and gets smaller increases until the scale catches up.',
+        '6. Anyone below step 1 is brought up in phases through the annual increase cycle.',
+        '7. A move to a higher level is a promotion into an approved, funded post.',
+        '8. One increase date for everyone ([start of the financial year]): the annual increase and the review step happen together. Off-cycle increases only for a regrade or promotion, each through its own request.',
+        '9. Funder-paid posts follow the same scale; the Head of Finance checks the budget, and if a funder will not cover an increase the reason is recorded.',
+        '10. Every increase is kept on the person’s history with its date, type (annual, regrade, promotion) and approver.'
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Staff import</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.side a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3A4459;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}
+.side a:hover{background:#EEF2F8}
+.side .code{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A93A6}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:8px 10px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:11px 10px;border-bottom:1px solid #EEF1F5}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.f{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#5B6478}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+</style>
+</helmet>
+<div style="font-family: Manrope, sans-serif; color: #16213A; background: #F3F5F9; min-height: 100vh; display: flex; flex-wrap: wrap; align-items: flex-start">
+  <nav class="side" aria-label="People Hub menu" style="flex: 1 1 240px; max-width: 260px; box-sizing: border-box; background: #fff; border-right: 1px solid #E3E7EE; padding: 20px 14px; display: flex; flex-direction: column; gap: 4px; align-self: stretch">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px">
+      <div style="width: 38px; height: 38px; border-radius: 10px; background: {{brand}}; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800">A</div>
+      <div><div style="font-weight: 800; font-size: 16px">Angels PERSAL</div><div style="font-size: 12px; color: #5B6478">People &amp; Payroll Hub</div></div>
+    </div>
+    <a href="Main.dc.html">Dashboard<span class="code">0.0</span></a>
+    <a href="Establishment.dc.html">Post establishment<span class="code">1.1</span></a>
+    <a href="Grading.dc.html">Grading &amp; salary scales<span class="code">1.2</span></a>
+    <a href="Recruitment.dc.html">Recruitment<span class="code">1.5</span></a>
+    <a href="Programmes.dc.html">Internships &amp; bursaries<span class="code">1.6</span></a>
+    <a href="PersonRecord.dc.html">People<span class="code">2.1</span></a>
+    <a href="PeopleImport.dc.html" style="background: {{brand}}; color: #fff">Staff import<span class="code" style="color: #C9D6EA">2.2</span></a>
+    <a href="Lifecycle.dc.html">Onboarding &amp; exits<span class="code">2.4</span></a>
+    <a href="Documents.dc.html">Documents<span class="code">2.6</span></a>
+    <a href="Leave.dc.html">Leave<span class="code">3.0</span></a>
+    <a href="LeaveImport.dc.html">Leave history import<span class="code">3.2</span></a>
+    <a href="Performance.dc.html">Performance<span class="code">3.5</span></a>
+    <a href="Transactions.dc.html">Payroll instructions<span class="code">4.0</span></a>
+    <a href="Transactions.dc.html">Approvals<span class="code">6.0</span></a>
+    <a href="EmployeeRelations.dc.html">Discipline &amp; grievance<span class="code">5.5</span></a>
+    <a href="Policies.dc.html">Policies &amp; compliance<span class="code">8.0</span></a>
+    <a href="Reports.dc.html">Reports<span class="code">7.0</span></a>
+    <a href="Access.dc.html">Roles &amp; access<span class="code">9.0</span></a>
+    <a href="AuditLog.dc.html">Audit log<span class="code">9.1</span></a>
+    <div style="margin-top: 24px; padding: 12px; border-radius: 12px; background: #F3F5F9; font-size: 12px; color: #5B6478">Signed in as<br><strong style="color: #16213A">[HR Administrator]</strong><br>HR Administrator</div>
+  </nav>
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px">
+      <div>
+        <h1 style="margin: 0; font-size: 28px; font-weight: 800">Staff import</h1>
+        <p style="margin: 4px 0 0; color: #5B6478; font-size: 14px">Loads the final staff list into PERSAL once and issues PERSAL numbers in one go · after that, every change goes through a request</p>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap"><a href="PeopleImport.dc.html" style="text-decoration: none; background: #fff; border: 1px solid #D5DBE5; color: #16213A; padding: 11px 16px; border-radius: 10px; font-weight: 700; font-size: 14px">Download template</a><a href="PeopleImport.dc.html" style="text-decoration: none; background: {{brand}}; color: #fff; padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 14px">Upload final staff list</a></div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px">
+      <sc-for list="{{tiles}}" as="t" hint-placeholder-count="4">
+        <div class="card" style="padding: 16px 18px"><div style="font-size: 13px; font-weight: 700; color: #5B6478">{{t.l}}</div><div style="font-size: 28px; font-weight: 800; margin-top: 6px; color: {{t.c}}">{{t.v}}</div><div style="font-size: 12px; color: #5B6478">{{t.s}}</div></div>
+      </sc-for>
+    </div>
+    <section class="card" style="min-width: 0">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px"><h2 class="h2" style="margin: 0">Checks before loading</h2><span style="font-size: 12px; color: #5B6478"></span></div>
+      <div style="overflow-x: auto; padding: 0 8px 8px">
+        <table class="tbl">
+          <thead><tr><th>Check</th><th>Rows</th><th>Result</th></tr></thead>
+          <tbody>
+            <sc-for list="{{checks}}" as="r" hint-placeholder-count="8">
+              <tr><td style="font-weight: 700; white-space: normal; min-width: 280px">{{r.c}}</td><td>{{r.n}}</td><td><span class="pill" style="background: {{r.bg}}; color: {{r.fg}}">{{r.st}}</span></td></tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin: 0; padding: 0 20px 16px; font-size: 12px; color: #5B6478">Rows with an error stay out of the load until HR fixes them in the file and uploads it again.</p>
+    </section>
+    <section class="card" style="min-width: 0">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px"><h2 class="h2" style="margin: 0">Preview</h2><span style="font-size: 12px; color: #5B6478"></span></div>
+      <div style="overflow-x: auto; padding: 0 8px 8px">
+        <table class="tbl">
+          <thead><tr><th>#</th><th>Name</th><th>Category</th><th>Department</th><th>Direct manager</th><th>Placed with</th><th>Email</th><th>PERSAL no</th><th>Result</th></tr></thead>
+          <tbody>
+            <sc-for list="{{rows}}" as="r" hint-placeholder-count="5">
+              <tr><td class="m" style="font-size: 12px; color: #5B6478">{{r.i}}</td><td style="font-weight: 700">{{r.n}}</td><td>{{r.c}}</td><td>{{r.d}}</td><td>{{r.m}}</td><td>{{r.p}}</td><td style="color: #5B6478">{{r.e}}</td><td class="m" style="font-size: 12px">{{r.no}}</td><td><span class="pill" style="background: {{r.bg}}; color: {{r.fg}}">{{r.st}}</span></td></tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="card" style="padding: 16px 18px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; justify-content: space-between">
+      <span style="font-size: 13px; color: #5B6478; flex: 1 1 400px">Loading needs HOD HR approval. Each person gets a record, a post link and a PERSAL number (8 random digits with a check digit, checked against every number issued). Suppliers get no number.</span>
+      <button type="button" style="font-family: Manrope, sans-serif; font-size: 14px; font-weight: 700; padding: 12px 18px; border-radius: 10px; border: 1px solid {{brand}}; background: {{brand}}; color: #fff; min-height: 44px">Send for HOD HR approval</button>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#1F4E8C","options":["#1F4E8C","#0F6E6E","#6B3FA0","#B4532A"]},"$preview":{"width":1440,"height":1300}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const ok = { bg: '#E3F4EC', fg: '#1E7A4F' }, amb = { bg: '#FFF3D9', fg: '#8A5800' }, bad = { bg: '#FDECEA', fg: '#B42318' }, blu = { bg: '#E8EFF8', fg: '#1F4E8C' }, gry = { bg: '#EEF1F5', fg: '#5B6478' };
+    return {
+      brand: this.props.brand ?? '#1F4E8C',
+      tiles: [
+        { l: 'Rows in file', v: '[00]', s: 'Final merged staff list', c: '#16213A' },
+        { l: 'Ready to load', v: '[00]', s: 'All checks passed', c: '#1E7A4F' },
+        { l: 'Need fixing', v: '[0]', s: 'See checks below', c: '#B42318' },
+        { l: 'No PERSAL number', v: '[0]', s: 'Suppliers', c: '#5B6478' }
+      ],
+      checks: [
+        { c: 'Every row has a staff category and how they are paid', n: '[00]', st: 'Passed', ...ok },
+        { c: 'Every employee has a direct manager who is an employee', n: '[0] missing', st: 'Fix', ...bad },
+        { c: 'Emails are unique and on a valid domain', n: '[00]', st: 'Passed', ...ok },
+        { c: 'Cell numbers have 10 digits and start with 06, 07 or 08', n: '[00]', st: 'Passed', ...ok },
+        { c: 'Employment start date present (first day worked)', n: '[0] missing', st: 'Fix', ...bad },
+        { c: 'Title matches a post on the establishment', n: '[0] unmatched', st: 'Check', ...amb },
+        { c: 'Interns have a client (placed with) and an end date', n: '[00]', st: 'Passed', ...ok },
+        { c: 'No duplicate people (same ID or same name and email)', n: '0', st: 'Passed', ...ok }
+      ],
+      rows: [
+        { i: '1', n: '[Employee name]', c: 'Permanent', d: 'Operations', m: 'Head of Ops & Systems', p: 'Angels', e: '[name]@angelsinc.co.za', no: '[on approval]', st: 'Ready', ...ok },
+        { i: '2', n: '[Employee name]', c: 'Contract (SLA)', d: 'Operations', m: 'n/a (contractor)', p: 'Angels', e: '[name]@angelsinc.co.za', no: '[on approval]', st: 'Ready', ...ok },
+        { i: '3', n: '[Employee name]', c: 'Permanent', d: '[blank]', m: '[blank]', p: 'Angels', e: '[name]@angelsinc.co.za', no: '—', st: 'Fix', ...bad },
+        { i: '4', n: '[Intern name]', c: 'Intern', d: 'Human Resources', m: 'HOD HR', p: '[Client]', e: '[name]@[client].co.za', no: '[on approval]', st: 'Ready', ...ok },
+        { i: '5', n: '[Supplier name]', c: 'Supplier', d: '—', m: '—', p: '—', e: '[name]@[supplier].co.za', no: 'None', st: 'No number', ...gry }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

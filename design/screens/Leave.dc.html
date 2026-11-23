@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Leave</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.side a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3A4459;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}
+.side a:hover{background:#EEF2F8}
+.side .code{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A93A6}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:8px 10px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:11px 10px;border-bottom:1px solid #EEF1F5}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+</style>
+</helmet>
+<div style="font-family: Manrope, sans-serif; color: #16213A; background: #F3F5F9; min-height: 100vh; display: flex; flex-wrap: wrap; align-items: flex-start">
+  <nav class="side" aria-label="People Hub menu" style="flex: 1 1 240px; max-width: 260px; box-sizing: border-box; background: #fff; border-right: 1px solid #E3E7EE; padding: 20px 14px; display: flex; flex-direction: column; gap: 4px; align-self: stretch">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px">
+      <div style="width: 38px; height: 38px; border-radius: 10px; background: {{brand}}; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800">A</div>
+      <div><div style="font-weight: 800; font-size: 16px">Angels PERSAL</div><div style="font-size: 12px; color: #5B6478">People &amp; Payroll Hub</div></div>
+    </div>
+    <a href="Main.dc.html">Dashboard<span class="code">0.0</span></a>
+    <a href="Establishment.dc.html">Post establishment<span class="code">1.1</span></a>
+    <a href="Grading.dc.html">Grading &amp; salary scales<span class="code">1.2</span></a>
+    <a href="Recruitment.dc.html">Recruitment<span class="code">1.5</span></a>
+    <a href="Programmes.dc.html">Internships &amp; bursaries<span class="code">1.6</span></a>
+    <a href="PersonRecord.dc.html">People<span class="code">2.1</span></a>
+    <a href="PeopleImport.dc.html">Staff import<span class="code">2.2</span></a>
+    <a href="Lifecycle.dc.html">Onboarding &amp; exits<span class="code">2.4</span></a>
+    <a href="Documents.dc.html">Documents<span class="code">2.6</span></a>
+    <a href="Leave.dc.html" style="background: {{brand}}; color: #fff">Leave<span class="code" style="color: #C9D6EA">3.0</span></a>
+    <a href="LeaveImport.dc.html">Leave history import<span class="code">3.2</span></a>
+    <a href="Performance.dc.html">Performance<span class="code">3.5</span></a>
+    <a href="Transactions.dc.html">Payroll instructions<span class="code">4.0</span></a>
+    <a href="Transactions.dc.html">Approvals<span class="code">6.0</span></a>
+    <a href="EmployeeRelations.dc.html">Discipline &amp; grievance<span class="code">5.5</span></a>
+    <a href="Policies.dc.html">Policies &amp; compliance<span class="code">8.0</span></a>
+    <a href="Reports.dc.html">Reports<span class="code">7.0</span></a>
+    <a href="Access.dc.html">Roles &amp; access<span class="code">9.0</span></a>
+    <a href="AuditLog.dc.html">Audit log<span class="code">9.1</span></a>
+    <div style="margin-top: 24px; padding: 12px; border-radius: 12px; background: #F3F5F9; font-size: 12px; color: #5B6478">Signed in as<br><strong style="color: #16213A">[HR Administrator]</strong><br>HR Administrator</div>
+  </nav>
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px">
+      <div>
+        <h1 style="margin: 0; font-size: 28px; font-weight: 800">Leave</h1>
+        <p style="margin: 4px 0 0; color: #5B6478; font-size: 14px">HR-06 Leave Policy · PERSAL is the leave record from cut-over on <strong style="color: #16213A">[1 April 2027]</strong> · SimplePay pays salaries only</p>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap">
+        <a href="Leave.dc.html" style="text-decoration: none; background: #fff; border: 1px solid #D5DBE5; color: #16213A; padding: 11px 16px; border-radius: 10px; font-weight: 700; font-size: 14px">Capture paper form (HR-06-FRM-01)</a>
+        <a href="LeaveImport.dc.html" style="text-decoration: none; background: #fff; border: 1px solid #D5DBE5; color: #16213A; padding: 11px 16px; border-radius: 10px; font-weight: 700; font-size: 14px">Opening balances</a>
+        <a href="LeavePortal.dc.html" style="text-decoration: none; background: {{brand}}; color: #fff; padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 14px">Open leave portal ↗</a>
+      </div>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; padding: 12px 16px; border-radius: 12px; background: #E8EFF8; color: #163A69; font-size: 13px; flex-wrap: wrap">
+      <span class="pill" style="background: #fff; color: #163A69">Leave portal</span>
+      <span>Staff apply in the separate leave portal and their <strong>direct manager</strong> approves it there. Neither can see personnel records. HR monitors here, keeps medical certificates confidential, and sends unpaid leave to SimplePay as a payroll instruction.</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px">
+      <sc-for list="{{tiles}}" as="t" hint-placeholder-count="5">
+        <div class="card" style="padding: 16px 18px"><div style="font-size: 13px; font-weight: 700; color: #5B6478">{{t.l}}</div><div style="font-size: 28px; font-weight: 800; margin-top: 6px; color: {{t.c}}">{{t.v}}</div><div style="font-size: 12px; color: #5B6478">{{t.s}}</div></div>
+      </sc-for>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 16px; align-items: start">
+      <section class="card" style="padding: 18px 20px; min-width: 0">
+        <h2 class="h2">Entitlements · HR-06 Leave Policy</h2>
+        <div style="overflow-x: auto">
+          <table class="tbl">
+            <thead><tr><th>Leave type</th><th>Entitlement</th><th>Paid</th><th>Rule built into PERSAL</th></tr></thead>
+            <tbody>
+              <sc-for list="{{ent}}" as="e" hint-placeholder-count="9">
+                <tr><td style="font-weight: 700; white-space: nowrap">{{e.t}}</td><td style="white-space: normal; min-width: 180px">{{e.e}}</td><td>{{e.p}}</td><td style="font-size: 12px; color: #5B6478; white-space: normal; min-width: 220px">{{e.r}}</td></tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin: 12px 0 0; font-size: 12px; color: #5B6478">Applies to permanent, fixed-term and part-time employees. Public holidays are never counted as leave. Where legislation and policy conflict, legislation prevails.</p>
+      </section>
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <section class="card" style="padding: 18px 20px; min-width: 0">
+          <h2 class="h2">Who approves</h2>
+          <div style="display: flex; flex-direction: column">
+            <sc-for list="{{routes}}" as="r" hint-placeholder-count="6">
+              <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #EEF1F5; font-size: 13px"><span style="font-weight: 700">{{r.who}}</span><span style="color: #5B6478; text-align: right">{{r.by}}</span></div>
+            </sc-for>
+          </div>
+          <p style="margin: 10px 0 0; font-size: 12px; color: #5B6478">Contractors and functional managers never approve leave. If the direct manager has not acted after [3] working days, the request moves to the next level.</p>
+        </section>
+        <section class="card" style="padding: 18px 20px; min-width: 0">
+          <h2 class="h2">HR follow-up</h2>
+          <div style="display: flex; flex-direction: column; gap: 8px">
+            <sc-for list="{{flags}}" as="f" hint-placeholder-count="5">
+              <div style="display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 10px; background: {{f.bg}}">
+                <span style="width: 8px; height: 8px; border-radius: 99px; background: {{f.fg}}; flex: none"></span>
+                <span style="flex: 1; font-size: 13px"><strong>{{f.who}}</strong> · {{f.t}}</span>
+                <span style="font-size: 12px; font-weight: 700; color: {{f.fg}}">{{f.a}}</span>
+              </div>
+            </sc-for>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 16px; align-items: start">
+      <section class="card" style="padding: 18px 20px; min-width: 0">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px"><h2 class="h2" style="margin: 0">December office closure</h2><button class="btn2" style="font-family: Manrope, sans-serif; font-size: 13px; font-weight: 700; padding: 9px 14px; border-radius: 10px; border: 1px solid #D5DBE5; background: #fff; color: #16213A">Set closure dates</button></div>
+        <div style="overflow-x: auto">
+          <table class="tbl">
+            <thead><tr><th>Closure</th><th>Dates</th><th>Leave days</th><th>Status</th></tr></thead>
+            <tbody>
+              <sc-for list="{{closures}}" as="c" hint-placeholder-count="3">
+                <tr><td style="font-weight: 700">{{c.y}}</td><td>{{c.d}}</td><td>{{c.n}}</td><td><span class="pill" style="background: {{c.bg}}; color: {{c.fg}}">{{c.st}}</span></td></tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin: 10px 0 0; font-size: 12px; color: #5B6478">Approved by the CEO and booked for every employee at once; public holidays inside the closure are skipped. If someone has too few days they fall into a leave deficit, recouped on termination (Leave Policy). <strong style="color: #8A5800">[For review: a deduction needs written agreement, BCEA s34]</strong>.</p>
+      </section>
+      <section class="card" style="padding: 18px 20px; min-width: 0">
+        <h2 class="h2">Unpaid leave · to SimplePay</h2>
+        <div style="overflow-x: auto">
+          <table class="tbl">
+            <thead><tr><th>Employee</th><th>Dates</th><th>Days</th><th>Payroll instruction</th></tr></thead>
+            <tbody>
+              <tr><td style="font-weight: 700">[Employee name]</td><td>[Dates]</td><td>[0]</td><td><span class="pill" style="background: #FFF3D9; color: #8A5800">Waiting for HOF</span></td></tr>
+              <tr><td style="font-weight: 700">[Employee name]</td><td>[Dates]</td><td>[0]</td><td><span class="pill" style="background: #E3F4EC; color: #1E7A4F">Sent · PR-27-0[000]</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin: 10px 0 0; font-size: 12px; color: #5B6478">Jibble attendance is compared with approved leave each month; days absent without leave are flagged here for HR.</p>
+      </section>
+    </div>
+    <section class="card" style="padding: 18px 20px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; background: #FFFBF1; border-color: #F1DDA8">
+      <strong style="font-size: 14px">Still to decide:</strong>
+      <span style="font-size: 13px">leave rules for interns, volunteers and mentors on SLAs (HR-06 covers employees only); whether the 4-month forfeiture of carried-over leave fits BCEA s20(4) (6 months); and approving Leave Policy Rev 3, which moves leave from SimplePay to PERSAL.</span>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#1F4E8C","options":["#1F4E8C","#0F6E6E","#6B3FA0","#B4532A"]},"$preview":{"width":1440,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const r = { bg: '#FDECEA', fg: '#B42318' }, a = { bg: '#FFF3D9', fg: '#8A5800' }, b = { bg: '#E8EFF8', fg: '#1F4E8C' }, g = { bg: '#E3F4EC', fg: '#1E7A4F' };
+    return {
+      brand: this.props.brand ?? '#1F4E8C',
+      tiles: [
+        { l: 'With direct managers', v: '[0]', s: 'Waiting for approval', c: '#1F4E8C' },
+        { l: 'On leave today', v: '[0]', s: 'Approved leave', c: '#16213A' },
+        { l: 'Expiring in 60 days', v: '[0]', s: 'Warned at 60 and 30 days', c: '#8A5800' },
+        { l: 'Medical certificates due', v: '[0]', s: 'Per HR-06 §6.2', c: '#B42318' },
+        { l: 'Unpaid leave to send', v: '[0]', s: 'Payroll instruction to SimplePay', c: '#16213A' }
+      ],
+      ent: [
+        { t: 'Annual', e: '15 working days per year (1 day per 17 worked); 20 after 5 completed years', p: 'Yes', r: 'Cycle from the employment date. Taken in the Dec–Jan closure; other times only by exception. Carried-over leave must be used within 4 months of the new cycle (longer only with management approval); staff warned at 60 and 30 days. Paid out on exit: current cycle plus carried-over leave up to 5 days' },
+        { t: 'Sick', e: '30 days in a 36-month cycle (5-day week)', p: 'Yes', r: 'Medical certificate if more than 2 consecutive days, or sick more than twice in 8 weeks; due within [2] working days of return' },
+        { t: 'Family responsibility', e: '3 days per annual cycle', p: 'Yes', r: 'Birth or illness of a child; death of an immediate family member' },
+        { t: 'Time off for overtime', e: 'As agreed in writing', p: 'Yes', r: 'Recorded as its own type, never as annual leave [confirm rule with HOD HR]' },
+        { t: 'Unpaid', e: 'By approval', p: 'No', r: 'Direct manager and HOD HR approve; Finance is notified through a payroll instruction' },
+        { t: 'Maternity', e: '4 consecutive months', p: 'No (UIF)', r: 'Unless contract or benefit scheme provides' },
+        { t: 'Parental', e: '10 consecutive days', p: 'No', r: 'Unless contractually agreed' },
+        { t: 'Adoption / commissioning parental', e: '10 weeks (one parent)', p: 'No', r: 'Other parent takes parental leave' },
+        { t: 'Special (incl. study)', e: 'Management discretion', p: 'Discretion', r: 'Direct manager recommends; HOD HR approves; CEO if more than [5] days' }
+      ],
+      routes: [
+        { who: 'Staff', by: 'Direct manager (an employee)' },
+        { who: 'Heads of Department', by: 'CEO' },
+        { who: 'CEO', by: 'Board Chair or Board Treasurer' },
+        { who: 'Interns placed with clients', by: 'HOD HR (Angels) [proposed]' },
+        { who: 'Programme staff (Social Performance Practitioners)', by: 'National Operations Co-ordinator' },
+        { who: 'Special leave', by: 'HOD HR; CEO over [5] days' }
+      ],
+      flags: [
+        { who: '[Employee name]', t: '3 sick days, no certificate on file', a: 'Request certificate', ...r },
+        { who: '[Employee name]', t: 'Absent on Jibble, no leave recorded', a: 'Check with manager', ...r },
+        { who: '[Employee name]', t: '[0] annual days expire on [date]', a: 'Warning sent', ...a },
+        { who: '[Employee name]', t: 'No direct manager on record', a: 'Fix in post establishment', ...a },
+        { who: '[Employee name]', t: 'Leave requested during notice period', a: 'Not permitted (policy)', ...b }
+      ],
+      closures: [
+        { y: '2026/27', d: '[DD Dec 2026] – [DD Jan 2027]', n: '[00]', st: 'Approved', ...g },
+        { y: '2027/28', d: '[DD Dec 2027] – [DD Jan 2028]', n: '[00]', st: 'Not set', ...a }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

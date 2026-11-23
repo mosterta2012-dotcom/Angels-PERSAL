@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Post establishment</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.side a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3A4459;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}
+.side a:hover{background:#EEF2F8}
+.side .code{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A93A6}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:10px 12px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:12px;border-bottom:1px solid #EEF1F5;white-space:nowrap}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.f{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#5B6478}
+.f select{font-family:Manrope,sans-serif;font-size:14px;padding:10px 12px;border:1px solid #D5DBE5;border-radius:10px;background:#fff;color:#16213A}
+</style>
+</helmet>
+<div style="font-family: Manrope, sans-serif; color: #16213A; background: #F3F5F9; min-height: 100vh; display: flex; flex-wrap: wrap; align-items: flex-start">
+  <nav class="side" aria-label="People Hub menu" style="flex: 1 1 240px; max-width: 260px; box-sizing: border-box; background: #fff; border-right: 1px solid #E3E7EE; padding: 20px 14px; display: flex; flex-direction: column; gap: 4px; align-self: stretch">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px">
+      <div style="width: 38px; height: 38px; border-radius: 10px; background: {{brand}}; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800">A</div>
+      <div><div style="font-weight: 800; font-size: 16px">Angels PERSAL</div><div style="font-size: 12px; color: #5B6478">People &amp; Payroll Hub</div></div>
+    </div>
+    <a href="Main.dc.html">Dashboard<span class="code">0.0</span></a>
+    <a href="Establishment.dc.html" style="background: {{brand}}; color: #fff">Post establishment<span class="code" style="color: #C9D6EA">1.1</span></a>
+    <a href="Grading.dc.html">Grading &amp; salary scales<span class="code">1.2</span></a>
+    <a href="Recruitment.dc.html">Recruitment<span class="code">1.5</span></a>
+    <a href="Programmes.dc.html">Internships &amp; bursaries<span class="code">1.6</span></a>
+    <a href="PersonRecord.dc.html">People<span class="code">2.1</span></a>
+    <a href="PeopleImport.dc.html">Staff import<span class="code">2.2</span></a>
+    <a href="Lifecycle.dc.html">Onboarding &amp; exits<span class="code">2.4</span></a>
+    <a href="Documents.dc.html">Documents<span class="code">2.6</span></a>
+    <a href="Leave.dc.html">Leave<span class="code">3.0</span></a>
+    <a href="LeaveImport.dc.html">Leave history import<span class="code">3.2</span></a>
+    <a href="Performance.dc.html">Performance<span class="code">3.5</span></a>
+    <a href="Transactions.dc.html">Payroll instructions<span class="code">4.0</span></a>
+    <a href="Transactions.dc.html">Approvals<span class="code">6.0</span></a>
+    <a href="EmployeeRelations.dc.html">Discipline &amp; grievance<span class="code">5.5</span></a>
+    <a href="Policies.dc.html">Policies &amp; compliance<span class="code">8.0</span></a>
+    <a href="Reports.dc.html">Reports<span class="code">7.0</span></a>
+    <a href="Access.dc.html">Roles &amp; access<span class="code">9.0</span></a>
+    <a href="AuditLog.dc.html">Audit log<span class="code">9.1</span></a>
+    <div style="margin-top: 24px; padding: 12px; border-radius: 12px; background: #F3F5F9; font-size: 12px; color: #5B6478">Signed in as<br><strong style="color: #16213A">[HR Administrator]</strong><br>HR Administrator</div>
+  </nav>
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 20px">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px">
+      <div>
+        <h1 style="margin: 0; font-size: 28px; font-weight: 800">Post establishment</h1>
+        <p style="margin: 4px 0 0; color: #5B6478; font-size: 14px">Financial year 2026/27 · approved by the CEO · version 03</p>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap">
+        <a href="Establishment.dc.html" style="text-decoration: none; background: #fff; border: 1px solid #D5DBE5; color: #16213A; padding: 11px 16px; border-radius: 10px; font-weight: 700; font-size: 14px">Download register</a>
+        <a href="Establishment.dc.html" style="text-decoration: none; background: {{brand}}; color: #fff; padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 14px">+ Create post</a>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
+      <sc-for list="{{tot}}" as="k" hint-placeholder-count="4">
+        <div class="card" style="padding: 16px 18px"><div style="font-size: 13px; font-weight: 700; color: #5B6478">{{k.l}}</div><div style="font-size: 28px; font-weight: 800; color: {{k.c}}; margin-top: 6px">{{k.v}}</div></div>
+      </sc-for>
+    </div>
+    <section class="card" style="padding: 16px 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px">
+      <label class="f">Department<select><option>All departments</option><option>Office of the CEO</option><option>Operations</option><option>Human Resources</option><option>Marketing / PR</option><option>Logistics</option><option>Finance</option></select></label>
+      <label class="f">Person category<select><option>All</option><option>Permanent</option><option>Fixed-term</option><option>Part-time</option><option>Temporary</option><option>Contract (SLA)</option><option>Intern</option><option>Volunteer</option><option>Bursary holder</option></select></label>
+      <label class="f">Paid through<select><option>All</option><option>SimplePay payroll</option><option>Invoice (SLA)</option><option>Stipend via SimplePay</option><option>Not paid</option></select></label>
+      <label class="f">Post status<select><option>All</option><option>Filled</option><option>Vacant funded</option><option>Vacant unfunded</option></select></label>
+      <label class="f">Funder<select><option>All</option><option>Core (Angels)</option><option>Scatec E4C</option><option>Scatec Y4C</option><option>Seriti Green</option></select></label>
+    </section>
+    <section class="card" style="min-width: 0">
+      <div style="overflow-x: auto; padding: 6px 8px">
+        <table class="tbl">
+          <thead><tr><th>Post no</th><th>Post title</th><th>Department</th><th>Category</th><th>Level (proposed)</th><th>Cost centre</th><th>Funder</th><th>Status</th><th>Direct manager</th><th>Functional manager</th><th>Incumbent</th><th></th></tr></thead>
+          <tbody>
+            <sc-for list="{{posts}}" as="p" hint-placeholder-count="10">
+              <tr><td class="m" style="font-size: 12px; color: #5B6478">{{p.no}}</td><td style="font-weight: 700">{{p.title}}</td><td>{{p.dept}}</td><td>{{p.cat}}</td><td class="m" style="font-size: 12px">{{p.grade}}</td><td class="m" style="font-size: 12px">{{p.cc}}</td><td>{{p.fund}}</td><td><span class="pill" style="background: {{p.bg}}; color: {{p.fg}}">{{p.st}}</span></td><td>{{p.dm}}</td><td style="color: #5B6478">{{p.fm}}</td><td>{{p.inc}}</td><td><a href="{{p.href}}" style="font-weight: 700; text-decoration: none">{{p.act}}</a></td></tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="card" style="padding: 16px 18px; background: #FFFBF1; border-color: #F1DDA8; display: flex; flex-direction: column; gap: 6px; font-size: 14px">
+      <strong>Establishment rules</strong>
+      <span>1. People are appointed only to a <strong>funded, vacant</strong> post. No post, no appointment, no payroll instruction.</span>
+      <span>2. Posts are created or closed only through a request approved by the CEO.</span>
+      <span>3. Every post has one cost centre and one funder, so salary costs roll up to programme budgets automatically.</span>
+      <span>4. Senior appointments are approved by the Board (HR-04 §5.1). Rules 1–3 are in draft HR-05-PROC-01.</span>
+      <span>5. Every post has <strong>one direct manager</strong>, who must hold an employee post: they approve leave, reviews and discipline. A functional manager (any post, including a contractor) guides day-to-day work but approves nothing.</span>
+      <span>6. Levels L1–L6 (Paterson) are proposed in the grading discussion paper and not yet approved; each title has 5 salary steps (see <a href="Grading.dc.html">Grading &amp; salary scales</a>). Contractors, interns and bursary holders sit outside the salary scale.</span>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#1F4E8C","options":["#1F4E8C","#0F6E6E","#6B3FA0","#B4532A"]},"$preview":{"width":1440,"height":1040}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const S = {
+      F: { st: 'Filled', fg: '#1E7A4F', bg: '#E3F4EC', act: 'View', href: 'PersonRecord.dc.html' },
+      V: { st: 'Vacant funded', fg: '#8A5800', bg: '#FFF3D9', act: 'Recruit', href: 'Recruitment.dc.html' },
+      U: { st: 'Unfunded', fg: '#5B6478', bg: '#EEF1F5', act: 'Request funding', href: 'Transactions.dc.html' }
+    };
+    const p = (no, title, dept, cat, grade, cc, fund, s, inc, dm, fm) => ({ no, title, dept, cat, grade, cc, fund, inc, dm, fm, ...S[s] });
+    return {
+      brand: this.props.brand ?? '#1F4E8C',
+      tot: [
+        { l: 'Total posts', v: '[00]', c: '#16213A' },
+        { l: 'Filled', v: '[00]', c: '#1E7A4F' },
+        { l: 'Vacant funded', v: '[00]', c: '#8A5800' },
+        { l: 'Annual cost (filled)', v: 'R [0.0]m', c: '#16213A' }
+      ],
+      posts: [
+        p('0100001', 'Chief Executive Officer', 'Office of the CEO', 'Permanent', 'L6', 'CC-0100', 'Core', 'F', '[Name]', 'Board Chair', '—'),
+        p('0100002', 'PA to the CEO', 'Office of the CEO', 'Permanent', 'L3', 'CC-0100', 'Core', 'F', '[Name]', 'CEO', '—'),
+        p('0200001', 'Head of Operations and Systems', 'Operations', 'Permanent', 'L5', 'CC-0200', 'Core', 'F', '[Name]', 'CEO', '—'),
+        p('0200002', 'National Operations Coordinator (NOC)', 'Operations', 'Permanent', 'L4', 'CC-0200', 'Core', 'F', '[Name]', 'Head of Ops & Systems', '—'),
+        p('0200003', 'Social Performance Practitioner', 'Operations', 'Permanent', 'L3', 'CC-0200', 'Scatec', 'F', '[Name]', 'NOC', '—'),
+        p('0300001', 'HOD Finance', 'Finance', '[To confirm]', 'L5', 'CC-0300', 'Core', 'F', '[Name]', 'CEO', '—'),
+        p('0500001', 'Marketing HOD', 'Marketing / PR', 'Permanent', 'L5', 'CC-0500', 'Core', 'F', '[Name]', 'CEO', '—'),
+        p('0600001', 'Logistics Factotum', 'Logistics', 'Permanent', 'L2', 'CC-0100', 'Core', 'F', '[Name]', 'PA to the CEO', '—'),
+        p('0400001', 'HOD Human Resources', 'Human Resources', 'Permanent', 'L5', 'CC-0400', 'Core', 'F', '[Name]', 'CEO', '—'),
+        p('0400002', 'HR Assistant', 'Human Resources', 'Permanent', 'L2', 'CC-0400', 'Core', 'F', '[Name]', 'HOD HR', '—'),
+        p('0400003', 'Programme Manager: Bursaries & Internships', 'Human Resources', 'Permanent', 'L4', 'CC-0400', '[Funder]', 'V', '—', 'HOD HR', 'NOC (programme coordination)'),
+        p('0200021', 'Mentor · SLA for the project period', 'Operations', 'Contract (SLA)', 'Rate band (HR-09)', 'CC-0211', 'Scatec E4C', 'F', '[Name]', 'n/a (contractor)', 'Head of Ops & Systems'),
+        p('0400051', 'Social Performance Intern · project period', 'Human Resources', 'Intern', 'Stipend scale', 'CC-0450', '[Project funder]', 'F', '[Name]', 'HOD HR', '[Angels supervisor]'),
+        p('0400091', 'Bursary Holder', 'Human Resources', 'Bursary holder', 'Award (HR-08)', 'CC-0490', 'Seriti Green', 'U', '—', 'HOD HR', '—')
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

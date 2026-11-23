@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Leave history import</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.side a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3A4459;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}
+.side a:hover{background:#EEF2F8}
+.side .code{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A93A6}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:8px 10px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:11px 10px;border-bottom:1px solid #EEF1F5}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+</style>
+</helmet>
+<div style="font-family: Manrope, sans-serif; color: #16213A; background: #F3F5F9; min-height: 100vh; display: flex; flex-wrap: wrap; align-items: flex-start">
+  <nav class="side" aria-label="People Hub menu" style="flex: 1 1 240px; max-width: 260px; box-sizing: border-box; background: #fff; border-right: 1px solid #E3E7EE; padding: 20px 14px; display: flex; flex-direction: column; gap: 4px; align-self: stretch">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px">
+      <div style="width: 38px; height: 38px; border-radius: 10px; background: {{brand}}; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800">A</div>
+      <div><div style="font-weight: 800; font-size: 16px">Angels PERSAL</div><div style="font-size: 12px; color: #5B6478">People &amp; Payroll Hub</div></div>
+    </div>
+    <a href="Main.dc.html">Dashboard<span class="code">0.0</span></a>
+    <a href="Establishment.dc.html">Post establishment<span class="code">1.1</span></a>
+    <a href="Grading.dc.html">Grading &amp; salary scales<span class="code">1.2</span></a>
+    <a href="Recruitment.dc.html">Recruitment<span class="code">1.5</span></a>
+    <a href="Programmes.dc.html">Internships &amp; bursaries<span class="code">1.6</span></a>
+    <a href="PersonRecord.dc.html">People<span class="code">2.1</span></a>
+    <a href="PeopleImport.dc.html">Staff import<span class="code">2.2</span></a>
+    <a href="Lifecycle.dc.html">Onboarding &amp; exits<span class="code">2.4</span></a>
+    <a href="Documents.dc.html">Documents<span class="code">2.6</span></a>
+    <a href="Leave.dc.html">Leave<span class="code">3.0</span></a>
+    <a href="LeaveImport.dc.html" style="background: {{brand}}; color: #fff">Leave history import<span class="code" style="color: #C9D6EA">3.2</span></a>
+    <a href="Performance.dc.html">Performance<span class="code">3.5</span></a>
+    <a href="Transactions.dc.html">Payroll instructions<span class="code">4.0</span></a>
+    <a href="Transactions.dc.html">Approvals<span class="code">6.0</span></a>
+    <a href="EmployeeRelations.dc.html">Discipline &amp; grievance<span class="code">5.5</span></a>
+    <a href="Policies.dc.html">Policies &amp; compliance<span class="code">8.0</span></a>
+    <a href="Reports.dc.html">Reports<span class="code">7.0</span></a>
+    <a href="Access.dc.html">Roles &amp; access<span class="code">9.0</span></a>
+    <a href="AuditLog.dc.html">Audit log<span class="code">9.1</span></a>
+    <div style="margin-top: 24px; padding: 12px; border-radius: 12px; background: #F3F5F9; font-size: 12px; color: #5B6478">Signed in as<br><strong style="color: #16213A">[HR Administrator]</strong><br>HR Administrator</div>
+  </nav>
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px">
+      <div>
+        <h1 style="margin: 0; font-size: 28px; font-weight: 800">Leave history import</h1>
+        <p style="margin: 4px 0 0; color: #5B6478; font-size: 14px">Each person starts on PERSAL with an opening balance checked by HR and signed by the employee. Old records come across read-only, with the scans attached.</p>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap">
+        <a href="LeaveImport.dc.html" style="text-decoration: none; background: #fff; border: 1px solid #D5DBE5; color: #16213A; padding: 11px 16px; border-radius: 10px; font-weight: 700; font-size: 14px">Download import template</a>
+        <a href="LeaveImport.dc.html" style="text-decoration: none; background: {{brand}}; color: #fff; padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 14px">Upload source file</a>
+      </div>
+    </div>
+    <section class="card" style="padding: 18px 20px">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 12px"><h2 class="h2" style="margin: 0">Cut-over steps</h2><span style="font-size: 13px; color: #5B6478">Leave stops in SimplePay on <strong style="color: #16213A">[1 April 2027]</strong></span></div>
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px">
+        <sc-for list="{{steps}}" as="s" hint-placeholder-count="7">
+          <li style="border-radius: 12px; padding: 12px; background: {{s.bg}}; border: 1px solid {{s.bd}}; display: flex; flex-direction: column; gap: 4px">
+            <span style="display: flex; align-items: center; gap: 8px"><span style="width: 24px; height: 24px; border-radius: 99px; background: {{s.fg}}; color: #fff; font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center">{{s.n}}</span><span style="font-size: 11px; font-weight: 800; color: {{s.fg}}; text-transform: uppercase">{{s.state}}</span></span>
+            <span style="font-size: 14px; font-weight: 800">{{s.t}}</span>
+            <span style="font-size: 12px; color: #5B6478">{{s.d}}</span>
+          </li>
+        </sc-for>
+      </ol>
+    </section>
+    <section class="card" style="min-width: 0">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px"><h2 class="h2" style="margin: 0">Per-person check · annual leave</h2><span style="font-size: 12px; color: #5B6478">Earned − taken (all sources) compared with the last SimplePay balance</span></div>
+      <div style="overflow-x: auto; padding: 0 8px 8px">
+        <table class="tbl">
+          <thead><tr><th>PERSAL no</th><th>Name</th><th>Earned</th><th>Taken</th><th>Expected</th><th>SimplePay</th><th>Difference</th><th>Wrongly deducted</th><th>Status</th></tr></thead>
+          <tbody>
+            <sc-for list="{{people}}" as="p" hint-placeholder-count="6">
+              <tr><td class="m" style="font-size: 12px; color: #5B6478">{{p.no}}</td><td style="font-weight: 700">{{p.n}}</td><td>{{p.e}}</td><td>{{p.t}}</td><td>{{p.x}}</td><td>{{p.sp}}</td><td style="font-weight: 800; color: {{p.dc}}">{{p.d}}</td><td>{{p.w}}</td><td><span class="pill" style="background: {{p.bg}}; color: {{p.fg}}">{{p.st}}</span></td></tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 16px; align-items: start">
+      <section class="card" style="padding: 18px 20px; min-width: 0">
+        <h2 class="h2">Sources · [Employee name]</h2>
+        <div style="overflow-x: auto">
+          <table class="tbl">
+            <thead><tr><th>Source</th><th>Years</th><th>Records</th><th>Evidence</th></tr></thead>
+            <tbody>
+              <sc-for list="{{sources}}" as="s" hint-placeholder-count="4">
+                <tr><td style="font-weight: 700">{{s.s}}</td><td>{{s.y}}</td><td>{{s.n}}</td><td style="color: #5B6478; white-space: normal">{{s.e}}</td></tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin: 10px 0 0; font-size: 12px; color: #5B6478">Import template: one row per leave event · PERSAL no · type · from · to · days · source · document reference · status (approved, cancelled, disputed).</p>
+      </section>
+      <section class="card" style="padding: 18px 20px; min-width: 0">
+        <h2 class="h2">Differences to settle</h2>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <sc-for list="{{diffs}}" as="d" hint-placeholder-count="4">
+            <div style="padding: 10px 12px; border-radius: 10px; background: {{d.bg}}; display: flex; flex-direction: column; gap: 4px">
+              <div style="display: flex; justify-content: space-between; gap: 10px"><strong style="font-size: 13px">{{d.t}}</strong><span style="font-size: 13px; font-weight: 800; color: {{d.fg}}">{{d.n}}</span></div>
+              <span style="font-size: 12px; color: #5B6478">{{d.why}}</span>
+              <span style="font-size: 12px; font-weight: 700; color: {{d.fg}}">{{d.dec}}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="margin-top: 14px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+          <div style="border: 1px dashed #D5DBE5; border-radius: 10px; padding: 10px 12px; font-size: 12px; color: #5B6478"><strong style="color: #16213A; display: block">Employee sign-off</strong>[Not signed]</div>
+          <div style="border: 1px dashed #D5DBE5; border-radius: 10px; padding: 10px 12px; font-size: 12px; color: #5B6478"><strong style="color: #16213A; display: block">HR sign-off</strong>[Not signed]</div>
+        </div>
+        <p style="margin: 10px 0 0; font-size: 12px; color: #5B6478">Disputed days are loaded as "disputed" so the rest of the balance can go live. Adjustments go through request 3.6 (HR → HOD HR → HOF).</p>
+      </section>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#1F4E8C","options":["#1F4E8C","#0F6E6E","#6B3FA0","#B4532A"]},"$preview":{"width":1440,"height":1300}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const done = { state: 'Done', fg: '#1E7A4F', bg: '#F2FAF6', bd: '#BFE3CF' }, now = { state: 'Now', fg: '#8A5800', bg: '#FFF8E8', bd: '#F1DDA8' }, next = { state: 'Next', fg: '#8A93A6', bg: '#fff', bd: '#E3E7EE' };
+    const ok = { bg: '#E3F4EC', fg: '#1E7A4F' }, amb = { bg: '#FFF3D9', fg: '#8A5800' }, bad = { bg: '#FDECEA', fg: '#B42318' }, blu = { bg: '#E8EFF8', fg: '#1F4E8C' };
+    const P = (no, n, e, t, x, sp, d, w, s) => ({ no, n, e, t, x, sp, d, w, dc: d === '0.00' ? '#1E7A4F' : '#B42318', st: s, ...({ Signed: ok, Agreed: ok, Differences: amb, Disputed: bad, Checking: blu, 'Not started': { bg: '#EEF1F5', fg: '#5B6478' } })[s] });
+    return {
+      brand: this.props.brand ?? '#1F4E8C',
+      steps: [
+        { n: '1', t: 'List sources', d: 'SimplePay, Excel trackers, paper forms, closure dates', ...done },
+        { n: '2', t: 'Scan paper', d: 'One scan per form, named by PERSAL no and date', ...now },
+        { n: '3', t: 'Fill template', d: 'One row per leave event, every source', ...next },
+        { n: '4', t: 'Check each person', d: 'Earned − taken vs SimplePay', ...next },
+        { n: '5', t: 'Settle differences', d: 'Credit back, accept or refer', ...next },
+        { n: '6', t: 'Sign off', d: 'Employee and HR sign the opening balance', ...next },
+        { n: '7', t: 'Cut over', d: 'Leave stops in SimplePay; balances go live', ...next }
+      ],
+      people: [
+        P('[00000000]', '[Employee name]', '[00.00]', '[00.00]', '[00.00]', '[00.00]', '0.00', '0', 'Signed'),
+        P('[00000000]', '[Employee name]', '[00.00]', '[00.00]', '[00.00]', '[00.00]', '[−00.00]', '[0]', 'Differences'),
+        P('[00000000]', '[Employee name]', '[00.00]', '[00.00]', '[00.00]', '[00.00]', '[−00.00]', '[0]', 'Disputed'),
+        P('[00000000]', '[Employee name]', '[00.00]', '[00.00]', '[00.00]', '[00.00]', '0.00', '0', 'Agreed'),
+        P('[00000000]', '[Employee name]', '—', '—', '—', '[00.00]', '—', '—', 'Checking'),
+        P('[00000000]', '[Employee name]', '—', '—', '—', '[00.00]', '—', '—', 'Not started')
+      ],
+      sources: [
+        { s: 'SimplePay (admin report)', y: '[2018]–[2027]', n: '[00]', e: 'Leave transactions, adjustments and expired leave' },
+        { s: 'HR Excel tracker', y: '[YYYY]', n: '[00]', e: 'Tracker file, the person’s row only' },
+        { s: 'Paper leave forms', y: '[YYYY]–[YYYY]', n: '[00]', e: 'Scans: PERSALno_LEAVE_YYYY-MM-DD' },
+        { s: 'December closure list', y: 'Every year', n: '[00]', e: 'Closure dates approved by the CEO' }
+      ],
+      diffs: [
+        { t: 'Public holidays recorded as leave', n: '[0] days', why: 'Found automatically by the public holiday calendar', dec: 'Credit back', ...ok },
+        { t: 'Overtime time off recorded as annual leave', n: '[0] days', why: 'Signed overtime form shows the hours bank', dec: 'Credit back', ...ok },
+        { t: 'Closure days with no leave record', n: '[0] days', why: 'Closure dates known, nothing captured', dec: '[HR to confirm]', ...amb },
+        { t: 'Leave not explained by any record', n: '[00.00] days', why: 'Likely expired leave or an HR adjustment', dec: '[Decision needed]', ...bad }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

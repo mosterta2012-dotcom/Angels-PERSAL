@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Angels leave portal</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:10px 12px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:12px;border-bottom:1px solid #EEF1F5;white-space:nowrap}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+.f{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#5B6478}
+.f select,.f input,.f textarea{font-family:Manrope,sans-serif;font-size:14px;padding:11px 12px;border:1px solid #D5DBE5;border-radius:10px;background:#fff;color:#16213A}
+.f textarea{min-height:70px;resize:vertical}
+.seg{font-family:Manrope,sans-serif;font-size:14px;font-weight:700;padding:10px 16px;border:0;border-radius:10px;cursor:pointer;min-height:44px}
+.btn{font-family:Manrope,sans-serif;font-size:14px;font-weight:700;padding:11px 16px;border-radius:10px;cursor:pointer;min-height:44px}
+</style>
+</helmet>
+<div style="font-family: Manrope, sans-serif; color: #16213A; background: #F3F5F9; min-height: 100vh">
+  <header style="background: #fff; border-bottom: 1px solid #E3E7EE">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+      <div style="width: 38px; height: 38px; border-radius: 10px; background: {{brand}}; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800">A</div>
+      <div style="flex: 1 1 200px"><div style="font-weight: 800; font-size: 16px">Angels Leave</div><div style="font-size: 12px; color: #5B6478">Staff leave portal · separate from PERSAL</div></div>
+      <div style="font-size: 13px; color: #5B6478; text-align: right">Signed in as <strong style="color: #16213A">[Employee name]</strong><br>Microsoft 365</div>
+    </div>
+  </header>
+  <main style="max-width: 1120px; margin: 0 auto; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px">
+    <div role="tablist" aria-label="Portal view" style="display: inline-flex; gap: 4px; padding: 4px; background: #E6EAF1; border-radius: 12px; align-self: flex-start; flex-wrap: wrap">
+      <sc-for list="{{tabs}}" as="t" hint-placeholder-count="2">
+        <button class="seg" role="tab" onClick="{{t.pick}}" style="background: {{t.bg}}; color: {{t.fg}}">{{t.name}}</button>
+      </sc-for>
+    </div>
+    <sc-if value="{{mine}}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; flex-direction: column; gap: 18px">
+        <div style="display: flex; gap: 12px; align-items: center; padding: 12px 16px; border-radius: 12px; background: #FFF3D9; color: #8A5800; font-size: 13px; flex-wrap: wrap">
+          <strong>[0] annual days expire on [DD Mon YYYY].</strong><span>Book them before then, or speak to your manager.</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px">
+          <sc-for list="{{bal}}" as="b" hint-placeholder-count="4">
+            <div class="card" style="padding: 16px 18px"><div style="font-size: 13px; font-weight: 700; color: #5B6478">{{b.t}}</div><div style="font-size: 30px; font-weight: 800; margin-top: 4px">{{b.v}}</div><div style="font-size: 12px; color: #5B6478">{{b.s}}</div></div>
+          </sc-for>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; align-items: start">
+          <section class="card" style="padding: 18px 20px; display: flex; flex-direction: column; gap: 12px">
+            <h2 class="h2" style="margin: 0">Apply for leave</h2>
+            <label class="f">Leave type<select><option>Annual</option><option>Sick</option><option>Family responsibility</option><option>Time off for overtime</option><option>Special</option><option>Unpaid</option></select></label>
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+              <label class="f">From<input type="date" value="2027-04-19"></label>
+              <label class="f">To<input type="date" value="2027-04-23"></label>
+            </div>
+            <div style="font-size: 13px; padding: 10px 12px; border-radius: 10px; background: #F3F5F9"><strong>[0] working days</strong> · public holidays are not counted</div>
+            <label class="f">Note for your manager (optional)<textarea placeholder="Add a note…"></textarea></label>
+            <label class="f">Medical certificate (sick leave over 2 days)<input type="file"></label>
+            <button class="btn" style="background: {{brand}}; border: 1px solid {{brand}}; color: #fff">Send to [Direct manager]</button>
+          </section>
+          <section class="card" style="padding: 18px 20px; min-width: 0">
+            <h2 class="h2">My requests</h2>
+            <div style="overflow-x: auto">
+              <table class="tbl">
+                <thead><tr><th>Type</th><th>Dates</th><th>Days</th><th>Status</th></tr></thead>
+                <tbody>
+                  <sc-for list="{{reqs}}" as="r" hint-placeholder-count="4">
+                    <tr><td style="font-weight: 700">{{r.t}}</td><td>{{r.d}}</td><td>{{r.n}}</td><td><span class="pill" style="background: {{r.bg}}; color: {{r.fg}}">{{r.st}}</span></td></tr>
+                  </sc-for>
+                </tbody>
+              </table>
+            </div>
+            <div style="margin-top: 14px; font-size: 13px; padding: 10px 12px; border-radius: 10px; background: #E8EFF8; color: #163A69">December closure: <strong>[DD Dec] – [DD Jan]</strong>, [00] leave days booked automatically.</div>
+          </section>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{team}}" hint-placeholder-val="{{ false }}">
+      <section class="card" style="min-width: 0">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px"><h2 class="h2" style="margin: 0">Waiting for you · your direct reports</h2><span style="font-size: 12px; color: #5B6478">Moves to the next level after [3] working days</span></div>
+        <div style="overflow-x: auto; padding: 0 8px 8px">
+          <table class="tbl">
+            <thead><tr><th>Name</th><th>Type</th><th>Dates</th><th>Days</th><th>Balance after</th><th>Team on leave</th><th></th></tr></thead>
+            <tbody>
+              <sc-for list="{{pend}}" as="p" hint-placeholder-count="3">
+                <tr><td style="font-weight: 700">{{p.n}}</td><td>{{p.t}}</td><td>{{p.d}}</td><td>{{p.days}}</td><td>{{p.after}}</td><td style="color: #5B6478">{{p.overlap}}</td><td style="display: flex; gap: 8px"><button class="btn" style="background: #1E7A4F; border: 1px solid #1E7A4F; color: #fff; padding: 8px 14px">Approve</button><button class="btn" style="background: #fff; border: 1px solid #E8A39C; color: #B42318; padding: 8px 14px">Decline</button></td></tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin: 0; padding: 0 20px 16px; font-size: 12px; color: #5B6478">A reason is required to decline, and the employee sees it. You only see leave for people who report directly to you.</p>
+      </section>
+    </sc-if>
+    <p style="margin: 0; font-size: 12px; color: #8A93A6">Personnel records, pay and documents are not visible here. Payslips stay in SimplePay. Questions: HR on Teams.</p>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#1F4E8C","options":["#1F4E8C","#0F6E6E","#6B3FA0","#B4532A"]},"$preview":{"width":1440,"height":1040}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { k: 0 }; }
+  renderVals() {
+    const k = this.state.k;
+    const ok = { bg: '#E3F4EC', fg: '#1E7A4F' }, amb = { bg: '#FFF3D9', fg: '#8A5800' }, bad = { bg: '#FDECEA', fg: '#B42318' };
+    return {
+      brand: this.props.brand ?? '#1F4E8C',
+      mine: k === 0, team: k === 1,
+      tabs: ['My leave', 'Team approvals · [0]'].map((name, i) => ({ name, pick: () => this.setState({ k: i }), bg: i === k ? '#fff' : 'transparent', fg: i === k ? '#16213A' : '#5B6478' })),
+      bal: [
+        { t: 'Annual leave', v: '[00.00]', s: '15 days a year · 20 after 5 years' },
+        { t: 'Sick leave', v: '[00]', s: 'Cycle ends [DD Mon YYYY]' },
+        { t: 'Family responsibility', v: '[0]', s: '3 days a year' },
+        { t: 'Time off for overtime', v: '[0.0]', s: 'Hours agreed in writing' }
+      ],
+      reqs: [
+        { t: 'Annual', d: '[DD Mon] – [DD Mon]', n: '[0]', st: 'With manager', ...amb },
+        { t: 'Sick', d: '[DD Mon]', n: '[0]', st: 'Approved', ...ok },
+        { t: 'Annual', d: '[DD Mon] – [DD Mon]', n: '[0]', st: 'Declined · reason given', ...bad }
+      ],
+      pend: [
+        { n: '[Employee name]', t: 'Annual', d: '[DD Mon] – [DD Mon]', days: '[0]', after: '[00.00]', overlap: '[0] others off' },
+        { n: '[Employee name]', t: 'Family responsibility', d: '[DD Mon]', days: '[0]', after: '[0]', overlap: 'None' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

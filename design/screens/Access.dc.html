@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Roles and access</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.side a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3A4459;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}
+.side a:hover{background:#EEF2F8}
+.side .code{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A93A6}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:8px 10px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:11px 10px;border-bottom:1px solid #EEF1F5}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+</style>
+</helmet>
+<div style="font-family: Manrope, sans-serif; color: #16213A; background: #F3F5F9; min-height: 100vh; display: flex; flex-wrap: wrap; align-items: flex-start">
+  <nav class="side" aria-label="People Hub menu" style="flex: 1 1 240px; max-width: 260px; box-sizing: border-box; background: #fff; border-right: 1px solid #E3E7EE; padding: 20px 14px; display: flex; flex-direction: column; gap: 4px; align-self: stretch">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px">
+      <div style="width: 38px; height: 38px; border-radius: 10px; background: {{brand}}; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800">A</div>
+      <div><div style="font-weight: 800; font-size: 16px">Angels PERSAL</div><div style="font-size: 12px; color: #5B6478">People &amp; Payroll Hub</div></div>
+    </div>
+    <a href="Main.dc.html">Dashboard<span class="code">0.0</span></a>
+    <a href="Establishment.dc.html">Post establishment<span class="code">1.1</span></a>
+    <a href="Grading.dc.html">Grading &amp; salary scales<span class="code">1.2</span></a>
+    <a href="Recruitment.dc.html">Recruitment<span class="code">1.5</span></a>
+    <a href="Programmes.dc.html">Internships &amp; bursaries<span class="code">1.6</span></a>
+    <a href="PersonRecord.dc.html">People<span class="code">2.1</span></a>
+    <a href="PeopleImport.dc.html">Staff import<span class="code">2.2</span></a>
+    <a href="Lifecycle.dc.html">Onboarding &amp; exits<span class="code">2.4</span></a>
+    <a href="Documents.dc.html">Documents<span class="code">2.6</span></a>
+    <a href="Leave.dc.html">Leave<span class="code">3.0</span></a>
+    <a href="LeaveImport.dc.html">Leave history import<span class="code">3.2</span></a>
+    <a href="Performance.dc.html">Performance<span class="code">3.5</span></a>
+    <a href="Transactions.dc.html">Payroll instructions<span class="code">4.0</span></a>
+    <a href="Transactions.dc.html">Approvals<span class="code">6.0</span></a>
+    <a href="EmployeeRelations.dc.html">Discipline &amp; grievance<span class="code">5.5</span></a>
+    <a href="Policies.dc.html">Policies &amp; compliance<span class="code">8.0</span></a>
+    <a href="Reports.dc.html">Reports<span class="code">7.0</span></a>
+    <a href="Access.dc.html" style="background: {{brand}}; color: #fff">Roles &amp; access<span class="code" style="color: #C9D6EA">9.0</span></a>
+    <a href="AuditLog.dc.html">Audit log<span class="code">9.1</span></a>
+    <div style="margin-top: 24px; padding: 12px; border-radius: 12px; background: #F3F5F9; font-size: 12px; color: #5B6478">Signed in as<br><strong style="color: #16213A">[HR Administrator]</strong><br>HR Administrator</div>
+  </nav>
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px">
+    <div>
+      <h1 style="margin: 0; font-size: 28px; font-weight: 800">Roles &amp; access</h1>
+      <p style="margin: 4px 0 0; color: #5B6478; font-size: 14px">Personnel records stay with four HR roles (POPIA / PAIA). Staff and managers only use the separate leave portal. Sign-in with Microsoft 365; every action is in the audit log.</p>
+    </div>
+    <section class="card" style="min-width: 0">
+      <div style="padding: 16px 20px 4px"><h2 class="h2" style="margin: 0">Who can do what</h2></div>
+      <div style="overflow-x: auto; padding: 0 8px 8px">
+        <table class="tbl">
+          <thead><tr><th>Role</th><th>Where</th><th>Records</th><th>Leave</th><th>Requests &amp; approvals</th><th>Pay data</th></tr></thead>
+          <tbody>
+            <sc-for list="{{roles}}" as="r" hint-placeholder-count="8">
+              <tr><td style="font-weight: 800">{{r.r}}</td><td><span class="pill" style="background: {{r.bg}}; color: {{r.fg}}">{{r.w}}</span></td><td style="white-space: normal; min-width: 150px">{{r.rec}}</td><td style="white-space: normal; min-width: 150px">{{r.lv}}</td><td style="white-space: normal; min-width: 170px">{{r.ap}}</td><td style="white-space: normal; min-width: 120px">{{r.pay}}</td></tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 16px; align-items: start">
+      <section class="card" style="padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; font-size: 14px">
+        <h2 class="h2" style="margin: 0 0 6px">Access rules</h2>
+        <sc-for list="{{rules}}" as="x" hint-placeholder-count="6"><span>{{x}}</span></sc-for>
+      </section>
+      <section class="card" style="padding: 18px 20px; min-width: 0">
+        <h2 class="h2">Where each HR task lives</h2>
+        <div style="display: flex; flex-direction: column">
+          <sc-for list="{{tools}}" as="t" hint-placeholder-count="8">
+            <div style="display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px solid #EEF1F5; font-size: 13px"><span style="font-weight: 700">{{t.t}}</span><span style="color: #5B6478; text-align: right">{{t.w}}</span></div>
+          </sc-for>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#1F4E8C","options":["#1F4E8C","#0F6E6E","#6B3FA0","#B4532A"]},"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const core = { w: 'PERSAL', bg: '#E8EFF8', fg: '#1F4E8C' }, portal = { w: 'Leave portal', bg: '#E3F4EC', fg: '#1E7A4F' };
+    return {
+      brand: this.props.brand ?? '#1F4E8C',
+      roles: [
+        { r: 'HOD HR', rec: 'All records', lv: 'Monitor, adjust, set closures', ap: 'Approves HR requests; reverses', pay: 'View', ...core },
+        { r: 'HR Administrator', rec: 'Capture and update', lv: 'Monitor, capture paper forms', ap: 'Captures requests', pay: 'Capture instructions', ...core },
+        { r: 'Head of Finance (CFO)', rec: 'View', lv: 'View; leave liability', ap: 'Budget and payroll step', pay: 'Verify banking; send to SimplePay', ...core },
+        { r: 'CEO', rec: 'View', lv: 'Approves HODs; approves closures', ap: 'Final approval', pay: 'View', ...core },
+        { r: 'Employee', rec: 'None', lv: 'Own balances and requests only', ap: '—', pay: 'None (payslips in SimplePay)', ...portal },
+        { r: 'Direct manager', rec: 'None', lv: 'Approve or decline direct reports’ leave', ap: 'Other requests on form or email', pay: 'None', ...portal },
+        { r: 'QMS Administrator', rec: 'None', lv: 'None', ap: 'Publishes policies and procedures in the QMS Hub (PERSAL shows them read-only); follows HR risks and policy acknowledgement totals · no personal details', pay: 'None', w: 'QMS Hub + risk tracker', bg: '#F1EAFB', fg: '#6B3FA0' },
+        { r: 'Board Chair / Treasurer', rec: 'None', lv: 'Approve the CEO’s leave', ap: 'Final step when the CEO is the subject', pay: 'None', ...portal }
+      ],
+      rules: [
+        '1. Only HOD HR, HR Administrator, Head of Finance and CEO log into PERSAL.',
+        '2. The leave portal shows a person their own leave, and a manager only their direct reports’ requests.',
+        '3. A direct manager must be an employee. Functional managers and contractors approve nothing.',
+        '4. Nobody approves their own request; the Board steps in when the CEO is the subject.',
+        '5. Staff ask for their own data through the Information Officer (POPIA / PAIA).',
+        '5a. HR risks leave PERSAL only as risk details (ID, area, level, owner, dates, status) for the QMS risk tracker; never names or personal data.',
+        '6. Every view of a pay or ID field, and every change, is written to the audit log.'
+      ],
+      tools: [
+        { t: 'Personnel records, posts, recruitment, performance, discipline', w: 'PERSAL (HR only)' },
+        { t: 'Policies and procedures (edit, approve, publish)', w: 'QMS Hub (QMS Administrator)' },
+        { t: 'Leave applications, approvals and balances', w: 'Leave portal + PERSAL' },
+        { t: 'Salaries, payslips, IRP5s', w: 'SimplePay' },
+        { t: 'Attendance logbook', w: 'Jibble' },
+        { t: 'Announcements, directory, HR queries', w: 'Microsoft Teams' },
+        { t: 'Training and learning', w: 'Lead Academy' },
+        { t: 'Surveys, exit interviews', w: 'Survey tool' },
+        { t: 'Wellness / EAP notes', w: 'Restricted board (Trello-style)' },
+        { t: 'Claims and payment requests', w: 'Finance Hub / Travel Hub' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

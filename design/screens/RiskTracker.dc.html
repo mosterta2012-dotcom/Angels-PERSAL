@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Angels risk tracker</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:10px 12px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:12px;border-bottom:1px solid #EEF1F5;white-space:nowrap}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+.rowbtn{font-family:Manrope,sans-serif;font-size:13px;font-weight:700;padding:8px 12px;border-radius:10px;border:1px solid #D5DBE5;background:#fff;color:#16213A;cursor:pointer;min-height:40px}
+</style>
+</helmet>
+<div style="font-family: Manrope, sans-serif; color: #16213A; background: #F3F5F9; min-height: 100vh">
+  <header style="background: #fff; border-bottom: 1px solid #E3E7EE">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+      <div style="width: 38px; height: 38px; border-radius: 10px; background: {{brand}}; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800">A</div>
+      <div style="flex: 1 1 220px"><div style="font-weight: 800; font-size: 16px">Angels Risk Tracker</div><div style="font-size: 12px; color: #5B6478">HR risks fed from PERSAL · no names or personal details</div></div>
+      <div style="font-size: 13px; color: #5B6478; text-align: right">Signed in as <strong style="color: #16213A">[QMS Administrator]</strong><br>Microsoft 365</div>
+    </div>
+  </header>
+  <main style="max-width: 1240px; margin: 0 auto; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px">
+      <div>
+        <h1 style="margin: 0; font-size: 26px; font-weight: 800">HR risks</h1>
+        <p style="margin: 4px 0 0; color: #5B6478; font-size: 14px">Updated whenever a risk is logged, changes level or changes status in PERSAL · linked to the QMS risk register</p>
+      </div>
+      <a href="RiskTracker.dc.html" style="text-decoration: none; background: {{brand}}; color: #fff; padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 14px">Export quarterly report</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px">
+      <sc-for list="{{tiles}}" as="t" hint-placeholder-count="4">
+        <div class="card" style="padding: 16px 18px"><div style="font-size: 13px; font-weight: 700; color: #5B6478">{{t.l}}</div><div style="font-size: 28px; font-weight: 800; margin-top: 6px; color: {{t.c}}">{{t.v}}</div><div style="font-size: 12px; color: #5B6478">{{t.s}}</div></div>
+      </sc-for>
+    </div>
+    <section class="card" style="padding: 18px 20px">
+      <h2 class="h2">Alerts</h2>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <sc-for list="{{alerts}}" as="a" hint-placeholder-count="4">
+          <div style="display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 10px; background: {{a.bg}}; flex-wrap: wrap">
+            <span style="width: 8px; height: 8px; border-radius: 99px; background: {{a.fg}}; flex: none"></span>
+            <span class="m" style="font-size: 12px; color: #5B6478">{{a.id}}</span>
+            <span style="flex: 1 1 300px; font-size: 13px">{{a.t}}</span>
+            <span style="font-size: 12px; font-weight: 700; color: {{a.fg}}">{{a.w}}</span>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+    <section class="card" style="min-width: 0">
+      <div style="padding: 16px 20px 4px"><h2 class="h2" style="margin: 0">All HR risks · select one to see its trail</h2></div>
+      <div style="overflow-x: auto; padding: 0 8px 8px">
+        <table class="tbl">
+          <thead><tr><th>HR ID</th><th>QMS ID</th><th>Area</th><th>Level</th><th>Owner</th><th>Reported to · date</th><th>Action due</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <sc-for list="{{risks}}" as="r" hint-placeholder-count="6">
+              <tr style="background: {{r.row}}"><td class="m" style="font-size: 12px">{{r.id}}</td><td class="m" style="font-size: 12px; color: #5B6478">{{r.q}}</td><td>{{r.a}}</td><td><span class="pill" style="background: {{r.bg}}; color: {{r.fg}}">{{r.lv}}</span></td><td>{{r.o}}</td><td style="font-size: 12px; color: {{r.rc}}">{{r.rp}}</td><td style="font-size: 12px; color: {{r.dc}}">{{r.due}}</td><td><span class="pill" style="background: #EEF1F5; color: #3A4459">{{r.st}}</span></td><td><button class="rowbtn" type="button" onClick="{{r.pick}}" aria-label="Show trail for {{r.id}}">Trail</button></td></tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 16px; align-items: start">
+      <section class="card" style="padding: 18px 20px; min-width: 0">
+        <h2 class="h2">Trail · {{sel.id}} · {{sel.a}}</h2>
+        <div style="display: flex; flex-direction: column">
+          <sc-for list="{{sel.trail}}" as="e" hint-placeholder-count="5">
+            <div style="display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #EEF1F5">
+              <span style="width: 10px; height: 10px; margin-top: 5px; border-radius: 99px; background: {{e.c}}; flex: none"></span>
+              <div style="flex: 1"><div style="font-size: 14px; font-weight: 700">{{e.t}}</div><div style="font-size: 12px; color: #5B6478">{{e.d}} · {{e.b}}</div></div>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+      <section class="card" style="padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; font-size: 14px">
+        <h2 class="h2" style="margin: 0 0 6px">How the tracker works</h2>
+        <span>1. A new HR risk, a level change or a status change reaches you here and by email or Teams the same day.</span>
+        <span>2. You give it a QMS ID in the QMS risk register; both registers stay linked.</span>
+        <span>3. You are warned when a risk is not reported in time (Critical: immediately; High: [48 hours]; Medium: [5] working days), or when a review or action is overdue.</span>
+        <span>4. A risk shows Closed only after the owner’s closure note, an evidence reference and HOD HR approval (CEO too for High and Critical).</span>
+        <span>5. Closed risks stay on the quarterly report for one more quarter as “closed this quarter”.</span>
+        <span style="font-size: 12px; color: #5B6478; margin-top: 4px">Quarterly report goes to [HOD Operations and Systems · to confirm].</span>
+      </section>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#1F4E8C","options":["#1F4E8C","#0F6E6E","#6B3FA0","#B4532A"]},"$preview":{"width":1440,"height":1400}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { k: 0 }; }
+  renderVals() {
+    const L = { Critical: { bg: '#FDECEA', fg: '#B42318' }, High: { bg: '#FFF3D9', fg: '#B4532A' }, Medium: { bg: '#FFF8E8', fg: '#8A5800' }, Low: { bg: '#E3F4EC', fg: '#1E7A4F' } };
+    const late = '#B42318', ok = '#3A4459';
+    const green = '#1E7A4F', blue = '#1F4E8C', amber = '#8A5800', red = '#B42318';
+    const data = [
+      { id: 'HR-R01', q: 'QMS-R[000]', a: 'Leave · BCEA', lv: 'High', o: 'HOD HR', rp: 'CEO · [date] ✓ in time', rc: ok, due: '[DD Mon] · on track', dc: ok, st: 'Action in progress',
+        trail: [
+          { t: 'Logged in PERSAL · rated High (4 × 4)', d: '[DD Mon]', b: 'HR Administrator', c: blue },
+          { t: 'Alert received · QMS-R[000] created', d: '[DD Mon]', b: 'QMS Administrator', c: blue },
+          { t: 'Reported to the CEO (within 48 hours)', d: '[DD Mon]', b: 'HOD HR', c: green },
+          { t: 'Action: leave history import and signed opening balances', d: 'Due [DD Mon]', b: 'HOD HR', c: amber },
+          { t: 'Closure: waiting for evidence and approval', d: '—', b: '—', c: '#C9D0DC' }
+        ] },
+      { id: 'HR-R02', q: 'QMS-R[000]', a: 'Leave · BCEA', lv: 'High', o: 'HOD HR', rp: 'Not reported · 3 days', rc: late, due: '[DD Mon]', dc: ok, st: 'Open',
+        trail: [
+          { t: 'Logged in PERSAL · rated High (4 × 3)', d: '[DD Mon]', b: 'HR Administrator', c: blue },
+          { t: 'Alert received · QMS-R[000] created', d: '[DD Mon]', b: 'QMS Administrator', c: blue },
+          { t: 'Reporting deadline passed (48 hours) · reminder sent to owner', d: '[DD Mon]', b: 'Tracker', c: red }
+        ] },
+      { id: 'HR-R04', q: 'QMS-R[000]', a: 'POPIA', lv: 'Medium', o: 'HOD HR', rp: 'HOD · [date] ✓', rc: ok, due: '[DD Mon] · overdue', dc: late, st: 'Action in progress',
+        trail: [
+          { t: 'Logged · rated Medium (2 × 5)', d: '[DD Mon]', b: 'HR Administrator', c: blue },
+          { t: 'Reported to HOD', d: '[DD Mon]', b: 'HOD HR', c: green },
+          { t: 'Action overdue: access review of PERSAL roles', d: 'Due [DD Mon]', b: 'HOD HR', c: red }
+        ] },
+      { id: 'HR-R06', q: 'QMS-R[000]', a: 'Tax · labour', lv: 'High', o: 'Head of Finance', rp: 'CEO · [date] ✓ in time', rc: ok, due: '[DD Mon]', dc: ok, st: 'Reported',
+        trail: [
+          { t: 'Logged · rated High (3 × 4)', d: '[DD Mon]', b: 'HR Administrator', c: blue },
+          { t: 'Reported to the CEO', d: '[DD Mon]', b: 'Head of Finance', c: green }
+        ] },
+      { id: 'HR-R09', q: 'QMS-R[000]', a: 'Policy', lv: 'Medium', o: 'HOD HR', rp: 'HOD · [date] ✓', rc: ok, due: 'Done', dc: green, st: 'Closed',
+        trail: [
+          { t: 'Logged · rated Medium (4 × 2)', d: '[DD Mon]', b: 'HR Administrator', c: blue },
+          { t: 'Reported to HOD', d: '[DD Mon]', b: 'HOD HR', c: green },
+          { t: 'Action done: HR-06 updated for leave on PERSAL', d: '[DD Mon]', b: 'HOD HR', c: green },
+          { t: 'Closed · evidence HR-06 v[1.1] approved', d: '[DD Mon]', b: 'HOD HR approved', c: green }
+        ] },
+      { id: 'HR-R10', q: 'QMS-R[000]', a: 'Contracts', lv: 'Low', o: 'HR Administrator', rp: 'Quarterly report', rc: ok, due: '[DD Mon]', dc: ok, st: 'Open',
+        trail: [
+          { t: 'Logged · rated Low (3 × 2)', d: '[DD Mon]', b: 'HR Administrator', c: blue }
+        ] }
+    ];
+    const k = this.state.k;
+    return {
+      brand: this.props.brand ?? '#1F4E8C',
+      tiles: [
+        { l: 'Open HR risks', v: '[0]', s: 'Not yet closed', c: '#16213A' },
+        { l: 'Not reported in time', v: '[0]', s: 'Past the deadline for their level', c: '#B42318' },
+        { l: 'Actions overdue', v: '[0]', s: 'Past the due date', c: '#8A5800' },
+        { l: 'Closed this quarter', v: '[0]', s: 'With evidence and approval', c: '#1E7A4F' }
+      ],
+      alerts: [
+        { id: 'HR-R02', t: 'High risk not reported to the CEO within 48 hours', w: 'Reminder sent', bg: '#FDECEA', fg: '#B42318' },
+        { id: 'HR-R04', t: 'Action past its due date', w: 'Follow up with owner', bg: '#FFF3D9', fg: '#8A5800' },
+        { id: 'HR-R11', t: 'New risk logged · Medium · Leave', w: 'Add to QMS register', bg: '#E8EFF8', fg: '#1F4E8C' },
+        { id: 'HR-R09', t: 'Closed with evidence · HOD HR approved', w: 'Closed this quarter', bg: '#E3F4EC', fg: '#1E7A4F' }
+      ],
+      risks: data.map((r, i) => ({ ...r, ...L[r.lv], row: i === k ? '#F7F9FD' : '#fff', pick: () => this.setState({ k: i }) })),
+      sel: data.at(k)
+    };
+  }
+}
+</script>
+</body>
+</html>

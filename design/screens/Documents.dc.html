@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Documents</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.side a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3A4459;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}
+.side a:hover{background:#EEF2F8}
+.side .code{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A93A6}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:8px 10px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:11px 10px;border-bottom:1px solid #EEF1F5;white-space:nowrap}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+.f{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#5B6478}
+.f select,.f input{font-family:Manrope,sans-serif;font-size:14px;padding:10px 12px;border:1px solid #D5DBE5;border-radius:10px;background:#fff;color:#16213A}
+.tab{font-family:Manrope,sans-serif;border:1px solid #E3E7EE;border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;min-height:40px}
+</style>
+</helmet>
+<div style="font-family: Manrope, sans-serif; color: #16213A; background: #F3F5F9; min-height: 100vh; display: flex; flex-wrap: wrap; align-items: flex-start">
+  <nav class="side" aria-label="People Hub menu" style="flex: 1 1 240px; max-width: 260px; box-sizing: border-box; background: #fff; border-right: 1px solid #E3E7EE; padding: 20px 14px; display: flex; flex-direction: column; gap: 4px; align-self: stretch">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px">
+      <div style="width: 38px; height: 38px; border-radius: 10px; background: {{brand}}; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800">A</div>
+      <div><div style="font-weight: 800; font-size: 16px">Angels PERSAL</div><div style="font-size: 12px; color: #5B6478">People &amp; Payroll Hub</div></div>
+    </div>
+    <a href="Main.dc.html">Dashboard<span class="code">0.0</span></a>
+    <a href="Establishment.dc.html">Post establishment<span class="code">1.1</span></a>
+    <a href="Grading.dc.html">Grading &amp; salary scales<span class="code">1.2</span></a>
+    <a href="Recruitment.dc.html">Recruitment<span class="code">1.5</span></a>
+    <a href="Programmes.dc.html">Internships &amp; bursaries<span class="code">1.6</span></a>
+    <a href="PersonRecord.dc.html">People<span class="code">2.1</span></a>
+    <a href="PeopleImport.dc.html">Staff import<span class="code">2.2</span></a>
+    <a href="Lifecycle.dc.html">Onboarding &amp; exits<span class="code">2.4</span></a>
+    <a href="Documents.dc.html" style="background: {{brand}}; color: #fff">Documents<span class="code" style="color: #C9D6EA">2.6</span></a>
+    <a href="Leave.dc.html">Leave<span class="code">3.0</span></a>
+    <a href="LeaveImport.dc.html">Leave history import<span class="code">3.2</span></a>
+    <a href="Performance.dc.html">Performance<span class="code">3.5</span></a>
+    <a href="Transactions.dc.html">Payroll instructions<span class="code">4.0</span></a>
+    <a href="Transactions.dc.html">Approvals<span class="code">6.0</span></a>
+    <a href="EmployeeRelations.dc.html">Discipline &amp; grievance<span class="code">5.5</span></a>
+    <a href="Policies.dc.html">Policies &amp; compliance<span class="code">8.0</span></a>
+    <a href="Reports.dc.html">Reports<span class="code">7.0</span></a>
+    <a href="Access.dc.html">Roles &amp; access<span class="code">9.0</span></a>
+    <a href="AuditLog.dc.html">Audit log<span class="code">9.1</span></a>
+    <div style="margin-top: 24px; padding: 12px; border-radius: 12px; background: #F3F5F9; font-size: 12px; color: #5B6478">Signed in as<br><strong style="color: #16213A">[HR Administrator]</strong><br>HR Administrator</div>
+  </nav>
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px">
+    <div>
+      <h1 style="margin: 0; font-size: 28px; font-weight: 800">Documents</h1>
+      <p style="margin: 4px 0 0; color: #5B6478; font-size: 14px">Every upload lands on the person's file, gets a document code and is verified by HR before it counts</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 16px; align-items: start">
+      <section class="card" style="padding: 18px 20px; display: flex; flex-direction: column; gap: 14px">
+        <h2 class="h2" style="margin: 0">Upload</h2>
+        <label style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; padding: 34px 20px; border: 2px dashed #B9C8DE; border-radius: 14px; background: #F7F9FD; cursor: pointer">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="{{brand}}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4"></path><path d="M7 9l5-5 5 5"></path><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"></path></svg>
+          <span style="font-size: 16px; font-weight: 800">Drag files here or click to browse</span>
+          <span style="font-size: 13px; color: #5B6478">PDF, JPG or PNG · up to 10 MB each · several files at once</span>
+          <input type="file" multiple style="position: absolute; width: 1px; height: 1px; opacity: 0">
+        </label>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+          <label class="f">Person<select><option>[Employee name] · [PERSAL no]</option></select></label>
+          <label class="f">Document type<select><option>Certified ID copy</option><option>CV</option><option>Qualifications</option><option>Signed contract / SLA</option><option>MoA</option><option>POPIA consent</option><option>Bank confirmation letter</option><option>Tax number proof</option><option>Medical / sick note</option><option>Exit documents</option></select></label>
+          <label class="f">Valid until (if any)<input type="date"></label>
+          <label class="f">Linked request (optional)<input placeholder="PR-26-____"></label>
+        </div>
+        <button style="font-family: Manrope, sans-serif; font-size: 14px; font-weight: 700; padding: 12px 18px; border-radius: 10px; border: 1px solid {{brand}}; background: {{brand}}; color: #fff; cursor: pointer; min-height: 44px; align-self: flex-start">Upload to file</button>
+        <p style="margin: 0; font-size: 12px; color: #5B6478">Files are renamed automatically: <span class="m">HR-[TYPE]-[PERSAL]-v01</span>. A new upload of the same type becomes the next version; old versions are kept, never overwritten.</p>
+      </section>
+      <section class="card" style="padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; min-width: 0">
+        <h2 class="h2" style="margin: 0">Required documents checklist</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px">
+          <sc-for list="{{cats}}" as="c" hint-placeholder-count="4">
+            <button class="tab" onClick="{{c.pick}}" style="background: {{c.bg}}; color: {{c.fg}}; border-color: {{c.bd}}">{{c.name}}</button>
+          </sc-for>
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <sc-for list="{{req}}" as="r" hint-placeholder-count="7">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid #EEF1F5">
+              <span style="font-size: 14px; font-weight: 600">{{r.n}}</span>
+              <span style="font-size: 12px; color: #5B6478">{{r.when}}</span>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+    </div>
+    <section class="card" style="min-width: 0">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px"><h2 class="h2" style="margin: 0">Recent uploads</h2><span class="pill" style="background: #FFF3D9; color: #8A5800">[0] waiting for verification</span></div>
+      <div style="overflow-x: auto; padding: 0 8px 8px">
+        <table class="tbl">
+          <thead><tr><th>Document code</th><th>Type</th><th>Person</th><th>Uploaded</th><th>By</th><th>Source</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <sc-for list="{{ups}}" as="u" hint-placeholder-count="6">
+              <tr><td class="m" style="font-size: 12px">{{u.code}}</td><td style="font-weight: 700">{{u.type}}</td><td>{{u.who}}</td><td style="color: #5B6478">{{u.when}}</td><td>{{u.by}}</td><td>{{u.src}}</td><td><span class="pill" style="background: {{u.bg}}; color: {{u.fg}}">{{u.st}}</span></td><td><a href="Documents.dc.html" style="font-weight: 700; text-decoration: none">{{u.act}}</a></td></tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#1F4E8C","options":["#1F4E8C","#0F6E6E","#6B3FA0","#B4532A"]},"$preview":{"width":1440,"height":1120}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { c: 0 }; }
+  renderVals() {
+    const lists = [
+      { name: 'Employees', req: [['Signed offer letter (HR-05-LET-01)', 'Before start'], ['Contract of employment (HR-05-CON-01)', 'Before start'], ['Certified ID copy', 'Before start'], ['CV & qualifications', 'Before start'], ['Code of Conduct acknowledgement (HR-02-ACK-01)', 'At induction'], ['Leave Policy acknowledgement (HR-06-ACK-01)', 'At induction'], ['Legacy leave forms, scanned (PERSALno_LEAVE_YYYY-MM-DD)', 'Before leave cut-over'], ['POPIA consent', 'Before start'], ['Bank confirmation letter', 'Before first pay'], ['Tax number proof', 'Before first pay'], ['KPAs agreed and signed (HR-07)', 'Before review period'], ['Probation outcome letter (HR-05-LET-02)', 'End of probation']] },
+      { name: 'Volunteers', req: [['Volunteer agreement (HR-04-MAN-01)', 'Before start'], ['Certified ID copy', 'Before start'], ['Safeguarding screening', 'Before start'], ['Code of Conduct acknowledgement (HR-02-ACK-01)', 'At induction'], ['POPIA consent', 'Before start'], ['Volunteer induction checklist', 'First week'], ['Volunteer exit / off-boarding checklist', 'On exit']] },
+      { name: 'Mentors (SLA · project period)', req: [['Certified ID copy', 'Before start'], ['CV & qualifications', 'Before start'], ['Signed SLA', 'Before start'], ['MoA with funder', 'Before start'], ['POPIA consent', 'Before start'], ['Bank confirmation letter', 'Before first payment'], ['Monthly activity report', 'Monthly']] },
+      { name: 'Interns (client-based · 18 months)', req: [['Certified ID copy', 'Before start'], ['Latest qualification', 'Before start'], ['Safeguarding screening (HR-04-INT §7)', 'Before placement'], ['Client placement confirmation', 'Before placement'], ['Code of Conduct acknowledgement (HR-02-ACK-01)', 'At induction'], ['Signed internship agreement', 'Before start'], ['POPIA consent', 'Before start'], ['Bank confirmation letter', 'Before first stipend'], ['Mentor review forms', '30 / 60 / 90 days']] },
+      { name: 'Bursary holders', req: [['Certified ID copy', 'Before award'], ['Proof of registration', 'Each semester'], ['Signed bursary agreement', 'Before award'], ['Academic results', 'Each semester'], ['POPIA consent', 'Before award'], ['Bank confirmation letter', 'Before first payment']] }
+    ];
+    const s = this.state;
+    const ok = { bg: '#E3F4EC', fg: '#1E7A4F' }, amb = { bg: '#FFF3D9', fg: '#8A5800' }, bad = { bg: '#FDECEA', fg: '#B42318' };
+    return {
+      brand: this.props.brand ?? '#1F4E8C',
+      cats: lists.map((l, i) => ({ name: l.name, pick: () => this.setState({ c: i }), bg: i === s.c ? '#E8EFF8' : '#fff', fg: i === s.c ? '#1F4E8C' : '#3A4459', bd: i === s.c ? '#BFD0E8' : '#E3E7EE' })),
+      req: lists[s.c].req.map(([n, when]) => ({ n, when })),
+      ups: [
+        { code: 'HR-ID-[00000000]-v01', type: 'Certified ID copy', who: '[Employee name]', when: 'Today 09:40', by: 'HR Admin', src: 'Upload', st: 'To verify', act: 'Verify', ...amb },
+        { code: 'HR-CV-[CAND-A]-v01', type: 'CV', who: '[Candidate A]', when: 'Today 09:14', by: 'System', src: 'Recruitment reply', st: 'To verify', act: 'Verify', ...amb },
+        { code: 'HR-BANK-[00000000]-v02', type: 'Bank confirmation', who: '[Employee name]', when: '2 Oct', by: 'Self-service', src: 'Request PR-26-0391', st: 'Verified', act: 'View', ...ok },
+        { code: 'HR-SLA-[00000000]-v03', type: 'Signed SLA', who: '[Employee name]', when: '28 Sep', by: 'HR Admin', src: 'Upload', st: 'Verified', act: 'View', ...ok },
+        { code: 'HR-QUAL-[00000000]-v01', type: 'Qualifications', who: '[Employee name]', when: '20 Sep', by: 'HR Admin', src: 'Upload', st: 'Rejected · unclear copy', act: 'View', ...bad }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

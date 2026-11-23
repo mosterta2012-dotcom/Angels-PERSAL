@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Onboarding and exits</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.side a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3A4459;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}
+.side a:hover{background:#EEF2F8}
+.side .code{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A93A6}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:8px 10px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:11px 10px;border-bottom:1px solid #EEF1F5}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.f{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#5B6478}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+</style>
+</helmet>
+<div style="font-family: Manrope, sans-serif; color: #16213A; background: #F3F5F9; min-height: 100vh; display: flex; flex-wrap: wrap; align-items: flex-start">
+  <nav class="side" aria-label="People Hub menu" style="flex: 1 1 240px; max-width: 260px; box-sizing: border-box; background: #fff; border-right: 1px solid #E3E7EE; padding: 20px 14px; display: flex; flex-direction: column; gap: 4px; align-self: stretch">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px">
+      <div style="width: 38px; height: 38px; border-radius: 10px; background: {{brand}}; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800">A</div>
+      <div><div style="font-weight: 800; font-size: 16px">Angels PERSAL</div><div style="font-size: 12px; color: #5B6478">People &amp; Payroll Hub</div></div>
+    </div>
+    <a href="Main.dc.html">Dashboard<span class="code">0.0</span></a>
+    <a href="Establishment.dc.html">Post establishment<span class="code">1.1</span></a>
+    <a href="Grading.dc.html">Grading &amp; salary scales<span class="code">1.2</span></a>
+    <a href="Recruitment.dc.html">Recruitment<span class="code">1.5</span></a>
+    <a href="Programmes.dc.html">Internships &amp; bursaries<span class="code">1.6</span></a>
+    <a href="PersonRecord.dc.html">People<span class="code">2.1</span></a>
+    <a href="PeopleImport.dc.html">Staff import<span class="code">2.2</span></a>
+    <a href="Lifecycle.dc.html" style="background: {{brand}}; color: #fff">Onboarding &amp; exits<span class="code" style="color: #C9D6EA">2.4</span></a>
+    <a href="Documents.dc.html">Documents<span class="code">2.6</span></a>
+    <a href="Leave.dc.html">Leave<span class="code">3.0</span></a>
+    <a href="LeaveImport.dc.html">Leave history import<span class="code">3.2</span></a>
+    <a href="Performance.dc.html">Performance<span class="code">3.5</span></a>
+    <a href="Transactions.dc.html">Payroll instructions<span class="code">4.0</span></a>
+    <a href="Transactions.dc.html">Approvals<span class="code">6.0</span></a>
+    <a href="EmployeeRelations.dc.html">Discipline &amp; grievance<span class="code">5.5</span></a>
+    <a href="Policies.dc.html">Policies &amp; compliance<span class="code">8.0</span></a>
+    <a href="Reports.dc.html">Reports<span class="code">7.0</span></a>
+    <a href="Access.dc.html">Roles &amp; access<span class="code">9.0</span></a>
+    <a href="AuditLog.dc.html">Audit log<span class="code">9.1</span></a>
+    <div style="margin-top: 24px; padding: 12px; border-radius: 12px; background: #F3F5F9; font-size: 12px; color: #5B6478">Signed in as<br><strong style="color: #16213A">[HR Administrator]</strong><br>HR Administrator</div>
+  </nav>
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px">
+      <div>
+        <h1 style="margin: 0; font-size: 28px; font-weight: 800">Onboarding &amp; exits</h1>
+        <p style="margin: 4px 0 0; color: #5B6478; font-size: 14px">HR-04-CHK-02 Staff Induction Checklist · HR-05-CHK-01 Exit Checklist</p>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap"><a href="Transactions.dc.html" style="text-decoration: none; background: {{brand}}; color: #fff; padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 14px">+ Start exit</a></div>
+    </div>
+    <div role="tablist" aria-label="Lifecycle stage" style="display: inline-flex; gap: 4px; padding: 4px; background: #E6EAF1; border-radius: 12px; align-self: flex-start">
+      <sc-for list="{{tabs}}" as="t" hint-placeholder-count="2">
+        <button role="tab" onClick="{{t.pick}}" style="font-family: Manrope, sans-serif; font-size: 14px; font-weight: 700; padding: 10px 16px; border: 0; border-radius: 10px; cursor: pointer; min-height: 44px; background: {{t.bg}}; color: {{t.fg}}">{{t.name}}</button>
+      </sc-for>
+    </div>
+    <section class="card" style="padding: 16px 20px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center">
+      <div style="flex: 1 1 300px"><div style="font-size: 18px; font-weight: 800">{{v.who}}</div><div style="font-size: 13px; color: #5B6478; margin-top: 2px">{{v.meta}}</div></div>
+      <div style="flex: 0 1 260px"><div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; color: #5B6478"><span>Progress</span><span>{{v.done}}</span></div><div style="height: 8px; border-radius: 99px; background: #EEF1F5; margin-top: 6px"><div style="height: 100%; border-radius: 99px; width: {{v.pct}}; background: {{brand}}"></div></div></div>
+    </section>
+    <section class="card" style="min-width: 0">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px"><h2 class="h2" style="margin: 0">{{v.title}}</h2><span style="font-size: 12px; color: #5B6478"></span></div>
+      <div style="overflow-x: auto; padding: 0 8px 8px">
+        <table class="tbl">
+          <thead><tr><th>Task</th><th>Owner</th><th>Due</th><th>Status</th></tr></thead>
+          <tbody>
+            <sc-for list="{{v.rows}}" as="r" hint-placeholder-count="10">
+              <tr><td style="font-weight: 700; white-space: normal; min-width: 260px">{{r.t}}</td><td>{{r.o}}</td><td style="color: #5B6478">{{r.d}}</td><td><span class="pill" style="background: {{r.bg}}; color: {{r.fg}}">{{r.st}}</span></td></tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin: 0; padding: 0 20px 16px; font-size: 12px; color: #5B6478">{{v.note}}</p>
+    </section>
+    <section class="card" style="padding: 16px 18px; background: #FFFBF1; border-color: #F1DDA8; display: flex; flex-direction: column; gap: 6px; font-size: 13px">
+      <strong style="font-size: 14px">Contract-based people</strong>
+      <span>Client-based interns: usually an 18-month contract; Angels runs onboarding and exit on behalf of the client. Mentors (SLA) and Social Performance interns end with the project period. PERSAL warns HR 60 days before each end date so the exit or renewal starts in time.</span>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#1F4E8C","options":["#1F4E8C","#0F6E6E","#6B3FA0","#B4532A"]},"$preview":{"width":1440,"height":1200}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { k: 0 }; }
+  renderVals() {
+    const ok = { bg: '#E3F4EC', fg: '#1E7A4F' }, amb = { bg: '#FFF3D9', fg: '#8A5800' }, bad = { bg: '#FDECEA', fg: '#B42318' }, blu = { bg: '#E8EFF8', fg: '#1F4E8C' }, gry = { bg: '#EEF1F5', fg: '#5B6478' };
+    return {
+      brand: this.props.brand ?? '#1F4E8C',
+      tabs: ['Onboarding', 'Exit'].map((name, i) => ({ name, pick: () => this.setState({ k: i }), bg: i === this.state.k ? '#fff' : 'transparent', fg: i === this.state.k ? '#16213A' : '#5B6478' })),
+      v: this.state.k === 0 ? {
+        who: '[New employee name]', meta: 'Social Performance Practitioner · Operations · starts [DD Mon YYYY] · direct manager: National Operations Co-ordinator', done: '5 of 10', pct: '50%',
+        title: 'Onboarding checklist · HR-04-CHK-02', note: 'IT tasks follow the Digital Onboarding SOP. Onboarding feedback at 30, 60 and 90 days goes through the survey tool.',
+        rows: [
+          { t: 'Appointment approved (2.2) · PERSAL number issued', o: 'HR', d: 'Before start', st: 'Done', ...ok },
+          { t: 'Signed offer letter and contract on file', o: 'HR', d: 'Before start', st: 'Done', ...ok },
+          { t: 'ID, qualifications, POPIA consent, EEA1 form', o: 'New starter → HR', d: 'Before start', st: 'Done', ...ok },
+          { t: 'Banking details verified', o: 'Head of Finance', d: 'Before first pay', st: 'Done', ...ok },
+          { t: 'Added to SimplePay for salary', o: 'Head of Finance', d: 'Before first pay', st: 'Done', ...ok },
+          { t: 'Microsoft 365 account, Teams, leave portal access', o: 'IT', d: 'Day 1', st: 'In progress', ...amb },
+          { t: 'Added to Jibble', o: 'HR', d: 'Day 1', st: 'Not started', ...gry },
+          { t: 'Laptop and equipment issued (asset register)', o: 'Logistics Factotum', d: 'Day 1', st: 'Not started', ...gry },
+          { t: 'Code of Conduct and Leave Policy acknowledged', o: 'New starter', d: 'Week 1', st: 'Not started', ...gry },
+          { t: '30 / 60 / 90-day reviews scheduled', o: 'Direct manager', d: 'Week 1', st: 'Not started', ...gry }
+        ]
+      } : {
+        who: '[Leaving employee name]', meta: 'Resignation · last working day [DD Mon YYYY] · notice period [4 weeks]', done: '3 of 10', pct: '30%',
+        title: 'Exit checklist · HR-05-CHK-01', note: 'Final pay = salary to the last day + unused annual leave from PERSAL (paid out only on exit). The PERSAL number is closed, never reused.',
+        rows: [
+          { t: 'Termination request approved (5.1) with reason', o: 'Direct manager → HOD HR → HOF → CEO', d: 'On notice', st: 'Done', ...ok },
+          { t: 'Leave balance frozen; unused days calculated', o: 'HR', d: 'On notice', st: 'Done', ...ok },
+          { t: 'Final pay instruction incl. leave payout to SimplePay', o: 'Head of Finance', d: 'Last pay run', st: 'Done', ...ok },
+          { t: 'Laptop, keys and equipment returned', o: 'Logistics Factotum', d: 'Last day', st: 'In progress', ...amb },
+          { t: 'Handover of work and files', o: 'Direct manager', d: 'Last day', st: 'In progress', ...amb },
+          { t: 'Microsoft 365, leave portal and Jibble access removed', o: 'IT / HR', d: 'Last day', st: 'Not started', ...gry },
+          { t: 'Certificate of service (BCEA s42)', o: 'HR', d: 'Last day', st: 'Not started', ...gry },
+          { t: 'UI-19 form for UIF', o: 'HR', d: 'Within 14 days', st: 'Not started', ...gry },
+          { t: 'Exit interview (survey tool)', o: 'HR', d: 'Last week', st: 'Not started', ...gry },
+          { t: 'Record closed; PERSAL number locked', o: 'HOD HR', d: 'After final pay', st: 'Not started', ...gry }
+        ]
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

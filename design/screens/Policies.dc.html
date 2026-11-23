@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Policies and compliance</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.side a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3A4459;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}
+.side a:hover{background:#EEF2F8}
+.side .code{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A93A6}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:8px 10px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:10px;border-bottom:1px solid #EEF1F5;vertical-align:top}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+.seg{font-family:Manrope,sans-serif;border:0;border-radius:10px;padding:10px 18px;font-size:14px;font-weight:800;cursor:pointer;min-height:44px}
+</style>
+</helmet>
+<div style="font-family: Manrope, sans-serif; color: #16213A; background: #F3F5F9; min-height: 100vh; display: flex; flex-wrap: wrap; align-items: flex-start">
+  <nav class="side" aria-label="People Hub menu" style="flex: 1 1 240px; max-width: 260px; box-sizing: border-box; background: #fff; border-right: 1px solid #E3E7EE; padding: 20px 14px; display: flex; flex-direction: column; gap: 4px; align-self: stretch">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px">
+      <div style="width: 38px; height: 38px; border-radius: 10px; background: {{brand}}; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800">A</div>
+      <div><div style="font-weight: 800; font-size: 16px">Angels PERSAL</div><div style="font-size: 12px; color: #5B6478">People &amp; Payroll Hub</div></div>
+    </div>
+    <a href="Main.dc.html">Dashboard<span class="code">0.0</span></a>
+    <a href="Establishment.dc.html">Post establishment<span class="code">1.1</span></a>
+    <a href="Grading.dc.html">Grading &amp; salary scales<span class="code">1.2</span></a>
+    <a href="Recruitment.dc.html">Recruitment<span class="code">1.5</span></a>
+    <a href="Programmes.dc.html">Internships &amp; bursaries<span class="code">1.6</span></a>
+    <a href="PersonRecord.dc.html">People<span class="code">2.1</span></a>
+    <a href="PeopleImport.dc.html">Staff import<span class="code">2.2</span></a>
+    <a href="Lifecycle.dc.html">Onboarding &amp; exits<span class="code">2.4</span></a>
+    <a href="Documents.dc.html">Documents<span class="code">2.6</span></a>
+    <a href="Leave.dc.html">Leave<span class="code">3.0</span></a>
+    <a href="LeaveImport.dc.html">Leave history import<span class="code">3.2</span></a>
+    <a href="Performance.dc.html">Performance<span class="code">3.5</span></a>
+    <a href="Transactions.dc.html">Payroll instructions<span class="code">4.0</span></a>
+    <a href="Transactions.dc.html">Approvals<span class="code">6.0</span></a>
+    <a href="EmployeeRelations.dc.html">Discipline &amp; grievance<span class="code">5.5</span></a>
+    <a href="Policies.dc.html" style="background: {{brand}}; color: #fff">Policies &amp; compliance<span class="code" style="color: #C9D6EA">8.0</span></a>
+    <a href="Reports.dc.html">Reports<span class="code">7.0</span></a>
+    <a href="Access.dc.html">Roles &amp; access<span class="code">9.0</span></a>
+    <a href="AuditLog.dc.html">Audit log<span class="code">9.1</span></a>
+    <div style="margin-top: 24px; padding: 12px; border-radius: 12px; background: #F3F5F9; font-size: 12px; color: #5B6478">Signed in as<br><strong style="color: #16213A">[HR Administrator]</strong><br>HR Administrator</div>
+  </nav>
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px">
+      <div>
+        <h1 style="margin: 0; font-size: 28px; font-weight: 800">Policies &amp; compliance</h1>
+        <p style="margin: 4px 0 0; color: #5B6478; font-size: 14px">HR-01 Policy Framework · one register, version control, biennial review, proof that staff received each policy</p>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap">
+        <a href="Policies.dc.html" style="text-decoration: none; background: #fff; border: 1px solid #D5DBE5; color: #16213A; padding: 11px 16px; border-radius: 10px; font-weight: 700; font-size: 14px">Download register</a>
+        <a href="Policies.dc.html" style="text-decoration: none; background: {{brand}}; color: #fff; padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 14px">Issue policy to staff</a>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px">
+      <sc-for list="{{tiles}}" as="t" hint-placeholder-count="4">
+        <div class="card" style="padding: 16px 18px"><div style="font-size: 13px; font-weight: 700; color: #5B6478">{{t.l}}</div><div style="font-size: 28px; font-weight: 800; margin-top: 6px; color: {{t.c}}">{{t.v}}</div><div style="font-size: 12px; color: #5B6478">{{t.s}}</div></div>
+      </sc-for>
+    </div>
+    <div role="tablist" aria-label="Section" style="display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; background: #E6EAF1; border-radius: 12px; align-self: flex-start">
+      <sc-for list="{{tabs}}" as="t" hint-placeholder-count="5">
+        <button class="seg" role="tab" onClick="{{t.pick}}" style="background: {{t.bg}}; color: {{t.fg}}">{{t.name}}</button>
+      </sc-for>
+    </div>
+    <sc-if value="{{show.reg}}" hint-placeholder-val="{{ true }}">
+      <section class="card" style="min-width: 0">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px"><h2 class="h2" style="margin: 0">HR Policy Register</h2><span class="pill" style="background: #F1EAFB; color: #6B3FA0">Read-only · from the QMS Hub</span></div>
+        <div style="margin: 8px 20px 4px; padding: 10px 12px; border-radius: 10px; background: #F7F9FD; border: 1px solid #E3E7EE; font-size: 13px; color: #3A4459">Policies and procedures are edited, approved and published only in the QMS Hub by the QMS Administrator (content owner for HR documents: HOD HR). PERSAL shows the current published version; acknowledgements and the roll-out tracker stay here because they hold personal data. The QMS Hub receives totals only, never names.</div>
+        <div style="overflow-x: auto; padding: 0 8px 8px">
+          <table class="tbl">
+            <thead><tr><th>Folder</th><th>Document</th><th>Type</th><th>Ver</th><th>Approval</th><th>Effective</th><th>Review</th><th>Status</th></tr></thead>
+            <tbody>
+              <sc-for list="{{reg}}" as="r" hint-placeholder-count="12">
+                <tr><td class="m" style="font-size: 12px; color: #5B6478">{{r.f}}</td><td style="font-weight: 700">{{r.t}}</td><td>{{r.ty}}</td><td>{{r.v}}</td><td>{{r.a}}</td><td style="color: #B42318; font-weight: 700">{{r.e}}</td><td>{{r.rc}}</td><td><span class="pill" style="background: {{r.bg}}; color: {{r.fg}}">{{r.st}}</span></td></tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </sc-if>
+    <sc-if value="{{show.risk}}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px">
+          <sc-for list="{{rlev}}" as="l" hint-placeholder-count="4">
+            <div class="card" style="padding: 14px 16px; border-top: 4px solid {{l.fg}}"><div style="display: flex; justify-content: space-between; align-items: center"><span class="pill" style="background: {{l.bg}}; color: {{l.fg}}">{{l.n}}</span><span class="m" style="font-size: 11px; color: #5B6478">score {{l.s}}</span></div><div style="font-size: 26px; font-weight: 800; margin-top: 8px">{{l.c}}</div><div style="font-size: 12px; color: #5B6478; margin-top: 4px">{{l.e}}</div></div>
+          </sc-for>
+        </div>
+        <section class="card" style="min-width: 0">
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px"><h2 class="h2" style="margin: 0">HR risk register</h2><span style="display: flex; gap: 8px; flex-wrap: wrap"><a href="Policies.dc.html" style="text-decoration: none; background: #fff; border: 1px solid #D5DBE5; color: #16213A; padding: 9px 14px; border-radius: 10px; font-weight: 700; font-size: 13px">Quarterly report</a><a href="Policies.dc.html" style="text-decoration: none; background: {{brand}}; color: #fff; padding: 9px 14px; border-radius: 10px; font-weight: 700; font-size: 13px">+ Log a risk</a></span></div>
+          <div style="overflow-x: auto; padding: 0 8px 8px">
+            <table class="tbl">
+              <thead><tr><th>ID</th><th>Risk</th><th>Area</th><th>L × I</th><th>Level</th><th>Controls / action</th><th>Owner</th><th>Reported to · date</th><th>Status</th><th>Closed</th></tr></thead>
+              <tbody>
+                <sc-for list="{{risks}}" as="r" hint-placeholder-count="10">
+                  <tr><td class="m" style="font-size: 12px; color: #5B6478">{{r.id}}</td><td style="font-weight: 700; white-space: normal; min-width: 220px">{{r.t}}</td><td>{{r.a}}</td><td class="m" style="font-size: 12px">{{r.l}} × {{r.i}} = {{r.sc}}</td><td><span class="pill" style="background: {{r.bg}}; color: {{r.fg}}">{{r.lv}}</span></td><td style="white-space: normal; min-width: 240px; font-size: 12px">{{r.c}}</td><td>{{r.o}}</td><td style="font-size: 12px">{{r.rp}}</td><td><span class="pill" style="background: #EEF1F5; color: #3A4459">{{r.st}}</span></td><td style="font-size: 12px; color: #5B6478">{{r.cl}}</td></tr>
+                </sc-for>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin: 0; padding: 0 20px 16px; font-size: 12px; color: #5B6478">Likelihood (L) and impact (I) on a 1–5 scale; ratings are proposals for the owners to confirm. Status: Open → Reported → Action in progress → Closed. Closing needs a closure note, evidence and HOD HR approval (CEO too for High and Critical). Every new risk, level change and status change is sent to the QMS Administrator’s <a href="RiskTracker.dc.html">risk tracker</a>, without personal details.</p>
+        </section>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 16px; align-items: start">
+          <section class="card" style="padding: 18px 20px; min-width: 0">
+            <h2 class="h2">Reporting by risk level</h2>
+            <div style="display: flex; flex-direction: column">
+              <sc-for list="{{rrep}}" as="x" hint-placeholder-count="4">
+                <div style="display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #EEF1F5; font-size: 13px"><span class="pill" style="background: {{x.bg}}; color: {{x.fg}}; flex: none; align-self: flex-start">{{x.n}}</span><span style="flex: 1">{{x.t}}</span></div>
+              </sc-for>
+            </div>
+          </section>
+          <section class="card" style="padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+            <h2 class="h2" style="margin: 0">Quarterly risk report</h2>
+            <span>The QMS Administrator follows every HR risk live in the <a href="RiskTracker.dc.html">risk tracker</a>, and exports the quarterly report from it across all departments for <strong>[HOD Operations and Systems · to confirm]</strong> (previously Jim).</span>
+            <span style="font-size: 13px; color: #5B6478">PERSAL exports the HR risks only: no names or personal details, so the report can leave the HR system. The QMS Administrator has no PERSAL login.</span>
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; font-size: 13px">
+              <div style="padding: 10px 12px; border-radius: 10px; background: #F3F5F9"><strong style="display: block">Next report</strong>[Q4 · DD Mon YYYY]</div>
+              <div style="padding: 10px 12px; border-radius: 10px; background: #F3F5F9"><strong style="display: block">HR export</strong>Ready [5] working days before</div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{show.roll}}" hint-placeholder-val="{{ false }}">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 16px; align-items: start">
+        <section class="card" style="padding: 18px 20px; min-width: 0">
+          <h2 class="h2">Policy roll-out tracker</h2>
+          <div style="overflow-x: auto">
+            <table class="tbl">
+              <thead><tr><th>Policy</th><th>Version</th><th>Acknowledged</th><th>Method</th><th>HR verified</th></tr></thead>
+              <tbody>
+                <sc-for list="{{roll}}" as="r" hint-placeholder-count="4">
+                  <tr><td style="font-weight: 700">{{r.p}}</td><td>{{r.v}}</td><td><div style="font-weight: 700">{{r.n}}</div><div style="height: 6px; border-radius: 99px; background: #EEF1F5; margin-top: 4px; width: 120px"><div style="height: 100%; border-radius: 99px; width: {{r.pct}}; background: {{brand}}"></div></div></td><td>{{r.m}}</td><td>{{r.h}}</td></tr>
+                </sc-for>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin: 12px 0 0; font-size: 12px; color: #5B6478">Signing in PERSAL counts as "system" acknowledgement. Paper copies are uploaded to Documents and verified by HR.</p>
+        </section>
+        <section class="card" style="padding: 18px 20px; min-width: 0">
+          <h2 class="h2">Record retention schedule</h2>
+          <div style="overflow-x: auto">
+            <table class="tbl">
+              <thead><tr><th>Record type</th><th>Keep for</th><th>System action</th></tr></thead>
+              <tbody>
+                <sc-for list="{{ret}}" as="r" hint-placeholder-count="7">
+                  <tr><td style="font-weight: 700">{{r.t}}</td><td>{{r.k}}</td><td style="font-size: 12px; color: #5B6478">{{r.a}}</td></tr>
+                </sc-for>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </sc-if>
+    <sc-if value="{{show.board}}" hint-placeholder-val="{{ false }}">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 16px; align-items: start">
+        <section class="card" style="padding: 18px 20px; min-width: 0">
+          <h2 class="h2">Board HR compliance dashboard</h2>
+          <div style="overflow-x: auto">
+            <table class="tbl">
+              <thead><tr><th>HR area</th><th>Key control</th><th>Status</th><th>Risk</th></tr></thead>
+              <tbody>
+                <sc-for list="{{board}}" as="b" hint-placeholder-count="6">
+                  <tr><td style="font-weight: 700">{{b.a}}</td><td>{{b.c}}</td><td><span class="pill" style="background: {{b.bg}}; color: {{b.fg}}">{{b.s}}</span></td><td style="font-size: 12px; color: #5B6478">{{b.r}}</td></tr>
+                </sc-for>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin: 12px 0 0; font-size: 12px; color: #5B6478">Status is calculated from the system, not typed in. Shown to the Board quarterly.</p>
+        </section>
+        <section class="card" style="padding: 18px 20px; display: flex; flex-direction: column; gap: 10px">
+          <h2 class="h2" style="margin: 0">Audit &amp; inspection packs</h2>
+          <sc-for list="{{packs}}" as="p" hint-placeholder-count="3">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px; border-radius: 12px; background: #F3F5F9; flex-wrap: wrap">
+              <div><div style="font-size: 14px; font-weight: 800">{{p.t}}</div><div style="font-size: 12px; color: #5B6478">{{p.d}}</div></div>
+              <a href="Policies.dc.html" style="font-size: 13px; font-weight: 700; text-decoration: none">{{p.a}}</a>
+            </div>
+          </sc-for>
+        </section>
+      </div>
+    </sc-if>
+    <sc-if value="{{show.cov}}" hint-placeholder-val="{{ false }}">
+      <section class="card" style="min-width: 0">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px"><h2 class="h2" style="margin: 0">Policy ↔ system coverage</h2><span style="font-size: 12px; color: #5B6478">Checked 20 Oct 2026 against the full HR OneDrive pack</span></div>
+        <div style="overflow-x: auto; padding: 0 8px 8px">
+          <table class="tbl">
+            <thead><tr><th>Area</th><th>Policy says</th><th>System does</th><th>Gap</th></tr></thead>
+            <tbody>
+              <sc-for list="{{cov}}" as="c" hint-placeholder-count="10">
+                <tr><td style="font-weight: 700; white-space: nowrap">{{c.a}}</td><td style="font-size: 12px">{{c.p}}</td><td style="font-size: 12px">{{c.s}}</td><td><span class="pill" style="background: {{c.bg}}; color: {{c.fg}}">{{c.g}}</span></td></tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </sc-if>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#1F4E8C","options":["#1F4E8C","#0F6E6E","#6B3FA0","#B4532A"]},"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { k: 0 }; }
+  renderVals() {
+    const brand = this.props.brand ?? '#1F4E8C';
+    const g = { bg: '#E3F4EC', fg: '#1E7A4F' }, a = { bg: '#FFF3D9', fg: '#8A5800' }, r = { bg: '#FDECEA', fg: '#B42318' }, b = { bg: '#E8EFF8', fg: '#1F4E8C' }, x = { bg: '#EEF1F5', fg: '#5B6478' };
+    const k = this.state.k;
+    const P = (f, t, ty, ap, rc, s) => ({ f, t, ty, v: '1.0', a: ap, e: 'Not set', rc, ...(s === 'u' ? { st: 'Not in register', ...a } : { st: 'Approved', ...g }) });
+    return {
+      brand,
+      show: { reg: k === 0, risk: k === 1, roll: k === 2, board: k === 3, cov: k === 4 },
+      tabs: ['Register', 'Risk register', 'Roll-out & retention', 'Board & audit', 'Coverage check'].map((name, i) => ({ name, pick: () => this.setState({ k: i }), bg: i === k ? '#fff' : 'transparent', fg: i === k ? '#16213A' : '#5B6478' })),
+      tiles: [
+        { l: 'Controlled documents', v: '53', s: '36 approved · 17 new drafts', c: '#16213A' },
+        { l: 'Effective date set', v: '0', s: 'Biennial review clock not started', c: '#B42318' },
+        { l: 'Acknowledgements', v: '[00]%', s: 'Code of Conduct + Leave Policy', c: '#8A5800' },
+        { l: 'Next internal HR audit', v: '[Month]', s: 'Annual · QMS-AUD-01', c: '#1F4E8C' }
+      ],
+      reg: [
+        P('01', 'HR-01 HR Policy Framework', 'Framework', 'Board', 'Biennial'),
+        P('02', 'HR-02 Code of Conduct Policy', 'Policy', 'Board', 'Biennial'),
+        P('02', 'HR-02-ACK-01 Code of Conduct Acknowledgement', 'Acknowledgement', 'N/A', 'As needed'),
+        P('03', 'HR-03 Disciplinary & Grievance Policy', 'Policy', 'Board', 'Biennial'),
+        P('03', 'HR-03-PROC-01 / PROC-02 Disciplinary & Grievance Procedures', 'Procedure', 'Board', 'Biennial'),
+        P('03', 'HR-03-SOP-01 Investigation · GDL-01 Sanctions', 'SOP / Guideline', 'Board', 'Biennial'),
+        P('03', 'HR-03-FRM-01 Hearing Record · FRM-02 Grievance Form', 'Form', 'N/A', 'As needed'),
+        P('04', 'HR-04 Recruitment & Selection · HR-04-INT Internship', 'Policy', 'Board', 'Biennial'),
+        P('04', 'HR-04-MAN-01 Recruitment & Volunteer Manual', 'Manual', 'Board', 'Biennial'),
+        P('05', 'HR-05 Employment Terms & Conditions', 'Policy', 'Board', 'Biennial'),
+        P('05', 'HR-05-LET-01/02/03 Offer, Probation, Termination · CON-01 Contract', 'Letter / Contract', 'N/A', 'As needed'),
+        P('06', 'HR-06 Leave Policy · PROC-01 · SUM-01', 'Policy / Procedure', 'Board', 'Biennial'),
+        P('06', 'HR-06-FRM-01 Leave Form (v1.0 and v1.01 both in folder)', 'Form', 'N/A', 'As needed'),
+        P('06', 'HR-06-ACK-01 Leave Acknowledgement', 'Acknowledgement', 'N/A', 'As needed'),
+        P('07', 'HR-07 Performance Management · PROC-01 PIP · FRM-01 PIP', 'Policy / Procedure', 'Board', 'Biennial'),
+        P('07', 'Review Form · Scoring Guide · Action Plan · Review Register', 'Form', '—', '—', 'u'),
+        P('07', 'KPA libraries (5) · KPA Selection Checklist', 'Tool', '—', '—', 'u'),
+        { f: '04', t: 'HR-04-INT-PROC-01 Internship Placement & Stipend Procedure', ty: 'Procedure', v: '0.1', a: 'Board', e: 'Not set', rc: 'Biennial', st: 'Draft', ...b },
+        { f: '05', t: 'HR-05-PROC-01 Remuneration & Establishment Procedure', ty: 'Procedure', v: '0.1', a: 'Board', e: 'Not set', rc: 'Biennial', st: 'Draft', ...b },
+        { f: '08', t: 'HR-08 Bursary Policy', ty: 'Policy', v: '0.1', a: 'Board', e: 'Not set', rc: 'Biennial', st: 'Draft', ...b },
+        { f: '09', t: 'HR-09 Mentor & Contractor Engagement Policy', ty: 'Policy', v: '0.1', a: 'Board', e: 'Not set', rc: 'Biennial', st: 'Draft', ...b }
+      ],
+      roll: [
+        { p: 'HR-02 Code of Conduct', v: '1.0', n: '[00] of [00]', pct: '60%', m: 'Signed / system', h: '[00]' },
+        { p: 'HR-06 Leave Policy', v: '1.0', n: '[00] of [00]', pct: '45%', m: 'Signed / system', h: '[00]' },
+        { p: 'HR-07 KPA agreement', v: '1.0', n: '[00] of [00]', pct: '20%', m: 'System', h: '[00]' },
+        { p: 'HR-03 Disciplinary & Grievance', v: '1.0', n: 'Not issued', pct: '0%', m: '—', h: '—' }
+      ],
+      ret: [
+        { t: 'Personnel files', k: '5 years after termination', a: 'Lock on exit, flag for destruction at year 5' },
+        { t: 'Contracts', k: '5 years after termination', a: 'Same as personnel file' },
+        { t: 'Leave records', k: '3 years (minimum)', a: 'PERSAL holds the record from cut-over; legacy SimplePay, tracker and paper history kept read-only with scans' },
+        { t: 'Disciplinary & grievance', k: '5 years', a: 'Confidential archive' },
+        { t: 'Performance & PIPs', k: '3 years', a: 'Auto-flag at 3 years' },
+        { t: 'Recruitment (unsuccessful)', k: '6 months', a: 'Candidate data and replies deleted automatically' },
+        { t: 'Policy acknowledgements', k: 'Employment + 5 years', a: 'Kept with personnel file' }
+      ],
+      board: [
+        { a: 'Policy governance', c: 'All HR policies approved & current', s: 'Amber', r: 'No effective dates set', ...a },
+        { a: 'Employment contracts', c: 'Signed contracts on file', s: '[Status]', r: 'Labour disputes', ...x },
+        { a: 'Leave management', c: 'Leave recorded on PERSAL; expiry warnings; public holidays excluded', s: '[Status]', r: 'BCEA non-compliance', ...x },
+        { a: 'Discipline & grievance', c: 'Fair process followed', s: '[Status]', r: 'CCMA exposure', ...x },
+        { a: 'Recruitment', c: 'Fair & documented recruitment', s: '[Status]', r: 'EEA risk', ...x },
+        { a: 'Data protection', c: 'POPIA controls in place', s: '[Status]', r: 'Regulatory fines', ...x },
+        { a: 'Risk management', c: 'HR risk register reviewed; quarterly report sent', s: '[Status]', r: 'Unmanaged HR risks', ...x }
+      ],
+      rlev: [
+        { n: 'Critical', s: '20–25', c: '[0]', e: 'CEO and Board immediately', bg: '#FDECEA', fg: '#B42318' },
+        { n: 'High', s: '12–19', c: '[0]', e: 'CEO within [48 hours]', bg: '#FFF3D9', fg: '#B4532A' },
+        { n: 'Medium', s: '6–11', c: '[0]', e: 'HOD within [5] working days', bg: '#FFF8E8', fg: '#8A5800' },
+        { n: 'Low', s: '1–5', c: '[0]', e: 'Owner manages · quarterly report', bg: '#E3F4EC', fg: '#1E7A4F' }
+      ],
+      rrep: [
+        { n: 'Critical', t: 'Reported to the CEO and the Board immediately; action plan within [48 hours]; reviewed weekly until it drops.', bg: '#FDECEA', fg: '#B42318' },
+        { n: 'High', t: 'Reported to the CEO within [48 hours]; reviewed monthly; on the quarterly report with progress.', bg: '#FFF3D9', fg: '#B4532A' },
+        { n: 'Medium', t: 'Reported to the HOD within [5] working days; reviewed quarterly.', bg: '#FFF8E8', fg: '#8A5800' },
+        { n: 'Low', t: 'Managed by the owner; listed on the quarterly report.', bg: '#E3F4EC', fg: '#1E7A4F' }
+      ],
+      risks: (() => {
+        const lev = s => s >= 20 ? { lv: 'Critical', bg: '#FDECEA', fg: '#B42318' } : s >= 12 ? { lv: 'High', bg: '#FFF3D9', fg: '#B4532A' } : s >= 6 ? { lv: 'Medium', bg: '#FFF8E8', fg: '#8A5800' } : { lv: 'Low', bg: '#E3F4EC', fg: '#1E7A4F' };
+        const rep = s => s >= 20 ? 'CEO + Board · [date]' : s >= 12 ? 'CEO · [date]' : s >= 6 ? 'HOD · [date]' : 'Quarterly report';
+        const r = (id, t, a, l, i, c, o, rv, st) => ({ id, t, a, l, i, sc: l * i, c, o, rv, st: st === 'Open' ? 'Reported' : st === 'Mitigating' ? 'Action in progress' : st, rp: rep(l * i), cl: '—', ...lev(l * i) });
+        return [
+          r('HR-R01', 'Leave records split over SimplePay, Excel trackers and paper; balances cannot be traced', 'Leave · BCEA', 4, 4, 'Leave history import, opening balances signed off before cut-over', 'HOD HR', '[Qtr]', 'Open'),
+          r('HR-R02', 'Staff never told when unused leave expires', 'Leave · BCEA', 4, 3, 'Written expiry rule in HR-06; automatic warnings at 60 and 30 days', 'HOD HR', '[Qtr]', 'Open'),
+          r('HR-R03', 'December closure leaves staff with negative balances', 'Leave · BCEA', 3, 3, 'Leave Policy: deficit recouped on exit; written agreement (BCEA s34) needed where leave is owed', 'HOD HR', '[Qtr]', 'Open'),
+          r('HR-R04', 'Unauthorised access to personal, pay or EE data', 'POPIA', 2, 5, 'Four HR roles only; separate leave portal; audit log', 'HOD HR', '[Qtr]', 'Mitigating'),
+          r('HR-R05', 'Angels passes 50 employees without Employment Equity reporting in place', 'EEA', 3, 4, 'Headcount tracker on Reports; EEA1 forms for all staff', 'HOD HR', '[Qtr]', 'Open'),
+          r('HR-R06', 'SLA contractors paid through payroll may be treated as employees (PAYE, labour law)', 'Tax · labour', 3, 4, 'Contractor test per HR-09; correct staff categories in the staff list', 'Head of Finance', '[Qtr]', 'Open'),
+          r('HR-R07', 'Overtime worked without pay or agreed time off', 'BCEA', 3, 3, 'Confirm earnings threshold; time off for overtime recorded separately', 'HOD HR', '[Qtr]', 'Open'),
+          r('HR-R08', 'Salaries not aligned to a scale; unequal pay for similar work', 'Pay · EEA', 3, 3, 'Grading and salary scales; placement with the calculator', 'Head of Finance', '[Qtr]', 'Open'),
+          r('HR-R09', 'HR-06 and the leave procedure still name SimplePay as the leave system', 'Policy', 4, 2, 'Update HR-06 and HR-06-PROC-01 before cut-over', 'HOD HR', '[Qtr]', 'Open'),
+          r('HR-R10', 'Client-based intern contracts end without exit steps or renewal decision', 'Contracts', 3, 2, '60-day end-date warning; exit checklist', 'HR Administrator', '[Qtr]', 'Open')
+        ];
+      })(),
+      packs: [
+        { t: 'ISO audit evidence index', d: 'Clause → document → owner → available', a: 'Generate' },
+        { t: 'Department of Labour inspection pack', d: 'Contracts, hours, leave, payslips (SimplePay), discipline, equity', a: 'Generate' },
+        { t: 'Internal HR audit checklist', d: 'Annual self-review with findings and corrective actions', a: 'Start audit' }
+      ],
+      cov: [
+        { a: 'Policy register', p: 'HR-01: register, version control, biennial review', s: 'Register, versions, review dates', g: 'Covered', ...g },
+        { a: 'Exceptions', p: 'HR-01 §8: deviations documented and approved', s: 'Not built yet', g: 'System gap', ...r },
+        { a: 'Code of Conduct', p: 'HR-02-ACK-01 signed, recorded on HR file', s: 'Roll-out tracker + Documents checklist', g: 'Covered', ...g },
+        { a: 'Discipline & grievance', p: 'HR-03 procedures, forms, sanctions guideline', s: 'Discipline & grievance screen', g: 'Covered', ...g },
+        { a: 'Warning validity / timeframes', p: 'HR-01-ADD-01 §3 (draft v0.1)', s: 'Warning expiry and deadline tracking', g: 'Draft policy', ...b },
+        { a: 'Recruitment', p: 'HR-04: fair, documented, EE, POPIA; Board approves senior posts', s: 'Recruitment screen, replies inbox', g: 'Partly', ...b },
+        { a: 'Safer recruitment & interview guide', p: 'HR-04-SOP-01, CHK-01, GDE-01, TPL-01 (draft v0.1)', s: 'Recruitment screen, templates, checks', g: 'Draft policy', ...b },
+        { a: 'Interns', p: 'HR-04-INT: placed with client organisations, client supervises', s: 'Programmes screen updated to client placements', g: 'Covered', ...g },
+        { a: 'Volunteers', p: 'HR-04-SOP-02, AGR-01, CHK-03, CHK-04 (draft v0.1)', s: 'Volunteer category and document checklist', g: 'Draft policy', ...b },
+        { a: 'Safeguarding', p: 'HR-10 Safeguarding Policy + HR-10-PROC-01 (draft v0.1)', s: 'Screening checks, concern form, DSO register', g: 'Draft policy', ...b },
+        { a: 'Exit & clearance', p: 'HR-05-CHK-01 + Digital Offboarding SOP (draft v0.1)', s: 'Termination request 5.1, clearance checklist', g: 'Draft policy', ...b },
+        { a: 'Bursaries', p: 'HR-08 Bursary Policy (draft v0.1)', s: 'Full bursary module', g: 'Draft policy', ...b },
+        { a: 'Mentors on SLAs', p: 'HR-09 Mentor & Contractor Engagement Policy (draft v0.1)', s: 'Mentor category, SLA tracking', g: 'Draft policy', ...b },
+        { a: 'Intern stipends & placements', p: 'HR-04-INT-PROC-01 (draft v0.1)', s: 'Logbooks, stipend run, client supervisor', g: 'Draft policy', ...b },
+        { a: 'Employment types', p: 'HR-05: permanent, fixed-term, part-time, temporary', s: 'Employment type on post and person', g: 'Covered', ...g },
+        { a: 'Probation', p: 'HR-05-LET-02: confirm / extend / terminate', s: 'Request 2.4 with three outcomes', g: 'Covered', ...g },
+        { a: 'Probation length & notice', p: 'HR-01-ADD-01 §4 (draft v0.1)', s: 'Probation outcome request 2.4', g: 'Draft policy', ...b },
+        { a: 'Termination', p: 'HR-05-LET-03: 5 reasons, final pay, property', s: 'Request 5.1 with reasons and letter', g: 'Covered', ...g },
+        { a: 'Leave', p: 'HR-06 and HR-06-PROC-01 still name SimplePay as the leave system', s: 'Leave portal + HR leave screen in PERSAL', g: 'Policy update needed', ...b },
+        { a: 'Payroll', p: 'DoL pack: payslips from SimplePay (salaries only)', s: 'Payroll instructions, incl. unpaid leave, go to SimplePay', g: 'Covered', ...g },
+        { a: 'Remuneration & increases', p: 'HR-05-PROC-01 (draft v0.1)', s: 'Increase approval route HR→HOD HR→HOF→CEO', g: 'Draft policy', ...b },
+        { a: 'Performance', p: 'HR-07: review form, 1–5 scale, KPAs, PIP', s: 'Performance screen', g: 'Covered', ...g },
+        { a: 'Review frequency', p: 'HR-01-ADD-01 §6 (draft v0.1)', s: '30/60/90-day and annual reviews', g: 'Draft policy', ...b },
+        { a: 'Onboarding / induction', p: 'HR-04-CHK-02 (draft) + Digital Onboarding SOP', s: 'Induction checklist on person record', g: 'Draft policy', ...b },
+        { a: 'Establishment & funded posts', p: 'HR-05-PROC-01 §4 (draft v0.1)', s: 'Post establishment rules', g: 'Draft policy', ...b },
+        { a: 'Retention', p: 'Roll-out tracker: retention schedule', s: 'Auto-flags and 6-month candidate purge', g: 'Covered', ...g },
+        { a: 'Board & audit', p: 'Board dashboard, ISO index, DoL pack, annual audit', s: 'Board & audit tab', g: 'Covered', ...g }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Internships and bursaries</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5F9}
+a{color:#1F4E8C}a:hover{color:#163A69}
+.m{font-family:'IBM Plex Mono',monospace}
+.card{background:#fff;border:1px solid #E3E7EE;border-radius:14px}
+.side a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3A4459;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}
+.side a:hover{background:#EEF2F8}
+.side .code{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A93A6}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5B6478;font-weight:700;padding:8px 10px;border-bottom:1px solid #E3E7EE;white-space:nowrap}
+.tbl td{padding:11px 10px;border-bottom:1px solid #EEF1F5;white-space:nowrap}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+.h2{margin:0 0 14px;font-size:17px;font-weight:800}
+.seg{font-family:Manrope,sans-serif;border:0;border-radius:10px;padding:10px 20px;font-size:14px;font-weight:800;cursor:pointer;min-height:44px}
+</style>
+</helmet>
+<div style="font-family: Manrope, sans-serif; color: #16213A; background: #F3F5F9; min-height: 100vh; display: flex; flex-wrap: wrap; align-items: flex-start">
+  <nav class="side" aria-label="People Hub menu" style="flex: 1 1 240px; max-width: 260px; box-sizing: border-box; background: #fff; border-right: 1px solid #E3E7EE; padding: 20px 14px; display: flex; flex-direction: column; gap: 4px; align-self: stretch">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px">
+      <div style="width: 38px; height: 38px; border-radius: 10px; background: {{brand}}; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800">A</div>
+      <div><div style="font-weight: 800; font-size: 16px">Angels PERSAL</div><div style="font-size: 12px; color: #5B6478">People &amp; Payroll Hub</div></div>
+    </div>
+    <a href="Main.dc.html">Dashboard<span class="code">0.0</span></a>
+    <a href="Establishment.dc.html">Post establishment<span class="code">1.1</span></a>
+    <a href="Grading.dc.html">Grading &amp; salary scales<span class="code">1.2</span></a>
+    <a href="Recruitment.dc.html">Recruitment<span class="code">1.5</span></a>
+    <a href="Programmes.dc.html" style="background: {{brand}}; color: #fff">Internships &amp; bursaries<span class="code" style="color: #C9D6EA">1.6</span></a>
+    <a href="PersonRecord.dc.html">People<span class="code">2.1</span></a>
+    <a href="PeopleImport.dc.html">Staff import<span class="code">2.2</span></a>
+    <a href="Lifecycle.dc.html">Onboarding &amp; exits<span class="code">2.4</span></a>
+    <a href="Documents.dc.html">Documents<span class="code">2.6</span></a>
+    <a href="Leave.dc.html">Leave<span class="code">3.0</span></a>
+    <a href="LeaveImport.dc.html">Leave history import<span class="code">3.2</span></a>
+    <a href="Performance.dc.html">Performance<span class="code">3.5</span></a>
+    <a href="Transactions.dc.html">Payroll instructions<span class="code">4.0</span></a>
+    <a href="Transactions.dc.html">Approvals<span class="code">6.0</span></a>
+    <a href="EmployeeRelations.dc.html">Discipline &amp; grievance<span class="code">5.5</span></a>
+    <a href="Policies.dc.html">Policies &amp; compliance<span class="code">8.0</span></a>
+    <a href="Reports.dc.html">Reports<span class="code">7.0</span></a>
+    <a href="Access.dc.html">Roles &amp; access<span class="code">9.0</span></a>
+    <a href="AuditLog.dc.html">Audit log<span class="code">9.1</span></a>
+    <div style="margin-top: 24px; padding: 12px; border-radius: 12px; background: #F3F5F9; font-size: 12px; color: #5B6478">Signed in as<br><strong style="color: #16213A">[HR Administrator]</strong><br>HR Administrator</div>
+  </nav>
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px">
+      <div>
+        <h1 style="margin: 0; font-size: 28px; font-weight: 800">Internships &amp; bursaries</h1>
+        <p style="margin: 4px 0 0; color: #5B6478; font-size: 14px">Managed in HR by the Programme Manager: Bursaries &amp; Internships (planned role, reports to HOD HR, coordinates with the National Operations Co-ordinator) · payments approved by HOD HR, then Head of Finance</p>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap">
+        <a href="Transactions.dc.html" style="text-decoration: none; background: #fff; border: 1px solid #D5DBE5; color: #16213A; padding: 11px 16px; border-radius: 10px; font-weight: 700; font-size: 14px">{{runLabel}}</a>
+        <a href="Recruitment.dc.html" style="text-decoration: none; background: {{brand}}; color: #fff; padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 14px">+ New intake</a>
+      </div>
+    </div>
+    <div role="tablist" aria-label="Programme type" style="display: inline-flex; gap: 4px; padding: 4px; background: #E6EAF1; border-radius: 12px; align-self: flex-start">
+      <sc-for list="{{tabs}}" as="t" hint-placeholder-count="2">
+        <button class="seg" role="tab" onClick="{{t.pick}}" style="background: {{t.bg}}; color: {{t.fg}}">{{t.name}}</button>
+      </sc-for>
+    </div>
+    <section class="card" style="padding: 18px 20px">
+      <h2 class="h2">{{v.flowTitle}}</h2>
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px">
+        <sc-for list="{{v.flow}}" as="s" hint-placeholder-count="7">
+          <li style="border-radius: 12px; padding: 12px; background: #F7F9FD; border: 1px solid #E3E7EE; display: flex; flex-direction: column; gap: 4px">
+            <span style="width: 24px; height: 24px; border-radius: 99px; background: {{brand}}; color: #fff; font-size: 12px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center">{{s.n}}</span>
+            <span style="font-size: 14px; font-weight: 800">{{s.t}}</span>
+            <span style="font-size: 12px; color: #5B6478">{{s.d}}</span>
+          </li>
+        </sc-for>
+      </ol>
+    </section>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+      <sc-for list="{{v.progs}}" as="p" hint-placeholder-count="3">
+        <div class="card" style="padding: 16px 18px; display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; justify-content: space-between; gap: 8px; align-items: flex-start"><div><div style="font-weight: 800; font-size: 16px">{{p.name}}</div><div style="font-size: 12px; color: #5B6478; margin-top: 2px">{{p.funder}} · {{p.period}}</div></div><span class="pill" style="background: {{p.bg}}; color: {{p.fg}}">{{p.st}}</span></div>
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; text-align: center">
+            <div style="background: #F3F5F9; border-radius: 8px; padding: 8px 4px"><div style="font-weight: 800; font-size: 18px">{{p.a}}</div><div style="font-size: 11px; color: #5B6478">{{p.al}}</div></div>
+            <div style="background: #F3F5F9; border-radius: 8px; padding: 8px 4px"><div style="font-weight: 800; font-size: 18px">{{p.b}}</div><div style="font-size: 11px; color: #5B6478">{{p.bl}}</div></div>
+            <div style="background: #F3F5F9; border-radius: 8px; padding: 8px 4px"><div style="font-weight: 800; font-size: 18px">{{p.c}}</div><div style="font-size: 11px; color: #5B6478">{{p.cl}}</div></div>
+          </div>
+          <div style="font-size: 12px; color: #5B6478">Budget used <strong style="color: #16213A">{{p.used}}</strong> of {{p.budget}}</div>
+          <div style="height: 8px; border-radius: 99px; background: #EEF1F5"><div style="height: 100%; border-radius: 99px; width: {{p.pct}}; background: {{brand}}"></div></div>
+        </div>
+      </sc-for>
+    </div>
+    <section class="card" style="min-width: 0">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 4px; flex-wrap: wrap; gap: 8px"><h2 class="h2" style="margin: 0">{{v.tableTitle}}</h2><span style="font-size: 12px; color: #5B6478">Click a name to open their person record</span></div>
+      <div style="overflow-x: auto; padding: 0 8px 8px">
+        <table class="tbl">
+          <thead><tr><sc-for list="{{v.cols}}" as="c" hint-placeholder-count="8"><th>{{c}}</th></sc-for></tr></thead>
+          <tbody>
+            <sc-for list="{{v.rows}}" as="r" hint-placeholder-count="5">
+              <tr><td><a href="PersonRecord.dc.html" style="font-weight: 700; text-decoration: none">{{r.n}}</a></td><td>{{r.a}}</td><td>{{r.b}}</td><td>{{r.c}}</td><td>{{r.d}}</td><td>{{r.e}}</td><td><span class="pill" style="background: {{r.bg}}; color: {{r.fg}}">{{r.st}}</span></td><td style="color: #5B6478">{{r.next}}</td></tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 16px; align-items: start">
+      <section class="card" style="padding: 18px 20px">
+        <h2 class="h2">{{v.payTitle}}</h2>
+        <div style="display: flex; flex-direction: column">
+          <sc-for list="{{v.pay}}" as="p" hint-placeholder-count="4">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 11px 0; border-bottom: 1px solid #EEF1F5">
+              <div><div style="font-size: 14px; font-weight: 700">{{p.t}}</div><div style="font-size: 12px; color: #5B6478">{{p.d}}</div></div>
+              <div style="text-align: right"><div style="font-size: 14px; font-weight: 800">{{p.amt}}</div><span class="pill" style="background: {{p.bg}}; color: {{p.fg}}">{{p.st}}</span></div>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+      <section class="card" style="padding: 18px 20px">
+        <h2 class="h2">{{v.rulesTitle}}</h2>
+        <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.5">
+          <sc-for list="{{v.rules}}" as="r" hint-placeholder-count="5"><li>{{r}}</li></sc-for>
+        </ul>
+      </section>
+      <section class="card" style="padding: 18px 20px">
+        <h2 class="h2">Outcomes for funder reports</h2>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+          <sc-for list="{{v.out}}" as="o" hint-placeholder-count="4">
+            <div style="background: #F3F5F9; border-radius: 12px; padding: 12px"><div style="font-size: 24px; font-weight: 800">{{o.v}}</div><div style="font-size: 12px; font-weight: 700; color: #5B6478">{{o.l}}</div></div>
+          </sc-for>
+        </div>
+        <a href="Main.dc.html" style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 700">Download impact report</a>
+      </section>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#1F4E8C","options":["#1F4E8C","#0F6E6E","#6B3FA0","#B4532A"]},"$preview":{"width":1440,"height":1300}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { k: 0 }; }
+  renderVals() {
+    const brand = this.props.brand ?? '#1F4E8C';
+    const S = { g: { bg: '#E3F4EC', fg: '#1E7A4F' }, a: { bg: '#FFF3D9', fg: '#8A5800' }, b: { bg: '#E8EFF8', fg: '#1F4E8C' }, r: { bg: '#FDECEA', fg: '#B42318' }, x: { bg: '#EEF1F5', fg: '#5B6478' } };
+    const intern = {
+      flowTitle: 'Internship journey',
+      flow: [
+        { n: '1', t: 'Intake', d: 'Applications via Recruitment' },
+        { n: '2', t: 'Screen & match', d: 'Safer recruitment; client joins interviews (HR-04-INT)' },
+        { n: '3', t: 'Agreement', d: 'Placement agreement; client contract applies' },
+        { n: '4', t: 'Placement', d: 'Client supervisor assigned; Code of Conduct signed' },
+        { n: '5', t: 'Monthly', d: 'Logbook, attendance, stipend' },
+        { n: '6', t: 'Reviews', d: '30 / 60 / 90 days, quarterly' },
+        { n: '7', t: 'Completion', d: 'Certificate, exit or absorb' }
+      ],
+      progs: [
+        { name: '[Internship programme 2026]', funder: '[Funder]', period: 'Feb 2026 – Jan 2027', st: 'Running', a: '[00]', al: 'Interns', b: '[0]', bl: 'Reviews due', c: '[0]', cl: 'Logbooks late', used: 'R [000 000]', budget: 'R [000 000]', pct: '62%', ...S.g },
+        { name: '[Learnership / SETA]', funder: '[SETA]', period: 'Apr 2026 – Mar 2027', st: 'Running', a: '[00]', al: 'Learners', b: '[0]', bl: 'Reviews due', c: '[0]', cl: 'Logbooks late', used: 'R [000 000]', budget: 'R [000 000]', pct: '48%', ...S.g },
+        { name: '[Internship programme 2027]', funder: '[Funder]', period: 'Feb 2027 – Jan 2028', st: 'Recruiting', a: '[00]', al: 'Applicants', b: '[00]', bl: 'Posts', c: '0', cl: 'Placed', used: 'R 0', budget: 'R [000 000]', pct: '0%', ...S.b }
+      ],
+      tableTitle: 'Interns',
+      cols: ['Intern', 'Programme', 'Placed with', 'Functional manager (client)', 'Period', 'Stipend · SimplePay', 'Status', 'Next action'],
+      rows: [
+        { n: '[Intern A]', a: '[Internship 2026]', b: '[Client organisation A]', c: '[Client supervisor]', d: 'Feb 26 – Jan 27', e: 'R [0 000]', st: 'On track', next: 'Quarterly review 30 Oct', ...S.g },
+        { n: '[Intern B]', a: '[Internship 2026]', b: '[Client organisation A]', c: '[Client supervisor]', d: 'Feb 26 – Jan 27', e: 'R [0 000]', st: 'Logbook late', next: 'September logbook missing', ...S.a },
+        { n: '[Intern C]', a: '[Learnership]', b: '[Client organisation B]', c: '[Client supervisor]', d: 'Apr 26 – Mar 27', e: 'R [0 000]', st: 'On track', next: '—', ...S.g },
+        { n: '[Intern D]', a: '[Internship 2026]', b: '[Client organisation C]', c: '[Client supervisor]', d: 'Feb 26 – Jan 27', e: 'R [0 000]', st: 'Absence flag', next: 'HR meeting', ...S.r },
+        { n: '[Intern E]', a: '[Learnership]', b: '[Client organisation B]', c: '[Client supervisor]', d: 'Apr 26 – Mar 27', e: 'R [0 000]', st: 'On track', next: '—', ...S.g }
+      ],
+      payTitle: 'Monthly stipend run · October',
+      pay: [
+        { t: 'Attendance & logbooks confirmed', d: 'By mentors · cut-off 20 Oct', amt: '[00] of [00]', st: 'In progress', ...S.a },
+        { t: 'Stipend schedule', d: 'Prepared by HR Admin', amt: 'R [000 000]', st: 'Ready', ...S.b },
+        { t: 'HOD HR approval', d: 'Dana', amt: '', st: 'Waiting', ...S.x },
+        { t: 'Head of Finance · Xero pay run', d: 'Gerald · pay date 25 Oct', amt: '', st: 'Waiting', ...S.x }
+      ],
+      rulesTitle: 'Internship rules · stipend rules not yet in a policy',
+      rules: ['Placed interns: direct manager is HOD HR (Angels), who approves leave and HR matters; the client supervisor is the functional manager. [Proposed]', 'Intern leave is not yet covered by HR-06: a rule is needed before interns use the leave portal. [Open]', 'Stipend is paid only when the month’s logbook and attendance are signed by the client supervisor. [Proposed]', 'Unauthorised absence is deducted pro rata from the stipend. [Proposed]', 'Client organisation confirms requirements and supervises; Angels runs recruitment, keeps records and holds safeguarding duty of care (HR-04-INT).', 'At completion: certificate issued, then absorbed into a vacant post or exited.', 'Outcome tracked 6 and 12 months after completion for funder reporting.'],
+      out: [{ v: '[00]', l: 'Completed' }, { v: '[00]', l: 'Absorbed at Angels' }, { v: '[00]', l: 'Employed elsewhere' }, { v: '[0]', l: 'Exited early' }]
+    };
+    const burs = {
+      flowTitle: 'Bursary journey',
+      flow: [
+        { n: '1', t: 'Applications', d: 'Call opens via Recruitment' },
+        { n: '2', t: 'Selection', d: 'Panel, academic record, need' },
+        { n: '3', t: 'Agreement', d: 'Bursary agreement & obligations' },
+        { n: '4', t: 'Registration', d: 'Proof of registration uploaded' },
+        { n: '5', t: 'Disbursement', d: 'Fees to institution, allowance' },
+        { n: '6', t: 'Results', d: 'Each semester, renewal check' },
+        { n: '7', t: 'Graduation', d: 'Work-back or exit' }
+      ],
+      progs: [
+        { name: '[Bursary scheme 2026]', funder: 'Seriti Green', period: 'Academic year 2026', st: 'Active', a: '[00]', al: 'Students', b: '[0]', bl: 'Results due', c: '[0]', cl: 'At risk', used: 'R [000 000]', budget: 'R [000 000]', pct: '74%', ...S.g },
+        { name: '[Angels bursary]', funder: 'Core (Angels)', period: 'Academic year 2026', st: 'Active', a: '[0]', al: 'Students', b: '[0]', bl: 'Results due', c: '0', cl: 'At risk', used: 'R [000 000]', budget: 'R [000 000]', pct: '55%', ...S.g },
+        { name: '[Bursary scheme 2027]', funder: '[Funder]', period: 'Academic year 2027', st: 'Applications open', a: '[00]', al: 'Applicants', b: '[0]', bl: 'Awards', c: '—', cl: 'Closes', used: 'R 0', budget: 'R [000 000]', pct: '0%', ...S.b }
+      ],
+      tableTitle: 'Bursary holders',
+      cols: ['Student', 'Bursary', 'Institution', 'Qualification', 'Year of study', 'Annual award', 'Status', 'Next action'],
+      rows: [
+        { n: '[Student A]', a: '[Seriti Green 2026]', b: '[University]', c: '[BCom Accounting]', d: '2nd year', e: 'R [00 000]', st: 'In good standing', next: 'Semester 2 results Dec', ...S.g },
+        { n: '[Student B]', a: '[Seriti Green 2026]', b: '[TVET college]', c: '[N6 Engineering]', d: '1st year', e: 'R [00 000]', st: 'Results below [00]%', next: 'Academic support plan', ...S.r },
+        { n: '[Student C]', a: '[Angels bursary]', b: '[University]', c: '[BSocSci]', d: '3rd year', e: 'R [00 000]', st: 'Final year', next: 'Plan work-back placement', ...S.b },
+        { n: '[Student D]', a: '[Seriti Green 2026]', b: '[University]', c: '[BSc]', d: '1st year', e: 'R [00 000]', st: 'Registration missing', next: 'Upload proof of registration', ...S.a },
+        { n: '[Graduate E]', a: '[Angels bursary]', b: '[University]', c: '[BCom]', d: 'Graduated', e: '—', st: 'Work-back', next: 'Month [0] of [00]', ...S.x }
+      ],
+      payTitle: 'Disbursements · semester 2',
+      pay: [
+        { t: 'Tuition to institutions', d: 'Paid against invoice · [0] institutions', amt: 'R [000 000]', st: 'Paid', ...S.g },
+        { t: 'Monthly allowance to students', d: 'Only if registration is current', amt: 'R [00 000]', st: 'Ready', ...S.b },
+        { t: 'Books & equipment', d: 'Once-off, against quote', amt: 'R [00 000]', st: 'Waiting', ...S.x },
+        { t: 'Approval route', d: 'HR → HOD HR → Head of Finance', amt: '', st: 'HOD HR', ...S.a }
+      ],
+      rulesTitle: 'Bursary conditions · no bursary policy in the HR pack yet',
+      rules: ['Proof of registration each semester before any payment.', 'Results uploaded within [00] days of release; below [00]% triggers a support plan, a second time a renewal review.', 'Tuition is paid to the institution, never to the student.', 'Work-back: [0] months per year funded, recorded on the person record.', 'Breach of agreement = repayment schedule raised through Finance.'],
+      out: [{ v: '[00]', l: 'Active students' }, { v: '[00]', l: 'Graduated' }, { v: '[00]', l: 'In work-back / employed' }, { v: '[0]', l: 'Discontinued' }]
+    };
+    const v = this.state.k === 0 ? intern : burs;
+    return {
+      brand, v,
+      runLabel: this.state.k === 0 ? 'Monthly stipend run' : 'Semester disbursement',
+      tabs: ['Internships', 'Bursaries'].map((name, i) => ({ name, pick: () => this.setState({ k: i }), bg: i === this.state.k ? '#fff' : 'transparent', fg: i === this.state.k ? '#16213A' : '#5B6478' }))
+    };
+  }
+}
+</script>
+</body>
+</html>
